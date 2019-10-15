@@ -18,7 +18,8 @@
   },
   "keywords": [
     "shadow-fns",
-    "functional"
+    "functional",
+    "pure"
   ],
   "files": [
     "dist",
@@ -32,6 +33,7 @@
     "url": "https://github.com/jinghua000/shadow-fns.git"
   },
   "homepage": "https://github.com/jinghua000/shadow-fns",
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
