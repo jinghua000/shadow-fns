@@ -5,9 +5,10 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "cross-env mocha --require @babel/register",
-    "cover": "yarn cover:unit && yarn cover:report",
+    "cover": "yarn cover:unit && yarn cover:report && yarn cover:check",
     "cover:unit": "nyc npm test",
     "cover:report": "nyc report --reporter=lcov",
+    "cover:check": "nyc check-coverage --branches=100 --functions=100 --lines=100 --statements=100 --source-map=100",
     "build": "yarn clean && yarn build:src && yarn build:umd:min && yarn build:doc",
     "clean": "rm -rf ./dist ./lib",
     "build:src": "cross-env babel src --out-dir lib",
