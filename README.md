@@ -1,5 +1,7 @@
 # shadow-fns
 
+[![npm module](https://badge.fury.io/js/shadow-fns.svg)](https://www.npmjs.com/package/shadow-fns)
+
 ## Introduction
 
 A javascript function library.  
