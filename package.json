@@ -1,9 +1,8 @@
 {
   "name": "shadow-fns",
-  "version": "0.1.0",
+  "version": "0.1.1-beta.0",
   "description": "A javascript function library.",
   "main": "./lib/index.js",
-  "repository": "",
   "scripts": {
     "test": "cross-env mocha --require @babel/register",
     "cover": "yarn cover:unit && yarn cover:report",
@@ -28,6 +27,11 @@
   ],
   "author": "shadow",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jinghua000/shadow-fns.git"
+  },
+  "homepage": "https://github.com/jinghua000/shadow-fns",
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
