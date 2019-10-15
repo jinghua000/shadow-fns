@@ -1,0 +1,44 @@
+{
+  "name": "shadow-fns",
+  "version": "0.1.0",
+  "description": "A javascript function library.",
+  "main": "./lib/index.js",
+  "repository": "",
+  "scripts": {
+    "test": "cross-env mocha --require @babel/register",
+    "cover": "yarn cover:unit && yarn cover:report",
+    "cover:unit": "nyc npm test",
+    "cover:report": "nyc report --reporter=lcov",
+    "build": "yarn clean && yarn build:src && yarn build:umd:min && yarn build:doc",
+    "clean": "rm -rf ./dist ./lib",
+    "build:src": "cross-env babel src --out-dir lib",
+    "build:umd": "cross-env MODE=development webpack",
+    "build:umd:min": "cross-env MODE=production webpack",
+    "build:doc": "node scripts/build-doc.js",
+    "demo": ""
+  },
+  "keywords": [
+    "shadow-fns",
+    "functional"
+  ],
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
+  "author": "shadow",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "cross-env": "^5.2.0",
+    "dmd": "^4.0.4",
+    "jsdoc-to-markdown": "^5.0.1",
+    "mocha": "^6.1.3",
+    "nyc": "^14.1.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}

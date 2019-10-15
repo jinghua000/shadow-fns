@@ -1,0 +1,22 @@
+/**
+ * Call a part of function and return a new function
+ * 
+ * Similar to `f.curry`
+ * 
+ * @param {Function} fn 
+ * @param {...*} args
+ * @return {Function}
+ * @category Function
+ * @sign ((a, b, ..., z) -> res) -> (a, b, ..., n) -> (o, p, ..., z) -> res
+ * @see curry, partialRight
+ * @example
+ * 
+ * let sum = (a, b, c) => a + b + c
+ * let sumAB = f.partial(sum)('a', 'b')
+ * 
+ * sumAB('c') // => 'abc'
+ * sumAB('d') // => 'abd'
+ */
+const partial = fn => (...args) => (...args2) => fn(...args, ...args2)
+
+export default partial

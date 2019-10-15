@@ -1,0 +1,18 @@
+/**
+ * Return a equivalent function and arguments is flipped!
+ * 
+ * @param {Function} fn 
+ * @return {Function}
+ * @category Function
+ * @sign ((a, b, ..., z) -> x) -> ((z, ..., b, a) -> x)
+ * @example
+ * 
+ * let print = (...args) => args
+ * let flipPrint = f.flip(print)
+ * 
+ * print(1, 2, 3) // => [1, 2, 3]
+ * flipPrint(1, 2, 3) // => [3, 2, 1]
+ */
+const flip = fn => (...args) => fn(...[].concat(args).reverse())
+
+export default flip
