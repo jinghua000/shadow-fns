@@ -98,11 +98,11 @@ import { * as f } from 'shadow-fns/src'
 
 ## Documentation
 
-You can check the [Full API documentation](./doc/README.md).
+You can check the [Full API documentation](https://github.com/jinghua000/shadow-fns/blob/master/doc/README.md).
 
 It's a little big, so you can download it and view with local Markdown Viewer for best experience.
 
-And I propose you read the [Usage Instruction](./doc/USAGE_INSTRUCTION.md),
+And I propose you read the [Usage Instruction](https://github.com/jinghua000/shadow-fns/blob/master/doc/USAGE_INSTRUCTION.md),
 it will be helpful.
 
 ## Reference
