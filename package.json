@@ -1,6 +1,6 @@
 {
   "name": "shadow-fns",
-  "version": "0.1.1-beta.0",
+  "version": "0.1.1-beta.1",
   "description": "A javascript function library.",
   "main": "./lib/index.js",
   "scripts": {
