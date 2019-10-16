@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/jinghua000/shadow-fns.svg?branch=master)](https://travis-ci.org/jinghua000/shadow-fns)
 [![npm module](https://badge.fury.io/js/shadow-fns.svg)](https://www.npmjs.com/package/shadow-fns)
+[![Coverage Status](https://coveralls.io/repos/github/jinghua000/shadow-fns/badge.svg?branch=master)](https://coveralls.io/github/jinghua000/shadow-fns?branch=master)
+[![Dependency Status](https://david-dm.org/jinghua000/shadow-fns.svg)](https://david-dm.org/jinghua000/shadow-fns)
 
 ## Introduction
 
@@ -105,6 +107,8 @@ You can check the [Full API documentation](https://github.com/jinghua000/shadow-
 
 And I propose you read the [Usage Instruction](https://github.com/jinghua000/shadow-fns/blob/master/doc/USAGE_INSTRUCTION.md),
 it will be helpful.
+
+And if you'd like to contribute, see the [CONTRIBUTING.md](https://github.com/jinghua000/shadow-fns/blob/master/CONTRIBUTING.md)
 
 ## Reference
 
