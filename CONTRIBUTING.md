@@ -4,7 +4,7 @@ Well, it's just the library for myself to use, not many rules.
 
 ## Beautiful
 
-So, write beautiful.
+So, writing beautiful.
 
 ## Development Setup
 
