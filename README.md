@@ -1,5 +1,6 @@
 # shadow-fns
 
+[![Build Status](https://travis-ci.org/jinghua000/shadow-fns.svg?branch=master)](https://travis-ci.org/jinghua000/shadow-fns)
 [![npm module](https://badge.fury.io/js/shadow-fns.svg)](https://www.npmjs.com/package/shadow-fns)
 
 ## Introduction
@@ -101,8 +102,6 @@ import { * as f } from 'shadow-fns/src'
 ## Documentation
 
 You can check the [Full API documentation](https://github.com/jinghua000/shadow-fns/blob/master/doc/README.md).
-
-It's a little big, so you can download it and view with local Markdown Viewer for best experience.
 
 And I propose you read the [Usage Instruction](https://github.com/jinghua000/shadow-fns/blob/master/doc/USAGE_INSTRUCTION.md),
 it will be helpful.
