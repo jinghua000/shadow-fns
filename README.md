@@ -108,7 +108,7 @@ You can check the [Full API documentation](https://github.com/jinghua000/shadow-
 And I propose you read the [Usage Instruction](https://github.com/jinghua000/shadow-fns/blob/master/doc/USAGE_INSTRUCTION.md),
 it will be helpful.
 
-And if you'd like to contribute, see the [CONTRIBUTING.md](https://github.com/jinghua000/shadow-fns/blob/master/CONTRIBUTING.md)
+And if you'd like to contribute, see the [Contributing Guide](https://github.com/jinghua000/shadow-fns/blob/master/CONTRIBUTING.md).
 
 ## Reference
 
