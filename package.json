@@ -21,7 +21,9 @@
   "keywords": [
     "shadow-fns",
     "functional",
-    "pure"
+    "pure",
+    "currying",
+    "point-free"
   ],
   "files": [
     "dist",

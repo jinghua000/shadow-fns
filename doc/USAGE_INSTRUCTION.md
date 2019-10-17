@@ -8,6 +8,7 @@ See also [Full API documentation](./README.md).
 
 - Almost all functions designed as `function first, data last`, mainly for make currying more simplify.  
 - All functions are using `arrow-function`, and **NOT** support context, if you want read the context, bind it before you use.
+- Many functions are [curried](#curried), but not all, detail below.
 
 ## Category introduction
 
@@ -37,7 +38,7 @@ Others such as
 ```js
 f.or('yes', false) // => false || yes => false
 
-f.gt(3, 4) // => 4 > 3 => false
+f.gt(3, 4) // => 4 > 3 => true
 ```
 
 ### Tools

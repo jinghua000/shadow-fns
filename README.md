@@ -19,6 +19,7 @@ Chasing for more simplify and singleness function.
 ## Keywords
 
 - Pure Function
+- Functional
 - Currying
 - Pointfree
 - No Context
@@ -26,7 +27,7 @@ Chasing for more simplify and singleness function.
 
 ## Usage
 
-**in browser:**
+### Browser
 
 ```html
 <script src="./dist/shadow-fns.min.js"></script>
@@ -42,7 +43,7 @@ f.identity(10) // => 10
 </script>
 ```
 
-**in node:**
+### Node
 
 ```bash
 npm i -D shadow-fns
@@ -93,7 +94,7 @@ const calc = pipe(add(2), multiply(2))
 calc(3) // => 10
 ```
 
-If you are using pack tools like webpack, you can import source code directly,
+If you are using packing tools like webpack, you can import source code directly,
 
 which can show the comments and jump to the source, will do much help to develop.  
 
@@ -105,10 +106,16 @@ import { * as f } from 'shadow-fns/src'
 
 You can check the [Full API documentation](https://github.com/jinghua000/shadow-fns/blob/master/doc/README.md).
 
-And I propose you read the [Usage Instruction](https://github.com/jinghua000/shadow-fns/blob/master/doc/USAGE_INSTRUCTION.md),
+And I propose you to read the [Usage Instruction](https://github.com/jinghua000/shadow-fns/blob/master/doc/USAGE_INSTRUCTION.md),
 it will be helpful.
 
 And if you'd like to contribute, see the [Contributing Guide](https://github.com/jinghua000/shadow-fns/blob/master/CONTRIBUTING.md).
+
+And [ChangeLog](https://github.com/jinghua000/shadow-fns/blob/master/CHANGELOG.md) is here.
+
+## Try
+
+[Click Me!](https://jinghua000.github.io/shadow-fns/index.html)
 
 ## Reference
 
