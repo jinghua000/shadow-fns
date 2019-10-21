@@ -9,6 +9,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {Array} [thisArg]
  * @param {Array} data
  * @return {Number}
+ * @since 0.1.0
  * @category Native
  * @sign (a -> Boolean) -> [a] -> Number
  * @see find

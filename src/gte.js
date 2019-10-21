@@ -8,6 +8,7 @@ import _curry2 from './internal/_curry2'
  * @param {*} x 
  * @param {*} e 
  * @return {Boolean}
+ * @since 0.1.0
  * @category Logic, curried
  * @sign a -> a -> Boolean
  * @see lte, gt

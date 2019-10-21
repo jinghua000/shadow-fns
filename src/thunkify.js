@@ -7,6 +7,7 @@
  * @param {Function} fn 
  * @param {*} args
  * @return {Function}
+ * @since 0.1.0
  * @category Function
  * @sign ((a, b, ..., z) -> res) -> (a, b, ..., z) -> () -> res
  * @see partial, partialRight

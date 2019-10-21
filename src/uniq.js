@@ -6,6 +6,7 @@
  * @param {Array} arr 
  * @return {Array}
  * @category Array
+ * @since 0.1.0
  * @sign Array -> Array
  * @see difference, intersection, union
  * @example

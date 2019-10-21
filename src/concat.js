@@ -9,6 +9,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {...(Array|String)} args
  * @param {Array|String} data
  * @return {Array|String}
+ * @since 0.1.0
  * @category Native
  * @sign ...a -> a -> a
  * @example

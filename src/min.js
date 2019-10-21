@@ -7,6 +7,7 @@ import _curry2 from './internal/_curry2'
  * @param {Number|String} b 
  * @return {Number|String}
  * @category Logic, curried
+ * @since 0.1.0
  * @sign (a, a) -> a
  * @see max
  * @example

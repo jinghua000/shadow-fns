@@ -8,6 +8,7 @@ import _curry2 from './internal/_curry2'
  * @param {Function} tryer 
  * @param {Function} catcher 
  * @return {Function}
+ * @since 0.1.0
  * @category Tools, curried
  * @sign (...a -> b, ...a -> c) -> (...a -> b | c)
  * @example

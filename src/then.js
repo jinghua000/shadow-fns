@@ -9,6 +9,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {Function} [fn2]
  * @param {Promise} data 
  * @return {Promise}
+ * @since 0.1.0
  * @category Native
  * @sign (Function, Function?) -> Promise -> Promise
  * @see catch

@@ -3,6 +3,7 @@
  * 
  * @param {*} _ 
  * @return {Boolean}
+ * @since 0.1.0
  * @category Logic
  * @sign x -> Boolean
  * @see F

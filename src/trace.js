@@ -10,6 +10,7 @@ import _curry2 from './internal/_curry2'
  * @param {String} tag 
  * @param {*} x 
  * @return {*}
+ * @since 0.1.0
  * @category Tools, curried
  * @sign String -> a -> a
  * @example

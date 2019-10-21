@@ -8,6 +8,7 @@ import _curry2 from './internal/_curry2'
  * @param {Number} index 
  * @param {String|Array} list
  * @return {*}
+ * @since 0.1.0
  * @category Tools
  * @sign Number -> String -> String
  * @sign Number -> [a] -> a

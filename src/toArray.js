@@ -5,6 +5,7 @@
  * 
  * @param {*} data 
  * @return {Array}
+ * @since 0.1.0
  * @category Tools
  * @sign a -> [a]
  * @sign [a] -> [a]

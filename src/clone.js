@@ -11,6 +11,7 @@ import tap from './tap'
  * 
  * @param {*} data 
  * @return {*}
+ * @since 0.1.0
  * @category Tools
  * @sign a -> a
  * @example

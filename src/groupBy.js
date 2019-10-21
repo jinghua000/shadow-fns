@@ -10,6 +10,7 @@ import tap from './tap'
  * @param {Function} fn 
  * @param {Array} arr
  * @return {Object}
+ * @since 0.1.0
  * @category Array, curried
  * @sign (a -> b) -> [a] -> { b: [a] }
  * @example

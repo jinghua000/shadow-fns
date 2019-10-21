@@ -9,6 +9,7 @@ import _curry2 from './internal/_curry2'
  * @param {Function} fn2 
  * @param {...*} args
  * @return {*}
+ * @since 0.1.0
  * @category Tools, curried
  * @sign (...x -> a) -> (...x -> b) -> (...x -> a | b)
  * @see either, everyPass

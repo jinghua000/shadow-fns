@@ -18,6 +18,7 @@ import _curry2 from './internal/_curry2'
  * @param {Function} fn 
  * @param {*} e
  * @return {*}
+ * @since 0.1.0
  * @category Tools, curried
  * @sign (a -> x) -> a -> a
  * @example

@@ -10,6 +10,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {Number} [position]
  * @param {Array|String} data
  * @return {Boolean}
+ * @since 0.1.0
  * @category Native
  * @sign x -> [a] -> Boolean
  * @sign x -> a -> Boolean

@@ -15,6 +15,7 @@ import _curry3 from './internal/_curry3'
  * @param {*} def 
  * @param {Object} obj
  * @return {*}
+ * @since 0.1.0
  * @category Object, curried
  * @sign (a, b) -> Object -> a | b
  * @see prop, propEq

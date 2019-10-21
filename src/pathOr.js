@@ -10,6 +10,7 @@ import path from './path'
  * @param {*} def 
  * @param {Object} obj
  * @return {*}
+ * @since 0.1.0
  * @category Object, curried
  * @sign (Array, a) -> Object -> x | a
  * @see path, pathEq

@@ -8,6 +8,7 @@ import _curry2 from './internal/_curry2'
  * @param {*} key
  * @param {Object} obj
  * @return {*}
+ * @since 0.1.0
  * @category Object, curried
  * @sign x -> Object -> x
  * @see props, propOr, propEq

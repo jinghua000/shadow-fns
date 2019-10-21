@@ -5,8 +5,9 @@ import uncurryN from './uncurryN'
  * 
  * @param {Function} fn 
  * @return {Function}
- * @sign (a -> b -> ... -> z -> result) -> (a, b, ..., z) -> result
+ * @since 0.1.0
  * @category Function
+ * @sign (a -> b -> ... -> z -> result) -> (a, b, ..., z) -> result
  * @see uncurryN, curry
  * @example
  * 

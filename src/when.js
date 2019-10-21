@@ -9,6 +9,7 @@ import _curry3 from './internal/_curry3'
  * @param {Function} handler 
  * @param {*} x
  * @return {*}
+ * @since 0.1.0
  * @category Tools, curried
  * @sign (a -> b, a -> c, a) -> a | c
  * @see unless, ifElse, cond

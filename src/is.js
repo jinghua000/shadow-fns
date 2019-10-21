@@ -9,6 +9,7 @@ import isNil from './isNil'
  * @param {Function} constructor 
  * @param {*} e 
  * @return {Boolean}
+ * @since 0.1.0
  * @category Tools, curried
  * @sign Function -> x -> Boolean
  * @see type

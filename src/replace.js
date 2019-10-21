@@ -11,6 +11,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {String|Function} arg2
  * @param {String} str
  * @return {String}
+ * @since 0.1.0
  * @category Native
  * @sing (String | RegExp, String | Function) -> String ->String
  * @example

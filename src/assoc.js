@@ -9,6 +9,7 @@ import _curry3 from './internal/_curry3'
  * @param {*} val 
  * @param {Object} obj 
  * @return {Object}
+ * @since 0.1.0
  * @category Object, curried
  * @sign x -> x -> Object -> Object
  * @see dissoc

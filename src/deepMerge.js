@@ -10,6 +10,7 @@ import type from './type'
  * 
  * @param {...Object} args 
  * @return {Object}
+ * @since 0.1.0
  * @category Object
  * @sign ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }
  * @example

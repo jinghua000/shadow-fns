@@ -3,6 +3,7 @@
  * 
  * @param {String|Array} list
  * @return {*}
+ * @since 0.1.0
  * @category Tools
  * @sign String -> String
  * @sign [a] -> a

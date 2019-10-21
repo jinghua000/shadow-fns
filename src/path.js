@@ -11,6 +11,7 @@ import isNil from './isNil'
  * @param {Array} arr 
  * @param {Object} obj
  * @return {*} 
+ * @since 0.1.0
  * @category Object, curried
  * @sign Array -> Object -> x
  * @see pathOr, pathEq

@@ -9,8 +9,10 @@ import _curry2 from './internal/_curry2'
  * @param {Function} fn 
  * @param {Array} args
  * @return {*}
+ * @since 0.1.0
  * @category Function, curried
  * @sign (...x -> a) -> [x] -> a
+ * @see call
  * @example 
  * 
  * let print = (...args) => args

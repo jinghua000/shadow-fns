@@ -10,6 +10,7 @@ import _curry2 from './internal/_curry2'
  * @param {*} a 
  * @param {*} b 
  * @return {Number}
+ * @since 0.1.0
  * @category Logic, curried
  * @sign a -> a -> Number
  * @see desc, ascend

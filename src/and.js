@@ -10,6 +10,7 @@ import _curry2 from './internal/_curry2'
  * @param {*} x
  * @param {*} e
  * @return {*}
+ * @since 0.1.0
  * @category Logic, curried
  * @sign a -> b -> b | a
  * @see or

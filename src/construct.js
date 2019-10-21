@@ -6,6 +6,7 @@
  * @param {Function} constructor 
  * @param {...*} args
  * @return {Object}
+ * @since 0.1.0
  * @category Function
  * @sign (...x -> a) -> (...x) -> a
  * @example

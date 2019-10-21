@@ -7,6 +7,7 @@
  * 
  * @param  {...Object} args 
  * @return {Object}
+ * @since 0.1.0
  * @category Object
  * @sign (Object, ...) -> Object
  * @example
