@@ -189,7 +189,7 @@ f.F(null) // => fasle
 ```
   
 
-[View source](../src/F.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/F.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="T"></a>
 
@@ -213,7 +213,7 @@ f.T(null) // => true
 ```
   
 
-[View source](../src/T.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/T.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="VERSION"></a>
 
@@ -228,7 +228,7 @@ f.VERSION // => 0.1.4
 ```
   
 
-[View source](../src/VERSION.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/VERSION.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="add"></a>
 
@@ -255,7 +255,7 @@ f.add(undefined)(undefined) // => NaN
 ```
   
 
-[View source](../src/add.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/add.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="after"></a>
 
@@ -291,7 +291,7 @@ fn()
 ```
   
 
-[View source](../src/after.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/after.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="always"></a>
 
@@ -318,7 +318,7 @@ f.always(obj)() === obj // => true
 ```
   
 
-[View source](../src/always.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/always.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="and"></a>
 
@@ -347,7 +347,7 @@ f.and('aaa')(0) // => 0
 ```
   
 
-[View source](../src/and.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/and.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="apply"></a>
 
@@ -376,7 +376,7 @@ fn([1, 2, 3]) // => [1, 2, 3]
 ```
   
 
-[View source](../src/apply.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/apply.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="applyTo"></a>
 
@@ -403,7 +403,7 @@ applyTo(fn2) // => 'abc'
 ```
   
 
-[View source](../src/applyTo.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/applyTo.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="asc"></a>
 
@@ -432,7 +432,7 @@ f.sort(f.asc)(arr) // => [1,2,3,4,5]
 ```
   
 
-[View source](../src/asc.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/asc.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="ascend"></a>
 
@@ -470,7 +470,7 @@ sortByAge(users)
 ```
   
 
-[View source](../src/ascend.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/ascend.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="assoc"></a>
 
@@ -496,7 +496,7 @@ f.assoc('b', 234)(obj) // => { a: 123, b: 234 }
 ```
   
 
-[View source](../src/assoc.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/assoc.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="before"></a>
 
@@ -532,7 +532,7 @@ fn()
 ```
   
 
-[View source](../src/before.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/before.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="binary"></a>
 
@@ -558,7 +558,7 @@ printTwo(1, 2, 3) // => [1, 2, undefined]
 ```
   
 
-[View source](../src/binary.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/binary.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="both"></a>
 
@@ -586,7 +586,7 @@ isBetween(11) // => false
 ```
   
 
-[View source](../src/both.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/both.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="cacheWith"></a>
 
@@ -621,7 +621,7 @@ add(2) // => 3
 ```
   
 
-[View source](../src/cacheWith.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/cacheWith.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="call"></a>
 
@@ -652,7 +652,7 @@ f.call(Number)('1') // => ERROR!
 ```
   
 
-[View source](../src/call.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/call.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="catch"></a>
 
@@ -680,7 +680,7 @@ getName(fetchData()).then(console.log) // => logs: Eric
 ```
   
 
-[View source](../src/catch.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/catch.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="clone"></a>
 
@@ -707,7 +707,7 @@ arr[0] === arr2[0] // => false
 ```
   
 
-[View source](../src/clone.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/clone.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="compact"></a>
 
@@ -741,7 +741,7 @@ f.compact(' i have a plan ') // => ihaveaplan
 ```
   
 
-[View source](../src/compact.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/compact.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="concat"></a>
 
@@ -770,7 +770,7 @@ f.concat(4, [5])(arr) // => [1, 2, 3, 4, 5]
 ```
   
 
-[View source](../src/concat.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/concat.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="cond"></a>
 
@@ -807,7 +807,7 @@ judgeMan(man2.point) // => 'unless man'
 ```
   
 
-[View source](../src/cond.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/cond.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="construct"></a>
 
@@ -834,7 +834,7 @@ makeAnimal('Rabbit') // => new Animal('Rabbit')
 ```
   
 
-[View source](../src/construct.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/construct.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="curry"></a>
 
@@ -866,7 +866,7 @@ fn(1)(2)(3)(4) // => 10
 ```
   
 
-[View source](../src/curry.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/curry.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="curryN"></a>
 
@@ -899,7 +899,7 @@ join3(1)(2)(3) // => '123'
 ```
   
 
-[View source](../src/curryN.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/curryN.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="debounce"></a>
 
@@ -934,7 +934,7 @@ setTimeout(() => console.log(num), 120) // logs 1 after 120 ms
 ```
   
 
-[View source](../src/debounce.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/debounce.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="deepMerge"></a>
 
@@ -963,7 +963,7 @@ f.deepMerge(obj1, obj2) // => { a: { a: 234, b: 234 } }
 ```
   
 
-[View source](../src/deepMerge.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/deepMerge.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="desc"></a>
 
@@ -992,7 +992,7 @@ f.sort(f.desc)(arr) // => [5,4,3,2,1]
 ```
   
 
-[View source](../src/desc.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/desc.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="descend"></a>
 
@@ -1030,7 +1030,7 @@ sortByAgeDesc(users)
 ```
   
 
-[View source](../src/descend.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/descend.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="difference"></a>
 
@@ -1064,7 +1064,7 @@ f.difference(arr1)(arr2) // => [7, 1]
 ```
   
 
-[View source](../src/difference.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/difference.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="dissoc"></a>
 
@@ -1089,7 +1089,7 @@ f.dissoc('b')(obj) // => { a: 123 }
 ```
   
 
-[View source](../src/dissoc.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/dissoc.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="divide"></a>
 
@@ -1117,7 +1117,7 @@ divide3(12) // => 4
 ```
   
 
-[View source](../src/divide.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/divide.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="either"></a>
 
@@ -1147,7 +1147,7 @@ isSatisfied(20) // => true
 ```
   
 
-[View source](../src/either.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/either.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="endsWith"></a>
 
@@ -1175,7 +1175,7 @@ f.endsWith('plan')(str) // => true
 ```
   
 
-[View source](../src/endsWith.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/endsWith.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="eq"></a>
 
@@ -1199,7 +1199,7 @@ f.eq({})({}) // => false
 ```
   
 
-[View source](../src/eq.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/eq.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="equals"></a>
 
@@ -1230,7 +1230,7 @@ f.equals({ a: 123 })({ a: 123 }) // => true
 ```
   
 
-[View source](../src/equals.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/equals.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="every"></a>
 
@@ -1259,7 +1259,7 @@ everyGreaterThan3([4, 5, 6]) // => true
 ```
   
 
-[View source](../src/every.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/every.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="everyPass"></a>
 
@@ -1287,7 +1287,7 @@ everyPass(20) // => true
 ```
   
 
-[View source](../src/everyPass.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/everyPass.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="filter"></a>
 
@@ -1316,7 +1316,7 @@ greaterThan3(arr) // => [4, 5]
 ```
   
 
-[View source](../src/filter.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/filter.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="find"></a>
 
@@ -1345,7 +1345,7 @@ firstBiggerThan2(arr) // => 3
 ```
   
 
-[View source](../src/find.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/find.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="findIndex"></a>
 
@@ -1374,7 +1374,7 @@ firstIndexBiggerThan2(arr) // => 1
 ```
   
 
-[View source](../src/findIndex.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/findIndex.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="first"></a>
 
@@ -1401,7 +1401,7 @@ f.first(arr) // => 1
 ```
   
 
-[View source](../src/first.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/first.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="flatten"></a>
 
@@ -1428,7 +1428,7 @@ f.flatten(arr) // => [1, 2, 3, 4, 5]
 ```
   
 
-[View source](../src/flatten.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/flatten.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="flip"></a>
 
@@ -1453,7 +1453,7 @@ flipPrint(1, 2, 3) // => [3, 2, 1]
 ```
   
 
-[View source](../src/flip.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/flip.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="forEach"></a>
 
@@ -1487,7 +1487,7 @@ logElems([1, 2, 3]) // => [1, 2, 3]
 ```
   
 
-[View source](../src/forEach.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/forEach.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="fromPairs"></a>
 
@@ -1512,7 +1512,7 @@ f.fromPairs([['a', 1], ['b', 2], ['a', 3]]) // => { a: 3, b: 2 }
 ```
   
 
-[View source](../src/fromPairs.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/fromPairs.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="groupBy"></a>
 
@@ -1541,7 +1541,7 @@ group(arr)
 ```
   
 
-[View source](../src/groupBy.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/groupBy.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="gt"></a>
 
@@ -1570,7 +1570,7 @@ greaterThan5(4) // => false
 ```
   
 
-[View source](../src/gt.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/gt.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="gte"></a>
 
@@ -1599,7 +1599,7 @@ greaterOrEuqal5(4) // => false
 ```
   
 
-[View source](../src/gte.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/gte.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="has"></a>
 
@@ -1627,7 +1627,7 @@ hasA({ b: 123 }) // => fasle
 ```
   
 
-[View source](../src/has.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/has.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="hasPath"></a>
 
@@ -1655,7 +1655,7 @@ hasPath({ b: 123 }) // => false
 ```
   
 
-[View source](../src/hasPath.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/hasPath.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="identity"></a>
 
@@ -1682,7 +1682,7 @@ f.identity(obj) === obj // => true
 ```
   
 
-[View source](../src/identity.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/identity.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="ifElse"></a>
 
@@ -1710,7 +1710,7 @@ check3(1) // => 'so small'
 ```
   
 
-[View source](../src/ifElse.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/ifElse.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="includes"></a>
 
@@ -1741,7 +1741,7 @@ includes('i say no!') // => false
 ```
   
 
-[View source](../src/includes.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/includes.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="indexOf"></a>
 
@@ -1772,7 +1772,7 @@ findIndexA(['b', 'c', 'd']) // => -1
 ```
   
 
-[View source](../src/indexOf.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/indexOf.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="intersection"></a>
 
@@ -1806,7 +1806,7 @@ f.intersection(arr1)(arr2) // => [5, 3]
 ```
   
 
-[View source](../src/intersection.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/intersection.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="is"></a>
 
@@ -1838,7 +1838,7 @@ f.is(String)(10) // => false
 ```
   
 
-[View source](../src/is.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/is.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="isEmpty"></a>
 
@@ -1863,7 +1863,7 @@ f.isEmpty([undefined]) // => false
 ```
   
 
-[View source](../src/isEmpty.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/isEmpty.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="isExist"></a>
 
@@ -1888,7 +1888,7 @@ f.isExist({}) // => true
 ```
   
 
-[View source](../src/isExist.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/isExist.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="isNil"></a>
 
@@ -1912,7 +1912,7 @@ f.isNil('undefined') // => false
 ```
   
 
-[View source](../src/isNil.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/isNil.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="join"></a>
 
@@ -1939,7 +1939,7 @@ f.join(' ')(arr) // => 'i have a plan'
 ```
   
 
-[View source](../src/join.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/join.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="keys"></a>
 
@@ -1965,7 +1965,7 @@ keys(obj) // => ['a', 'b', 'c']
 ```
   
 
-[View source](../src/keys.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/keys.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="last"></a>
 
@@ -1992,7 +1992,7 @@ f.last(arr) // => 5
 ```
   
 
-[View source](../src/last.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/last.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="lastIndexOf"></a>
 
@@ -2023,7 +2023,7 @@ findIndexA(['b', 'c', 'd']) // => -1
 ```
   
 
-[View source](../src/lastIndexOf.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/lastIndexOf.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="length"></a>
 
@@ -2045,7 +2045,7 @@ f.length('abc') // => 3
 ```
   
 
-[View source](../src/length.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/length.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="lt"></a>
 
@@ -2074,7 +2074,7 @@ lessThan5(4) // => true
 ```
   
 
-[View source](../src/lt.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/lt.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="lte"></a>
 
@@ -2103,7 +2103,7 @@ lessOrEqual5(4) // => true
 ```
   
 
-[View source](../src/lte.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/lte.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="map"></a>
 
@@ -2130,7 +2130,7 @@ mapSquare([1, 2, 3]) // => [2, 4, 6]
 ```
   
 
-[View source](../src/map.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/map.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="mapObj"></a>
 
@@ -2161,7 +2161,7 @@ everyAdd1(obj) // => { a: 2, b: 3, c: 4 }
 ```
   
 
-[View source](../src/mapObj.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/mapObj.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="match"></a>
 
@@ -2189,7 +2189,7 @@ matchAll('{aa}-{bb}-{cc}')
 ```
   
 
-[View source](../src/match.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/match.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="max"></a>
 
@@ -2214,7 +2214,7 @@ arr.reduce(f.max) // => 10
 ```
   
 
-[View source](../src/max.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/max.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="merge"></a>
 
@@ -2242,7 +2242,7 @@ f.merge(obj1, obj2) // => { a: 123, b: 234 }
 ```
   
 
-[View source](../src/merge.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/merge.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="min"></a>
 
@@ -2267,7 +2267,7 @@ arr.reduce(f.min) // => 1
 ```
   
 
-[View source](../src/min.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/min.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="move"></a>
 
@@ -2299,7 +2299,7 @@ f.move(-100, 100, arr) // => [1, 2, 3, 4]
 ```
   
 
-[View source](../src/move.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/move.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="multiply"></a>
 
@@ -2327,7 +2327,7 @@ multiply3(3) // => 9
 ```
   
 
-[View source](../src/multiply.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/multiply.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="nAry"></a>
 
@@ -2354,7 +2354,7 @@ printTwo(1, 2, 3) // => [1, 2, undefined]
 ```
   
 
-[View source](../src/nAry.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/nAry.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="none"></a>
 
@@ -2382,7 +2382,7 @@ noneGreaterThan3([2, 3, 4]) // => false
 ```
   
 
-[View source](../src/none.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/none.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="not"></a>
 
@@ -2405,7 +2405,7 @@ f.not(null) // => true
 ```
   
 
-[View source](../src/not.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/not.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="nth"></a>
 
@@ -2437,7 +2437,7 @@ f.nth(-1)(arr) // => 5
 ```
   
 
-[View source](../src/nth.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/nth.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="omit"></a>
 
@@ -2466,7 +2466,7 @@ omit(obj) // => { c: 3 }
 ```
   
 
-[View source](../src/omit.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/omit.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="once"></a>
 
@@ -2496,7 +2496,7 @@ addOnce(30) // => 11
 ```
   
 
-[View source](../src/once.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/once.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="opposite"></a>
 
@@ -2521,7 +2521,7 @@ arr.filter(f.opposite(gt3)) // => [1, 2, 3]
 ```
   
 
-[View source](../src/opposite.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/opposite.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="or"></a>
 
@@ -2550,7 +2550,7 @@ f.or('aaa')(0) // => 'aaa'
 ```
   
 
-[View source](../src/or.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/or.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="partial"></a>
 
@@ -2579,7 +2579,7 @@ sumAB('d') // => 'abd'
 ```
   
 
-[View source](../src/partial.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/partial.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="partialRight"></a>
 
@@ -2608,7 +2608,7 @@ sumAB('d') // => 'dab'
 ```
   
 
-[View source](../src/partialRight.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/partialRight.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="path"></a>
 
@@ -2640,7 +2640,7 @@ readPath(obj2) // => undefined
 ```
   
 
-[View source](../src/path.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/path.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="pathEq"></a>
 
@@ -2669,7 +2669,7 @@ checkPath({ a: { a: 123 } }) // => true
 ```
   
 
-[View source](../src/pathEq.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/pathEq.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="pathOr"></a>
 
@@ -2698,7 +2698,7 @@ readPathOr({ a: { a: 'yes' } }) // => yes!
 ```
   
 
-[View source](../src/pathOr.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/pathOr.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="pick"></a>
 
@@ -2728,7 +2728,7 @@ pickAB(obj) // => { a: 123, b: 234 }
 ```
   
 
-[View source](../src/pick.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/pick.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="pickBy"></a>
 
@@ -2760,7 +2760,7 @@ pickBy(obj) // => { b: 2, c: 3 }
 ```
   
 
-[View source](../src/pickBy.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/pickBy.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="pipe"></a>
 
@@ -2790,7 +2790,7 @@ calc(3) // => 8
 ```
   
 
-[View source](../src/pipe.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/pipe.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="pipeAsync"></a>
 
@@ -2822,7 +2822,7 @@ addABC('').then(console.log) // => after 300 ms logs: 'abc'
 ```
   
 
-[View source](../src/pipeAsync.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/pipeAsync.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="prop"></a>
 
@@ -2854,7 +2854,7 @@ getB(b) // => undefined
 ```
   
 
-[View source](../src/prop.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/prop.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="propEq"></a>
 
@@ -2887,7 +2887,7 @@ checkEq(obj2) // => false
 ```
   
 
-[View source](../src/propEq.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/propEq.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="propOr"></a>
 
@@ -2922,7 +2922,7 @@ readA({}) // => false
 ```
   
 
-[View source](../src/propOr.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/propOr.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="props"></a>
 
@@ -2950,7 +2950,7 @@ f.props(['a', 'b', 'c', 'd'])(obj)
 ```
   
 
-[View source](../src/props.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/props.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="random"></a>
 
@@ -2979,7 +2979,7 @@ f.random(1, 10) // => 10
 ```
   
 
-[View source](../src/random.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/random.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="reduce"></a>
 
@@ -3006,7 +3006,7 @@ sum([1, 2, 3]) // => 6
 ```
   
 
-[View source](../src/reduce.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/reduce.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="reject"></a>
 
@@ -3034,7 +3034,7 @@ notGreaterThan3(arr) // => [1, 2, 3]
 ```
   
 
-[View source](../src/reject.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/reject.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="replace"></a>
 
@@ -3064,7 +3064,7 @@ replace('yes yes i will yes')
 ```
   
 
-[View source](../src/replace.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/replace.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="reverse"></a>
 
@@ -3093,7 +3093,7 @@ f.reverse(arr) // [3, 2, 1]
 ```
   
 
-[View source](../src/reverse.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/reverse.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="shuffle"></a>
 
@@ -3118,7 +3118,7 @@ f.shuffle(arr) // => [2, 3, 1]
 ```
   
 
-[View source](../src/shuffle.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/shuffle.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="sleep"></a>
 
@@ -3144,7 +3144,7 @@ sleepOneSec('hello').then(fn)
 ```
   
 
-[View source](../src/sleep.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/sleep.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="slice"></a>
 
@@ -3173,7 +3173,7 @@ slice2('abced') // => 'ce'
 ```
   
 
-[View source](../src/slice.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/slice.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="some"></a>
 
@@ -3202,7 +3202,7 @@ someGreaterThan3([1, 2, 3]) // => false
 ```
   
 
-[View source](../src/some.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/some.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="somePass"></a>
 
@@ -3232,7 +3232,7 @@ somePass(3) // => false
 ```
   
 
-[View source](../src/somePass.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/somePass.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="sort"></a>
 
@@ -3263,7 +3263,7 @@ sortAsc([10, 9, 1, 3, 2]) // => [1, 2, 3, 9, 10]
 ```
   
 
-[View source](../src/sort.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/sort.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="sortWith"></a>
 
@@ -3312,7 +3312,7 @@ sortMethod(users)
 ```
   
 
-[View source](../src/sortWith.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/sortWith.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="splice"></a>
 
@@ -3347,7 +3347,7 @@ replaceTwo(arr) // => ['one', 'two', 'two', 'four']
 ```
   
 
-[View source](../src/splice.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/splice.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="split"></a>
 
@@ -3376,7 +3376,7 @@ splitWithBlank(str) // => ['i', 'have', 'a', 'plan']
 ```
   
 
-[View source](../src/split.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/split.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="startsWith"></a>
 
@@ -3404,7 +3404,7 @@ f.startsWith('i have')(str) // => true
 ```
   
 
-[View source](../src/startsWith.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/startsWith.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="subtract"></a>
 
@@ -3430,7 +3430,7 @@ f.subtract(3)('a') // => NaN
 ```
   
 
-[View source](../src/subtract.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/subtract.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="sum"></a>
 
@@ -3454,7 +3454,7 @@ f.sum(['a', 'b', 'c', 'd']) // => abcd
 ```
   
 
-[View source](../src/sum.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/sum.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="tap"></a>
 
@@ -3490,7 +3490,7 @@ f.tap(fn)({}) // => { a: 123 }
 ```
   
 
-[View source](../src/tap.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/tap.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="test"></a>
 
@@ -3521,7 +3521,7 @@ test('goodbye world') // => false
 ```
   
 
-[View source](../src/test.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/test.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="then"></a>
 
@@ -3550,7 +3550,7 @@ getName(fetchData()).then(console.log) // => logs: Eric
 ```
   
 
-[View source](../src/then.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/then.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="throttle"></a>
 
@@ -3588,7 +3588,7 @@ setTimeout(() => console.log(num), 150) // logs 2 after 150 ms
 ```
   
 
-[View source](../src/throttle.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/throttle.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="thunkify"></a>
 
@@ -3617,7 +3617,7 @@ waitSum() // => 'abc'
 ```
   
 
-[View source](../src/thunkify.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/thunkify.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="times"></a>
 
@@ -3642,7 +3642,7 @@ id3(1) // => [1, 1, 1]
 ```
   
 
-[View source](../src/times.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/times.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="toArray"></a>
 
@@ -3666,7 +3666,7 @@ f.toArray(['hello']) // => ['hello']
 ```
   
 
-[View source](../src/toArray.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/toArray.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="toLower"></a>
 
@@ -3694,7 +3694,7 @@ f.toLower(str) // => 'abc'
 ```
   
 
-[View source](../src/toLower.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/toLower.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="toPairs"></a>
 
@@ -3719,7 +3719,7 @@ f.toPairs({ a: 1, b: 2 }) // => [['a', 1], ['b', 2]]
 ```
   
 
-[View source](../src/toPairs.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/toPairs.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="toUpper"></a>
 
@@ -3747,7 +3747,7 @@ f.toUpper(str) // => 'ABC'
 ```
   
 
-[View source](../src/toUpper.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/toUpper.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="trace"></a>
 
@@ -3784,7 +3784,7 @@ add3(3)
 ```
   
 
-[View source](../src/trace.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/trace.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="trim"></a>
 
@@ -3811,7 +3811,7 @@ f.trim(str) // => 'i have a plan'
 ```
   
 
-[View source](../src/trim.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/trim.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="tryCatch"></a>
 
@@ -3838,7 +3838,7 @@ parse({ a: 1 }) // => {}
 ```
   
 
-[View source](../src/tryCatch.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/tryCatch.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="type"></a>
 
@@ -3864,7 +3864,7 @@ f.type('') // => String
 ```
   
 
-[View source](../src/type.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/type.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="unary"></a>
 
@@ -3889,7 +3889,7 @@ arr.map(f.unary(parseInt)) // => [1, 2, 3]
 ```
   
 
-[View source](../src/unary.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/unary.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="uncurry"></a>
 
@@ -3914,7 +3914,7 @@ fn('a', 'b', 'c') // => 'abc'
 ```
   
 
-[View source](../src/uncurry.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/uncurry.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="uncurryN"></a>
 
@@ -3941,7 +3941,7 @@ fn('a', 'b')('c') // => 'abc'
 ```
   
 
-[View source](../src/uncurryN.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/uncurryN.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="union"></a>
 
@@ -3973,7 +3973,7 @@ f.union(arr1)(arr2) // => [2, 3, 4, 1]
 ```
   
 
-[View source](../src/union.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/union.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="uniq"></a>
 
@@ -3999,7 +3999,7 @@ f.uniq(arr) // => [1, 2, NaN]
 ```
   
 
-[View source](../src/uniq.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/uniq.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="unless"></a>
 
@@ -4028,7 +4028,7 @@ cannotBelow3(1) // => 'so small'
 ```
   
 
-[View source](../src/unless.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/unless.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="values"></a>
 
@@ -4054,7 +4054,7 @@ f.values(obj) // => [1, 2, 3]
 ```
   
 
-[View source](../src/values.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/values.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="when"></a>
 
@@ -4083,7 +4083,7 @@ cannotOver3(1) // => 1
 ```
   
 
-[View source](../src/when.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+[View source](../src/when.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
   
 
