@@ -3,29 +3,20 @@ const f = require('../src')
 
 describe('test toArray', function () {
   
-  it('test not array', function () {
+  it('parameter is not array will return a array of it', function () {
 
     equals(f.toArray('fff'), ['fff'])
     equals(f.toArray(null), [null])
 
   })
 
-  it('test array', function () {
+  it('pass array will return self', function () {
 
-    equals(f.toArray([1, 2, 3]), [1, 2, 3])
-    equals(f.toArray([1, 2, [3]]), [1, 2, [3]])
+    let arr = [1, 2, 3]
+    let arr1 = [1, 2, [3]]
 
-  })
-
-  it('shallow copy', function () {
-
-    let arr = [{}]
-    let arr2 = f.toArray(arr)
-
-    arr2[0].a = 123
-
-    equals(arr, [{ a: 123 }])
-    equals(arr2, [{ a: 123 }])
+    equals(f.toArray(arr), arr)
+    equals(f.toArray(arr1), arr1)
 
   })
 

@@ -3,7 +3,7 @@
  * 
  * Return a new array
  * 
- * **NOTE:** Shallow copy
+ * **NOTE:** Shallow Copy
  * 
  * @param {Array} arr 
  * @return {Array}

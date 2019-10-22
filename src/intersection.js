@@ -9,6 +9,8 @@ import uniq from './uniq'
  * Order from second to first
  * 
  * Use `Array.prototype.includes`
+ * 
+ * **NOTE:** Shallow Copy
  *  
  * @param {Array} arrx 
  * @param {Array} arr

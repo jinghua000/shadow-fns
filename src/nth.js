@@ -23,6 +23,6 @@ import _curry2 from './internal/_curry2'
  * f.nth(5)(arr) // => undefined
  * f.nth(-1)(arr) // => 5
  */
-const nth = _curry2((index, list) => index < 0 ? list[list.length + index] : list[index])
+const nth = _curry2((index, list) => list[index < 0 ? list.length + index : index])
 
 export default nth

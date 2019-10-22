@@ -5,17 +5,15 @@ describe('test add', function () {
   
   it('add number', function () {
 
-    let res
-    res = f.add(1)(2)
-    eq(res, 3)
+    eq(f.add(1)(2), 3)
+    eq(f.add(1, -2), -1)
+    eq(f.add(-1, -2), -3)
     
   })
 
   it('add string, second add the first', function () {
 
-    let res
-    res = f.add('a')('b')
-    eq(res, 'ba')
+    eq(f.add('a')('b'), 'ba')
 
   })
 

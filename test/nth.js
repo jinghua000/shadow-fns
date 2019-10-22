@@ -23,4 +23,13 @@ describe('test nth', function () {
 
   })
 
+  it('out of range should return undefined', function () {
+
+    eq(f.nth(5, [1, 2, 3]), undefined)
+    eq(f.nth(5, '123'), undefined)
+    eq(f.nth(-5, [1, 2, 3]), undefined)
+    eq(f.nth(-5, '123'), undefined)
+
+  })
+
 })

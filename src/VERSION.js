@@ -4,8 +4,8 @@ import pkg from '../package.json'
  * Library's version
  * 
  * @type {String}
- * @category Other
  * @since 0.1.4
+ * @category Other
  * @example
  * 
  * f.VERSION // => 0.1.4

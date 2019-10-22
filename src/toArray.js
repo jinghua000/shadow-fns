@@ -1,7 +1,6 @@
 /**
- * If the parameter is array return a new shallow copy array
- * 
- * If not, return a array with it
+ * If the parameter is array return self,
+ * else, return a array with it.
  * 
  * @param {*} data 
  * @return {Array}
@@ -14,6 +13,6 @@
  * f.toArray('hello') // => ['hello']
  * f.toArray(['hello']) // => ['hello']
  */
-const toArray = data => Array.isArray(data) ? [].concat(data) : [data]
+const toArray = data => Array.isArray(data) ? data : [data]
 
 export default toArray

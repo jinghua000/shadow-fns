@@ -10,6 +10,8 @@ import uniq from './uniq'
  * 
  * Use `Array.prototype.includes`
  * 
+ * **NOTE:** Shallow Copy
+ * 
  * @param {Array} arrx 
  * @param {Array} arr
  * @return {Array}

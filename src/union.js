@@ -8,6 +8,8 @@ import uniq from './uniq'
  * 
  * Order from second to first
  * 
+ * **NOTE:** Shallow Copy
+ * 
  * @param {Array} arrx 
  * @param {Array} arr
  * @return {Array}
