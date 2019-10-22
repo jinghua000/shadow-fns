@@ -63,8 +63,10 @@
 
 - [difference](#difference)  
 - [flatten](#flatten)  
+- [fromPairs](#fromPairs)  
 - [groupBy](#groupBy)  
 - [intersection](#intersection)  
+- [move](#move)  
 - [none](#none)  
 - [reject](#reject)  
 - [shuffle](#shuffle)  
@@ -93,6 +95,7 @@
 - [propEq](#propEq)  
 - [propOr](#propOr)  
 - [props](#props)  
+- [toPairs](#toPairs)  
 
 
 ### Native 
@@ -1040,6 +1043,8 @@ Order from second to first
 
 Use `Array.prototype.includes`
 
+**NOTE:** Shallow Copy
+
 **Category**: [Array](#array), curried  
 **Sign**: Array -> Array -> Array  
 **See**: [intersection](#intersection), [union](#union), [uniq](#uniq)  
@@ -1405,7 +1410,7 @@ Deep flatten the array
 
 Return a new array
 
-**NOTE:** Shallow copy
+**NOTE:** Shallow Copy
 
 **Category**: [Array](#array)  
 **Sign**: Array -> Array  
@@ -1483,6 +1488,31 @@ logElems([1, 2, 3]) // => [1, 2, 3]
   
 
 [View source](../src/forEach.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+
+<a name="fromPairs"></a>
+
+## fromPairs ⇒ <code>Object</code>
+Convert the Array which seems like `[[key, value], ...]` to Object.
+
+If has multiple same keys, use the rightmost one.
+
+**Category**: [Array](#array)  
+**Sign**: [[k, v], ...] -> { k: v, ... }  
+**See**: [toPairs](#toPairs)  
+**Since**: 0.1.4  
+
+| Param | Type |
+| --- | --- |
+| arr | <code>Array</code> | 
+
+**Example**  
+```js
+f.fromPairs([['a', 1], ['b', 2], ['c', 3]]) // => { a: 1, b: 2, c: 3 }
+f.fromPairs([['a', 1], ['b', 2], ['a', 3]]) // => { a: 3, b: 2 }
+```
+  
+
+[View source](../src/fromPairs.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
 
 <a name="groupBy"></a>
 
@@ -1754,6 +1784,8 @@ Select unique elements both exist in one array and another
 Order from second to first
 
 Use `Array.prototype.includes`
+
+**NOTE:** Shallow Copy
 
 **Category**: [Array](#array), curried  
 **Sign**: Array -> Array -> Array  
@@ -2194,7 +2226,7 @@ Use `Object.assign` to merge the objects passed and return a new object
 **NOTE:** Shallow copy
 
 **Category**: [Object](#object)  
-**Sign**: (Object, ...) -> Object  
+**Sign**: ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }  
 **Since**: 0.1.0  
 
 | Param | Type |
@@ -2236,6 +2268,38 @@ arr.reduce(f.min) // => 1
   
 
 [View source](../src/min.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+
+<a name="move"></a>
+
+## move ⇒ <code>Array</code>
+Move the element of supplied array from `from` to `to`.
+
+Support negative index, 
+and if supplied index is out of range will return the origin array.
+
+**NOTE:** Shallow Copy
+
+**Category**: [Array](#array), curried  
+**Sign**: Number -> Number -> [a] -> [a]  
+**Since**: 0.1.4  
+
+| Param | Type |
+| --- | --- |
+| from | <code>Number</code> | 
+| to | <code>Number</code> | 
+| arr | <code>Array</code> | 
+
+**Example**  
+```js
+let arr = [1, 2, 3, 4]
+
+f.move(1, 2, arr) // => [1, 3, 2, 4]
+f.move(-1, 0, arr) // => [4, 1, 2, 3]
+f.move(-100, 100, arr) // => [1, 2, 3, 4]
+```
+  
+
+[View source](../src/move.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
 
 <a name="multiply"></a>
 
@@ -3583,9 +3647,8 @@ id3(1) // => [1, 1, 1]
 <a name="toArray"></a>
 
 ## toArray ⇒ <code>Array</code>
-If the parameter is array return a new shallow copy array
-
-If not, return a array with it
+If the parameter is array return self,
+else, return a array with it.
 
 **Category**: [Tools](#tools)  
 **Sign**: a -> [a]  
@@ -3632,6 +3695,31 @@ f.toLower(str) // => 'abc'
   
 
 [View source](../src/toLower.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+
+<a name="toPairs"></a>
+
+## toPairs ⇒ <code>Array</code>
+Convert the Object to Array like `[[key, value], ...]`.
+
+Only support own property,
+and not support Symbol keys.
+
+**Category**: [Object](#object)  
+**Sign**: ({ k: v, ... }) -> [[k, v], ...]  
+**See**: [fromPairs](#fromPairs)  
+**Since**: 0.1.4  
+
+| Param | Type |
+| --- | --- |
+| obj | <code>Object</code> | 
+
+**Example**  
+```js
+f.toPairs({ a: 1, b: 2 }) // => [['a', 1], ['b', 2]]
+```
+  
+
+[View source](../src/toPairs.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
 
 <a name="toUpper"></a>
 
@@ -3863,6 +3951,8 @@ Return a new uniq array
 Select unique elements either exist in one array or another
 
 Order from second to first
+
+**NOTE:** Shallow Copy
 
 **Category**: [Array](#array), curried  
 **Sign**: Array -> Array -> Array  

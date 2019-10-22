@@ -145,7 +145,7 @@ function generateAll () {
     let docArr = []
 
     Object.keys(f).sort(f.asc).forEach((key, index) => {
-      // if (!['add', 'toArray'].includes(key)) return
+      // if (!['toPairs', 'pick'].includes(key)) return
 
       const filePath = path.join(__dirname, `../src/${key}.js`)
 

@@ -13,7 +13,7 @@ Add
 Change
 
 - [toArray](./src/toArray.js) 
-  - `Before`: If supplied parameter is array, return shallow copy.
+  - `Before`: If supplied parameter is array, return array's shallow copy.
   - `After`: If supplied parameter is array, return self.
 
 ## v0.1.0 ~ v0.1.3 (20191016)
