@@ -5,6 +5,7 @@
  * 
  * @param {Object} obj 
  * @return {Array}
+ * @since 0.1.0
  * @category Native
  * @sign Object -> Array
  * @see values

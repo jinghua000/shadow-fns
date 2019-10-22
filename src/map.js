@@ -8,6 +8,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {Function} fn
  * @param {Array} [thisArg]
  * @param {Array} arr
+ * @since 0.1.0
  * @category Native
  * @return {Array}
  * @sign (a -> b) -> [a] -> [b]

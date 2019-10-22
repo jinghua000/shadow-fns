@@ -8,6 +8,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {String} [separator]
  * @param {Array} data
  * @return {String} 
+ * @since 0.1.0
  * @category Native
  * @sign String -> Array -> String
  * @see split

@@ -6,6 +6,7 @@
  * @param {...Function} fns
  * @param {...*} args
  * @return {Boolean}
+ * @since 0.1.0
  * @category Tools
  * @sign (...a -> b, ...a -> c, ...) -> (...a -> Boolean)
  * @see somePass, both

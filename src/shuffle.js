@@ -7,6 +7,7 @@ import random from './random'
  * 
  * @param {Array} arr
  * @return {Array}
+ * @since 0.1.0
  * @category Array
  * @sign [a] -> [a]
  * @example

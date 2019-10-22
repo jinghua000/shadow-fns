@@ -8,6 +8,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {RegExp} args
  * @param {String} str
  * @return {Array}
+ * @since 0.1.0
  * @category Native
  * @sign RegExp -> String -> Array
  * @see test

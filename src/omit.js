@@ -10,6 +10,7 @@ import tap from './tap'
  * @param {Array} keys 
  * @param {Object} obj
  * @return {Object}
+ * @since 0.1.0
  * @category Object, curried
  * @sign [k] -> { k: v } -> { k: v }
  * @see pick

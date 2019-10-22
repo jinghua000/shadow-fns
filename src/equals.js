@@ -14,6 +14,7 @@ import keys from './keys'
  * @param {*} x 
  * @param {*} e 
  * @return {Boolean}
+ * @since 0.1.0
  * @category Logic, curried
  * @sign a -> b -> Boolean
  * @see eq

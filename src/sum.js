@@ -5,6 +5,7 @@
  * 
  * @param {Array} arr 
  * @return {*}
+ * @since 0.1.0
  * @category Array
  * @sign [a] -> a
  * @example

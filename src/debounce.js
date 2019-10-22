@@ -10,6 +10,7 @@ import _curry2 from './internal/_curry2'
  * @param {Number} ms 
  * @param {Function} fn
  * @return {Function}
+ * @since 0.1.0
  * @category Function, curried
  * @sign Number -> (...x -> a) -> (...x -> undefined)
  * @see throttle

@@ -9,6 +9,7 @@ import _curry3 from './internal/_curry3'
  * @param {Function} reslover 
  * @param {Function} rejecter 
  * @return {Function}
+ * @since 0.1.0
  * @category Tools, curried
  * @sign (...a -> b, ...a -> c, ...a -> d) -> (...a -> c | d)
  * @see when, unless, cond

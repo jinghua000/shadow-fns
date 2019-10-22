@@ -53,6 +53,10 @@ function processData (data) {
       console.warn(`${datum.id} has wrong category`)
     }
 
+    if (!datum.since) {
+      console.warn(`${datum.id} has not since field`)
+    }
+
     datum.id = datum.id.replace(/_/g, '')
     datum.longname = datum.longname.replace(/_/g, '')
     datum.name = datum.name.replace(/_/g, '')
@@ -141,7 +145,7 @@ function generateAll () {
     let docArr = []
 
     Object.keys(f).sort(f.asc).forEach((key, index) => {
-      // if (!['toArray'].includes(key)) return
+      // if (!['toPairs', 'pick'].includes(key)) return
 
       const filePath = path.join(__dirname, `../src/${key}.js`)
 

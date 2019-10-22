@@ -14,6 +14,7 @@ import _has from './internal/_has'
  * @param {Function} cacheFn - Cache with function
  * @param {Function} fn - Origin function
  * @return {Function}
+ * @since 0.1.0
  * @category Function, curried
  * @sign (...x -> a) -> (...x -> a) -> (...x -> a)
  * @example

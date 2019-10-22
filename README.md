@@ -121,4 +121,4 @@ And [ChangeLog](https://github.com/jinghua000/shadow-fns/blob/master/CHANGELOG.m
 
 - https://ramdajs.com/docs/  
 - https://lodash.com/docs  
-- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript  
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript  

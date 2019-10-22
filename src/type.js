@@ -5,6 +5,7 @@
  * 
  * @param {*} e 
  * @return {String}
+ * @since 0.1.0
  * @category Tools
  * @sign x -> String
  * @see is

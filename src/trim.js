@@ -7,6 +7,7 @@
  * 
  * @param {String} str 
  * @return {String}
+ * @since 0.1.0
  * @category Native
  * @sign String -> String
  * @example

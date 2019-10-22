@@ -8,6 +8,7 @@ import desc from './desc'
  * @param {*} a 
  * @param {*} b 
  * @return {Number}
+ * @since 0.1.0
  * @category Tools, curried
  * @sign (a -> x) -> a -> a -> Number
  * @see desc, ascend

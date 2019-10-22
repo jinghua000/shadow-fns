@@ -9,6 +9,7 @@ import has from './has'
  * @param {Array} arr 
  * @param {Object} obj 
  * @return {Boolean}
+ * @since 0.1.0
  * @category Object, curried
  * @sign Array -> Object -> Boolean
  * @see has

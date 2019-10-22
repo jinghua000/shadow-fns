@@ -8,6 +8,7 @@ import _curryN from './internal/_curryN'
  * 
  * @param {Function} fn 
  * @return {Function}
+ * @since 0.1.0
  * @category Function
  * @sign ((a, b, ..., z) -> result) -> a -> b -> ... -> z -> result
  * @see curryN, partial

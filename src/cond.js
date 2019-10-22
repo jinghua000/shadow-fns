@@ -7,6 +7,7 @@
  * 
  * @param {...Array<Function>} conditions 
  * @return {Function}
+ * @since 0.1.0
  * @category Tools
  * @sign ([...a -> b, ...a -> c], [...a -> d, ...a -> e], ...) -> (...a -> c | e | x)
  * @see when, unless, ifElse

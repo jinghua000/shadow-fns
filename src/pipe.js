@@ -7,6 +7,7 @@
  * 
  * @param {...Function} fns 
  * @return {Function}
+ * @since 0.1.0
  * @category Function
  * @sign (...a -> b, b -> c, ..., y -> z) -> (...a -> z)
  * @see pipeAsync

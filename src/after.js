@@ -12,6 +12,7 @@ import _curry2 from './internal/_curry2'
  * @param {Function} fnx - After function
  * @param {Function} fn - Origin function
  * @return {Function}
+ * @since 0.1.0
  * @category Function, curried
  * @sign (...x -> a) -> (...x -> b) -> (...x -> b)
  * @see before

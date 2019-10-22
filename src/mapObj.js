@@ -13,6 +13,7 @@ import tap from './tap'
  * @param {Function} fn
  * @param {Object} obj
  * @return {Object}
+ * @since 0.1.0
  * @category Object, curried
  * @sign (a -> b) -> { k: a } -> { k: b }
  * @example 

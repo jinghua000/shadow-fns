@@ -3,10 +3,11 @@
  * 
  * Return a new array
  * 
- * **NOTE:** Shallow copy
+ * **NOTE:** Shallow Copy
  * 
  * @param {Array} arr 
  * @return {Array}
+ * @since 0.1.0
  * @category Array
  * @sign Array -> Array
  * @example

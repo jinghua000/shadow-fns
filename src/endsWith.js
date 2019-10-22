@@ -9,6 +9,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {Number} [length]
  * @param {String} data
  * @return {Boolean}
+ * @since 0.1.0
  * @category Native
  * @sign String -> String -> Boolean
  * @see startsWith

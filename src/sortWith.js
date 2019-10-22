@@ -12,6 +12,7 @@
  * @param {...Function} fns 
  * @param {Array} arr
  * @return {Array}
+ * @since 0.1.0
  * @category Array
  * @sign ((a, a) -> Number, ...) -> [a] -> [a]
  * @see sort

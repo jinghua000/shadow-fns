@@ -8,6 +8,7 @@
  * @param {...Function} fns 
  * @param {*} arg
  * @return {Function}
+ * @since 0.1.0
  * @category Function
  * @sign (a -> PromiseA, ..., z -> PromiseZ) -> (a -> PromiseZ)
  * @see pipe

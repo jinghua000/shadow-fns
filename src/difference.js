@@ -10,9 +10,12 @@ import uniq from './uniq'
  * 
  * Use `Array.prototype.includes`
  * 
+ * **NOTE:** Shallow Copy
+ * 
  * @param {Array} arrx 
  * @param {Array} arr
  * @return {Array}
+ * @since 0.1.0
  * @category Array, curried
  * @sign Array -> Array -> Array
  * @see intersection, union, uniq

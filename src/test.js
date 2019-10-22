@@ -11,6 +11,7 @@ import _curry2 from './internal/_curry2'
  * @param {RegExp} reg 
  * @param {String} str
  * @return {Boolean}
+ * @since 0.1.0
  * @category Native, curried
  * @sign RegExp -> String -> Boolean
  * @see match

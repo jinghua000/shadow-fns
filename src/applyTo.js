@@ -4,6 +4,7 @@
  * @param {...*} args 
  * @param {Function} fn
  * @return {*}
+ * @since 0.1.0
  * @category Function
  * @sign ...x -> (...x -> a) -> a
  * @example

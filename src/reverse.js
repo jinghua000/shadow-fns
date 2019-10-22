@@ -9,6 +9,7 @@
  * 
  * @param {*} arr 
  * @return {Array} 
+ * @since 0.1.0
  * @category Native
  * @sign [a, b, ..., z] -> [z, ..., b, a]
  * @example

@@ -8,6 +8,7 @@ import _curry2 from './internal/_curry2'
  * @param {Number} x 
  * @param {Number} e 
  * @return {Number}
+ * @since 0.1.0
  * @category Logic, curried
  * @sign Number -> Number -> Number
  * @see divide

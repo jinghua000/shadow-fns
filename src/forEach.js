@@ -13,6 +13,7 @@ import tap from './tap'
  * @param {Array} [thisArg]
  * @param {Array} data
  * @return {Array}
+ * @since 0.1.0
  * @category Native
  * @sign (a -> x) -> [a] -> [a]
  * @example

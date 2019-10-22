@@ -10,6 +10,7 @@ import path from './path'
  * @param {*} val 
  * @param {Object} obj
  * @return {Boolean}
+ * @since 0.1.0
  * @category Object, curried
  * @sign (Array, x) -> Object -> Boolean
  * @see path, pathOr

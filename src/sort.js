@@ -10,6 +10,7 @@
  * @param {Function} [fn] 
  * @param {Array} arr
  * @return {Array}
+ * @since 0.1.0
  * @category Native
  * @sign ((a, a) -> Number) -> [a] -> [a]
  * @see sortWith

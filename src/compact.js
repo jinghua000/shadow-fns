@@ -18,6 +18,7 @@ import type from './type'
  * 
  * @param {Array|Object|String} data 
  * @return {Array|Object|String}
+ * @since 0.1.0
  * @category Tools
  * @sign a -> a
  * @see isNil

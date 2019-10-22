@@ -10,6 +10,7 @@ import _has from './internal/_has'
  * @param {*} key 
  * @param {Object} obj 
  * @return {Boolean}
+ * @since 0.1.0
  * @category Object, curried
  * @sign x -> Object -> Boolean
  * @see hasPath

@@ -63,8 +63,10 @@
 
 - [difference](#difference)  
 - [flatten](#flatten)  
+- [fromPairs](#fromPairs)  
 - [groupBy](#groupBy)  
 - [intersection](#intersection)  
+- [move](#move)  
 - [none](#none)  
 - [reject](#reject)  
 - [shuffle](#shuffle)  
@@ -93,6 +95,7 @@
 - [propEq](#propEq)  
 - [propOr](#propOr)  
 - [props](#props)  
+- [toPairs](#toPairs)  
 
 
 ### Native 
@@ -137,6 +140,7 @@
 - [before](#before)  
 - [binary](#binary)  
 - [cacheWith](#cacheWith)  
+- [call](#call)  
 - [construct](#construct)  
 - [curry](#curry)  
 - [curryN](#curryN)  
@@ -156,6 +160,11 @@
 - [uncurryN](#uncurryN)  
 
 
+### Other 
+
+- [VERSION](#VERSION)  
+
+
   
 
 <a name="F"></a>
@@ -166,6 +175,7 @@ Always return `false`
 **Category**: [Logic](#logic)  
 **Sign**: x -> Boolean  
 **See**: [T](#T)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -189,6 +199,7 @@ Always return `true`
 **Category**: [Logic](#logic)  
 **Sign**: x -> Boolean  
 **See**: [F](#F)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -204,6 +215,21 @@ f.T(null) // => true
 
 [View source](../src/T.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
 
+<a name="VERSION"></a>
+
+## VERSION : <code>String</code>
+Library's version
+
+**Category**: [Other](#other)  
+**Since**: 0.1.4  
+**Example**  
+```js
+f.VERSION // => 0.1.4
+```
+  
+
+[View source](../src/VERSION.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+
 <a name="add"></a>
 
 ## add ⇒ <code>Number</code> \| <code>String</code>
@@ -214,6 +240,7 @@ The second parameter add the first
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> a -> a  
 **See**: [subtract](#subtract)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -244,6 +271,7 @@ New function's returns same as the origin function
 **Category**: [Function](#function), curried  
 **Sign**: (...x -> a) -> (...x -> b) -> (...x -> b)  
 **See**: [before](#before)  
+**Since**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -273,6 +301,7 @@ Always return the first parameter
 **Category**: [Tools](#tools)  
 **Sign**: a -> x -> a  
 **See**: [identity](#identity)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -303,6 +332,7 @@ Return the first if the second parameter is true
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> b -> b | a  
 **See**: [or](#or)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -329,6 +359,8 @@ Similar to `Function.prototype.apply`, but without context
 
 **Category**: [Function](#function), curried  
 **Sign**: (...x -> a) -> [x] -> a  
+**See**: [call](#call)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -353,6 +385,7 @@ Apply the arguments to the supplied function
 
 **Category**: [Function](#function)  
 **Sign**: ...x -> (...x -> a) -> a  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -384,6 +417,7 @@ Used for sort array in ascending
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> a -> Number  
 **See**: [desc](#desc), [ascend](#ascend)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -408,6 +442,7 @@ Pass a function and sort by the returns in ascending
 **Category**: [Tools](#tools), curried  
 **Sign**: (a -> x) -> a -> a -> Number  
 **See**: [asc](#asc), [descend](#descend)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -445,6 +480,7 @@ Return a new object (shallow copy) which associate the key and value
 **Category**: [Object](#object), curried  
 **Sign**: x -> x -> Object -> Object  
 **See**: [dissoc](#dissoc)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -476,6 +512,7 @@ New function's returns same as the origin function
 **Category**: [Function](#function), curried  
 **Sign**: (...x -> a) -> (...x -> b) -> (...x -> b)  
 **See**: [after](#after)  
+**Since**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -505,6 +542,7 @@ Pass the first two parameters to supplied function and ignore others
 **Category**: [Function](#function)  
 **Sign**: ((a, b, ..., z) -> result) -> ((a, b) -> result)  
 **See**: [unary](#unary), [uAry](#uAry)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -532,6 +570,7 @@ First sceond, then first, like `fn2 && fn1`
 **Category**: [Tools](#tools), curried  
 **Sign**: (...x -> a) -> (...x -> b) -> (...x -> a | b)  
 **See**: [either](#either), [everyPass](#everyPass)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -563,6 +602,7 @@ return the corresponding value without invoke `fn`
 
 **Category**: [Function](#function), curried  
 **Sign**: (...x -> a) -> (...x -> a) -> (...x -> a)  
+**Since**: 0.1.0  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -583,6 +623,37 @@ add(2) // => 3
 
 [View source](../src/cacheWith.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
 
+<a name="call"></a>
+
+## call ⇒ <code>\*</code>
+Pass the supplied arguments to the supplied function.
+
+Similar to `Function.prototype.call`, but without context.
+
+Notice that this function is not curried, 
+but if supplied function is curried the result can also be curried.
+
+**Category**: [Function](#function)  
+**Sign**: ((...x -> a), ...x) -> a  
+**See**: [apply](#apply)  
+**Since**: 0.1.4  
+
+| Param | Type |
+| --- | --- |
+| fn | <code>function</code> | 
+| ...args | <code>\*</code> | 
+
+**Example**  
+```js
+f.call(f.add, 1, 2) // => 3
+f.call(f.add)(1, 2) // => 3
+f.call(Number, '1') // => 1
+f.call(Number)('1') // => ERROR!
+```
+  
+
+[View source](../src/call.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+
 <a name="catch"></a>
 
 ## catch ⇒ <code>Promise</code>
@@ -593,6 +664,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: Function -> Promise -> Promise  
 **See**: [then](#then)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -621,6 +693,7 @@ Support `[]` and `{}`, others will return themself
 
 **Category**: [Tools](#tools)  
 **Sign**: a -> a  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -654,6 +727,7 @@ And nil means `null` or `undefined`
 **Category**: [Tools](#tools)  
 **Sign**: a -> a  
 **See**: [isNil](#isNil)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -679,6 +753,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Category**: [Native](#native)  
 **Sign**: ...a -> a -> a  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -709,6 +784,7 @@ else next
 **Category**: [Tools](#tools)  
 **Sign**: ([...a -> b, ...a -> c], [...a -> d, ...a -> e], ...) -> (...a -> c | e | x)  
 **See**: [when](#when), [unless](#unless), [ifElse](#ifElse)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -742,6 +818,7 @@ Like `new MyClass()`
 
 **Category**: [Function](#function)  
 **Sign**: (...x -> a) -> (...x) -> a  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -770,6 +847,7 @@ Return a curried equivalent function
 **Category**: [Function](#function)  
 **Sign**: ((a, b, ..., z) -> result) -> a -> b -> ... -> z -> result  
 **See**: [curryN](#curryN), [partial](#partial)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -800,6 +878,7 @@ Usual used in rest parameters
 **Category**: [Function](#function), curried  
 **Sign**: Number -> ((a, b, ..., z) -> result) -> a -> b -> ... -> z -> result  
 **See**: [curry](#curry), [partial](#partial)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -834,6 +913,7 @@ from the last time the new function called
 **Category**: [Function](#function), curried  
 **Sign**: Number -> (...x -> a) -> (...x -> undefined)  
 **See**: [throttle](#throttle)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -868,6 +948,7 @@ Supplied object will not change
 
 **Category**: [Object](#object)  
 **Sign**: ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -896,6 +977,7 @@ Used for sort array in descending
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> a -> Number  
 **See**: [asc](#asc), [descend](#descend)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -920,6 +1002,7 @@ Pass a function and sort by the returns in descending
 **Category**: [Tools](#tools), curried  
 **Sign**: (a -> x) -> a -> a -> Number  
 **See**: [desc](#desc), [ascend](#ascend)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -960,9 +1043,12 @@ Order from second to first
 
 Use `Array.prototype.includes`
 
+**NOTE:** Shallow Copy
+
 **Category**: [Array](#array), curried  
 **Sign**: Array -> Array -> Array  
 **See**: [intersection](#intersection), [union](#union), [uniq](#uniq)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -988,6 +1074,7 @@ Return a new object (shallow copy) which delete the key
 **Category**: [Object](#object), curried  
 **Sign**: x -> Object -> Object  
 **See**: [dissoc](#dissoc)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1014,6 +1101,7 @@ The second parameter divide the first
 **Category**: [Logic](#logic), curried  
 **Sign**: Number -> Number -> Number  
 **See**: [multiply](#multiply)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1041,6 +1129,7 @@ First sceond, then first, like `fn2 || fn1`
 **Category**: [Tools](#tools), curried  
 **Sign**: (...x -> a) -> (...x -> b) -> (...x -> a | b)  
 **See**: [both](#both), [somePass](#somePass)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1070,6 +1159,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: String -> String -> Boolean  
 **See**: [startsWith](#startsWith)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1094,6 +1184,7 @@ Check two element strict equal by `===`
 
 **Category**: [Logic](#logic), curried  
 **See**: [equals](#equals)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1124,6 +1215,7 @@ Also `NaN` considered the same
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> b -> Boolean  
 **See**: [eq](#eq)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1150,6 +1242,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: (a -> Boolean) -> [a] -> Boolean  
 **See**: [some](#some), [none](#none)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1178,6 +1271,7 @@ From left-to-right
 **Category**: [Tools](#tools)  
 **Sign**: (...a -> b, ...a -> c, ...) -> (...a -> Boolean)  
 **See**: [somePass](#somePass), [both](#both)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1205,6 +1299,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: (a -> Boolean) -> [a] -> [a]  
 **See**: [reject](#reject)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1233,6 +1328,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: (a -> Boolean) -> [a] -> a  
 **See**: [findIndex](#findIndex)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1261,6 +1357,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: (a -> Boolean) -> [a] -> Number  
 **See**: [find](#find)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1288,6 +1385,7 @@ Return the first element of the data
 **Sign**: String -> String  
 **Sign**: [a] -> a  
 **See**: [last](#last), [nth](#nth)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1312,10 +1410,11 @@ Deep flatten the array
 
 Return a new array
 
-**NOTE:** Shallow copy
+**NOTE:** Shallow Copy
 
 **Category**: [Array](#array)  
 **Sign**: Array -> Array  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1338,6 +1437,7 @@ Return a equivalent function and arguments is flipped!
 
 **Category**: [Function](#function)  
 **Sign**: ((a, b, ..., z) -> x) -> ((z, ..., b, a) -> x)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1368,6 +1468,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Category**: [Native](#native)  
 **Sign**: (a -> x) -> [a] -> [a]  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1388,6 +1489,31 @@ logElems([1, 2, 3]) // => [1, 2, 3]
 
 [View source](../src/forEach.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
 
+<a name="fromPairs"></a>
+
+## fromPairs ⇒ <code>Object</code>
+Convert the Array which seems like `[[key, value], ...]` to Object.
+
+If has multiple same keys, use the rightmost one.
+
+**Category**: [Array](#array)  
+**Sign**: [[k, v], ...] -> { k: v, ... }  
+**See**: [toPairs](#toPairs)  
+**Since**: 0.1.4  
+
+| Param | Type |
+| --- | --- |
+| arr | <code>Array</code> | 
+
+**Example**  
+```js
+f.fromPairs([['a', 1], ['b', 2], ['c', 3]]) // => { a: 1, b: 2, c: 3 }
+f.fromPairs([['a', 1], ['b', 2], ['a', 3]]) // => { a: 3, b: 2 }
+```
+  
+
+[View source](../src/fromPairs.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+
 <a name="groupBy"></a>
 
 ## groupBy ⇒ <code>Object</code>
@@ -1398,6 +1524,7 @@ satisfied elements as array values
 
 **Category**: [Array](#array), curried  
 **Sign**: (a -> b) -> [a] -> { b: [a] }  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1426,6 +1553,7 @@ Check the second parameter is greater than the first
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> a -> Boolean  
 **See**: [lt](#lt), [gte](#gte)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1454,6 +1582,7 @@ Check the second parameter is bigger than or equal with the first
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> a -> Boolean  
 **See**: [lte](#lte), [gt](#gt)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1482,6 +1611,7 @@ Use `Object.prototype.hasOwnProperty`
 **Category**: [Object](#object), curried  
 **Sign**: x -> Object -> Boolean  
 **See**: [hasPath](#hasPath)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1509,6 +1639,7 @@ Check every element with `f.has`
 **Category**: [Object](#object), curried  
 **Sign**: Array -> Object -> Boolean  
 **See**: [has](#has)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1536,6 +1667,7 @@ It will be useful in some special case
 **Category**: [Tools](#tools)  
 **Sign**: a -> a  
 **See**: [always](#always)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1562,6 +1694,7 @@ else invoke the third one
 **Category**: [Tools](#tools), curried  
 **Sign**: (...a -> b, ...a -> c, ...a -> d) -> (...a -> c | d)  
 **See**: [when](#when), [unless](#unless), [cond](#cond)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1590,6 +1723,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: x -> [a] -> Boolean  
 **Sign**: x -> a -> Boolean  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1620,6 +1754,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: x -> a -> Number  
 **See**: [lastIndexOf](#lastIndexOf)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1650,9 +1785,12 @@ Order from second to first
 
 Use `Array.prototype.includes`
 
+**NOTE:** Shallow Copy
+
 **Category**: [Array](#array), curried  
 **Sign**: Array -> Array -> Array  
 **See**: [difference](#difference), [union](#union), [uniq](#uniq)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1680,6 +1818,7 @@ Support prototype chain
 **Category**: [Tools](#tools), curried  
 **Sign**: Function -> x -> Boolean  
 **See**: [type](#type)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1710,6 +1849,7 @@ Check the element is equal with one of below
 **Category**: [Tools](#tools)  
 **Sign**: x -> Boolean  
 **See**: [isNil](#isNil)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1733,6 +1873,7 @@ Check the element is not `undefined` or `null`
 **Category**: [Tools](#tools)  
 **Sign**: x -> Boolean  
 **See**: [isNil](#isNil), [isEmpty](#isEmpty)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1757,6 +1898,7 @@ Check the element is `undefined` or `null`
 **Category**: [Tools](#tools)  
 **Sign**: x -> Boolean  
 **See**: [isExist](#isExist), [isEmpty](#isEmpty)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1782,6 +1924,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: String -> Array -> String  
 **See**: [split](#split)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1808,6 +1951,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: Object -> Array  
 **See**: [values](#values)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1832,6 +1976,7 @@ Return the last element of the data
 **Sign**: String -> String  
 **Sign**: [a] -> a  
 **See**: [first](#first), [nth](#nth)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1860,6 +2005,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: x -> a -> Number  
 **See**: [indexOf](#indexOf)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1886,6 +2032,7 @@ Read the `length` property of supplied parameter
 
 **Category**: [Tools](#tools)  
 **Sign**: x -> Number  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1910,6 +2057,7 @@ Check the second parameter is less than the first
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> a -> Boolean  
 **See**: [gt](#gt), [lte](#lte)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1938,6 +2086,7 @@ Check the second parameter is less than or equal with the first
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> a -> Boolean  
 **See**: [gte](#gte), [lt](#lt)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1965,6 +2114,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Category**: [Native](#native)  
 **Sign**: (a -> b) -> [a] -> [b]  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -1995,6 +2145,7 @@ and set them as the returns of function
 
 **Category**: [Object](#object), curried  
 **Sign**: (a -> b) -> { k: a } -> { k: b }  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2022,6 +2173,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: RegExp -> String -> Array  
 **See**: [test](#test)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2047,6 +2199,7 @@ Compare the two parameters and return the bigger one
 **Category**: [Logic](#logic), curried  
 **Sign**: (a, a) -> a  
 **See**: [min](#min)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2073,7 +2226,8 @@ Use `Object.assign` to merge the objects passed and return a new object
 **NOTE:** Shallow copy
 
 **Category**: [Object](#object)  
-**Sign**: (Object, ...) -> Object  
+**Sign**: ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2098,6 +2252,7 @@ Compare the two parameters and return the smaller one
 **Category**: [Logic](#logic), curried  
 **Sign**: (a, a) -> a  
 **See**: [max](#max)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2114,6 +2269,38 @@ arr.reduce(f.min) // => 1
 
 [View source](../src/min.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
 
+<a name="move"></a>
+
+## move ⇒ <code>Array</code>
+Move the element of supplied array from `from` to `to`.
+
+Support negative index, 
+and if supplied index is out of range will return the origin array.
+
+**NOTE:** Shallow Copy
+
+**Category**: [Array](#array), curried  
+**Sign**: Number -> Number -> [a] -> [a]  
+**Since**: 0.1.4  
+
+| Param | Type |
+| --- | --- |
+| from | <code>Number</code> | 
+| to | <code>Number</code> | 
+| arr | <code>Array</code> | 
+
+**Example**  
+```js
+let arr = [1, 2, 3, 4]
+
+f.move(1, 2, arr) // => [1, 3, 2, 4]
+f.move(-1, 0, arr) // => [4, 1, 2, 3]
+f.move(-100, 100, arr) // => [1, 2, 3, 4]
+```
+  
+
+[View source](../src/move.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+
 <a name="multiply"></a>
 
 ## multiply ⇒ <code>Number</code>
@@ -2124,6 +2311,7 @@ The second parameter multiply the first
 **Category**: [Logic](#logic), curried  
 **Sign**: Number -> Number -> Number  
 **See**: [divide](#divide)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2149,6 +2337,7 @@ Pass the first `n` parameters to supplied function and ignore others
 **Category**: [Function](#function), curried  
 **Sign**: Number -> ((a, b, ..., z) -> result) -> ((a, b, ..., n) -> result)  
 **See**: [unary](#unary), [binary](#binary)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2177,6 +2366,7 @@ Only support first parameter(Function)
 **Category**: [Array](#array), curried  
 **Sign**: (a -> Boolean) -> [a] -> Boolean  
 **See**: [every](#every), [some](#some)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2202,6 +2392,7 @@ Return opposite boolean of the parameter supplied
 **Category**: [Logic](#logic)  
 **Sign**: x -> Boolean  
 **See**: [opposite](#opposite)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2227,6 +2418,7 @@ Support negative number
 **Sign**: Number -> String -> String  
 **Sign**: Number -> [a] -> a  
 **See**: [first](#first), [last](#last)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2258,6 +2450,7 @@ which not exists in supplied array
 **Category**: [Object](#object), curried  
 **Sign**: [k] -> { k: v } -> { k: v }  
 **See**: [pick](#pick)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2286,6 +2479,7 @@ The next time called will return the same result
 
 **Category**: [Function](#function)  
 **Sign**: (...x -> a) -> (...x -> a)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2311,6 +2505,7 @@ Return a function and the returns of that is opposite to the function passed
 
 **Category**: [Function](#function)  
 **Sign**: (...x -> result) -> (...x -> !result)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2340,6 +2535,7 @@ Return the first if the second parameter is not true
 **Category**: [Logic](#logic), curried  
 **Sign**: a -> b -> b | a  
 **See**: [and](#and)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2366,6 +2562,7 @@ Similar to `f.curry`
 **Category**: [Function](#function)  
 **Sign**: ((a, b, ..., z) -> res) -> (a, b, ..., n) -> (o, p, ..., z) -> res  
 **See**: [curry](#curry), [partialRight](#partialRight)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2394,6 +2591,7 @@ But arguments start at right (arguments order still left-to-right)
 **Category**: [Function](#function)  
 **Sign**: ((a, b, ..., z) -> res) -> (o, p, ..., z) -> (a, b, ..., n) -> res  
 **See**: [partial](#partial)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2424,6 +2622,7 @@ If not pass path will return object self
 **Category**: [Object](#object), curried  
 **Sign**: Array -> Object -> x  
 **See**: [pathOr](#pathOr), [pathEq](#pathEq)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2453,6 +2652,7 @@ Check the returns is equal with the supplied value
 **Category**: [Object](#object), curried  
 **Sign**: (Array, x) -> Object -> Boolean  
 **See**: [path](#path), [pathOr](#pathOr)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2481,6 +2681,7 @@ If not true return default value
 **Category**: [Object](#object), curried  
 **Sign**: (Array, a) -> Object -> x | a  
 **See**: [path](#path), [pathEq](#pathEq)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2511,6 +2712,7 @@ Return a new object with the corresponding key and value
 **Category**: [Object](#object), curried  
 **Sign**: [k] -> { k: v } -> { k: v }  
 **See**: [pickBy](#pickBy), [omit](#omit)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2531,19 +2733,18 @@ pickAB(obj) // => { a: 123, b: 234 }
 <a name="pickBy"></a>
 
 ## pickBy ⇒ <code>Object</code>
-If the supplied function return true
+Pass every `value` and `key` of the object to the supplied function,  
+if return true, select corresponding key and value.  
 
-Select corresponding key and value 
+Return a new object.
 
-Return a new object
-
-**NOTE:** Shallow copy
-
+**NOTE:** Shallow copy  
 **NOTE:** Not support prototype chain
 
 **Category**: [Object](#object), curried  
 **Sign**: ((v, k) -> Boolean) -> { k: v } -> { k: v }  
 **See**: [pick](#pick)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2573,6 +2774,7 @@ Except the first function, others should be unary
 **Category**: [Function](#function)  
 **Sign**: (...a -> b, b -> c, ..., y -> z) -> (...a -> z)  
 **See**: [pipeAsync](#pipeAsync)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2602,6 +2804,7 @@ Every functions need return a `Promise`
 **Category**: [Function](#function)  
 **Sign**: (a -> PromiseA, ..., z -> PromiseZ) -> (a -> PromiseZ)  
 **See**: [pipe](#pipe)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2631,6 +2834,7 @@ Like `obj[key]`
 **Category**: [Object](#object), curried  
 **Sign**: x -> Object -> x  
 **See**: [props](#props), [propOr](#propOr), [propEq](#propEq)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2664,6 +2868,7 @@ Use `===`
 **Category**: [Object](#object), curried  
 **Sign**: (a, b) -> Object -> Boolean  
 **See**: [prop](#prop), [propOr](#propOr)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2700,6 +2905,7 @@ Like `obj[key] || def`
 **Category**: [Object](#object), curried  
 **Sign**: (a, b) -> Object -> a | b  
 **See**: [prop](#prop), [propEq](#propEq)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2728,6 +2934,7 @@ Return an array
 **Category**: [Object](#object), curried  
 **Sign**: Array -> Object -> Array  
 **See**: [prop](#prop)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2756,6 +2963,7 @@ Contains the min and the max
 
 **Category**: [Tools](#tools), curried  
 **Sign**: Number -> Number -> Number  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2782,6 +2990,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Category**: [Native](#native)  
 **Sign**: (x -> a) -> Array -> a  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2809,6 +3018,7 @@ Only support first parameter
 **Category**: [Array](#array), curried  
 **Sign**: (a -> Boolean) -> [a] -> [a]  
 **See**: [filter](#filter)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2837,6 +3047,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Category**: [Native](#native)  
 **Sing**: (String | RegExp, String | Function) -> String ->String  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2868,6 +3079,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Category**: [Native](#native)  
 **Sign**: [a, b, ..., z] -> [z, ..., b, a]  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2892,6 +3104,7 @@ Shallow Copy
 
 **Category**: [Array](#array)  
 **Sign**: [a] -> [a]  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2914,6 +3127,7 @@ Wait for some time and return a `Promise` instance
 
 **Category**: [Tools](#tools), curried  
 **Sign**: Number -> x -> Promise  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2942,6 +3156,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Category**: [Native](#native)  
 **Sign**: (Number, Number) -> a -> a  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -2970,6 +3185,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: (a -> Boolean) -> [a] -> Boolean  
 **See**: [every](#every), [none](#none)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3000,6 +3216,7 @@ Default `false`
 **Category**: [Tools](#tools)  
 **Sign**: (...a -> b, ...a -> c, ...) -> (...a -> Boolean)  
 **See**: [everyPass](#everyPass), [either](#either)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3031,6 +3248,7 @@ But it will not change the supplied array
 **Category**: [Native](#native)  
 **Sign**: ((a, a) -> Number) -> [a] -> [a]  
 **See**: [sortWith](#sortWith)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3063,6 +3281,7 @@ Use `Array.prototype.sort`
 **Category**: [Array](#array)  
 **Sign**: ((a, a) -> Number, ...) -> [a] -> [a]  
 **See**: [sort](#sort)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3110,6 +3329,7 @@ Return changed array
 
 **Category**: [Native](#native)  
 **Sign**: (Number, Number, *, ...) -> Array -> Array  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3139,6 +3359,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: (String | RegExp) -> String -> Array  
 **See**: [join](#join)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3167,6 +3388,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: (String) -> String -> Boolean  
 **See**: [endsWith](#endsWith)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3194,6 +3416,7 @@ The second parameter subtract the first
 **Category**: [Logic](#logic), curried  
 **Sign**: Number -> Number -> Number  
 **See**: [add](#add)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3218,6 +3441,7 @@ Use `Array.prototype.reduce`
 
 **Category**: [Array](#array)  
 **Sign**: [a] -> a  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3251,6 +3475,7 @@ To
 
 **Category**: [Tools](#tools), curried  
 **Sign**: (a -> x) -> a -> a  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3280,6 +3505,7 @@ it is curried and `RegExp` is the first parameter
 **Category**: [Native](#native), curried  
 **Sign**: RegExp -> String -> Boolean  
 **See**: [match](#match)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3307,6 +3533,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: (Function, Function?) -> Promise -> Promise  
 **See**: [catch](#catch)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3337,6 +3564,7 @@ and at most invoke once in `ms` milliseconds
 **Category**: [Function](#function), curried  
 **Sign**: Number -> (...x -> a) -> (...x -> a)  
 **See**: [debounce](#debounce)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3373,6 +3601,7 @@ It is the special case of `f.partial`
 **Category**: [Function](#function)  
 **Sign**: ((a, b, ..., z) -> res) -> (a, b, ..., z) -> () -> res  
 **See**: [partial](#partial), [partialRight](#partialRight)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3398,6 +3627,7 @@ and push the returns to an array
 
 **Category**: [Tools](#tools), curried  
 **Sign**: Number -> (a -> b) -> (a -> b)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3417,13 +3647,13 @@ id3(1) // => [1, 1, 1]
 <a name="toArray"></a>
 
 ## toArray ⇒ <code>Array</code>
-If the parameter is array return a new shallow copy array
-
-If not, return a array with it
+If the parameter is array return self,
+else, return a array with it.
 
 **Category**: [Tools](#tools)  
 **Sign**: a -> [a]  
 **Sign**: [a] -> [a]  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3450,6 +3680,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: String -> String  
 **See**: [toUpper](#toUpper)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3465,6 +3696,31 @@ f.toLower(str) // => 'abc'
 
 [View source](../src/toLower.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
 
+<a name="toPairs"></a>
+
+## toPairs ⇒ <code>Array</code>
+Convert the Object to Array like `[[key, value], ...]`.
+
+Only support own property,
+and not support Symbol keys.
+
+**Category**: [Object](#object)  
+**Sign**: ({ k: v, ... }) -> [[k, v], ...]  
+**See**: [fromPairs](#fromPairs)  
+**Since**: 0.1.4  
+
+| Param | Type |
+| --- | --- |
+| obj | <code>Object</code> | 
+
+**Example**  
+```js
+f.toPairs({ a: 1, b: 2 }) // => [['a', 1], ['b', 2]]
+```
+  
+
+[View source](../src/toPairs.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#category)  
+
 <a name="toUpper"></a>
 
 ## toUpper ⇒ <code>String</code>
@@ -3477,6 +3733,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: String -> String  
 **See**: [toLower](#toLower)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3503,6 +3760,7 @@ To test what parameters passed in
 
 **Category**: [Tools](#tools), curried  
 **Sign**: String -> a -> a  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3539,6 +3797,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Category**: [Native](#native)  
 **Sign**: String -> String  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3563,6 +3822,7 @@ If throw an error, call the next
 
 **Category**: [Tools](#tools), curried  
 **Sign**: (...a -> b, ...a -> c) -> (...a -> b | c)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3590,6 +3850,7 @@ Use `Object.prototype.toString`
 **Category**: [Tools](#tools)  
 **Sign**: x -> String  
 **See**: [is](#is)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3613,6 +3874,7 @@ Pass the first parameters to supplied function and ignore others
 **Category**: [Function](#function)  
 **Sign**: ((a, b, ..., z) -> result) -> (a -> result)  
 **See**: [binary](#binary), [uAry](#uAry)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3637,6 +3899,7 @@ Change a curried function to an uncurry equivalent function
 **Category**: [Function](#function)  
 **Sign**: (a -> b -> ... -> z -> result) -> (a, b, ..., z) -> result  
 **See**: [uncurryN](#uncurryN), [curry](#curry)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3662,6 +3925,7 @@ with `n` arugments
 **Category**: [Function](#function), curried  
 **Sign**: Number -> (a -> b -> ... -> n -> result) -> (a, b, ..., n) -> result  
 **See**: [uncurry](#uncurry), [curry](#curry)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3688,9 +3952,12 @@ Select unique elements either exist in one array or another
 
 Order from second to first
 
+**NOTE:** Shallow Copy
+
 **Category**: [Array](#array), curried  
 **Sign**: Array -> Array -> Array  
 **See**: [difference](#difference), [intersection](#intersection), [uniq](#uniq)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3718,6 +3985,7 @@ Select unique elements in the array with `Set`
 **Category**: [Array](#array)  
 **Sign**: Array -> Array  
 **See**: [difference](#difference), [intersection](#intersection), [union](#union)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3743,6 +4011,7 @@ else return self
 **Category**: [Tools](#tools), curried  
 **Sign**: (a -> b, a -> c, a) -> a | c  
 **See**: [when](#when), [ifElse](#ifElse), [cond](#cond)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3771,6 +4040,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 **Category**: [Native](#native)  
 **Sign**: Object -> Array  
 **See**: [keys](#keys)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |
@@ -3796,6 +4066,7 @@ else return self
 **Category**: [Tools](#tools), curried  
 **Sign**: (a -> b, a -> c, a) -> a | c  
 **See**: [unless](#unless), [ifElse](#ifElse), [cond](#cond)  
+**Since**: 0.1.0  
 
 | Param | Type |
 | --- | --- |

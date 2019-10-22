@@ -6,6 +6,7 @@ import equals from './equals'
  * 
  * @param {*} e
  * @return {Boolean} 
+ * @since 0.1.0
  * @category Tools
  * @sign x -> Boolean
  * @see isNil

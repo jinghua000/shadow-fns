@@ -9,6 +9,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @param {Number} [limit]
  * @param {String} str
  * @return {Array}
+ * @since 0.1.0
  * @category Native
  * @sign (String | RegExp) -> String -> Array
  * @see join

@@ -16,6 +16,7 @@ import tap from './tap'
  * @param {...*} [arg3]
  * @param {Array} arr
  * @return {Array}
+ * @since 0.1.0
  * @category Native
  * @sign (Number, Number, *, ...) -> Array -> Array
  * @example

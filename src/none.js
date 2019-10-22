@@ -9,6 +9,7 @@ import opposite from './opposite'
  * @param {Function} fn
  * @param {Array} arr
  * @return {Boolean}
+ * @since 0.1.0
  * @category Array, curried
  * @sign (a -> Boolean) -> [a] -> Boolean
  * @see every, some
