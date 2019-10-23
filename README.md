@@ -111,7 +111,7 @@ it will be helpful.
 
 And if you'd like to contribute, see the [Contributing Guide](https://github.com/jinghua000/shadow-fns/blob/master/CONTRIBUTING.md).
 
-And [ChangeLog](https://github.com/jinghua000/shadow-fns/blob/master/CHANGELOG.md) is here.
+And [Changelog](https://github.com/jinghua000/shadow-fns/blob/master/CHANGELOG.md) is here.
 
 ## Try
 
