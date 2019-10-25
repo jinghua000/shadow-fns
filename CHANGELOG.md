@@ -1,6 +1,6 @@
-# ChangeLog
+# Changelog
 
-## v0.1.4 (TODO)
+## v0.1.4 (20191025)
 
 Add 
 

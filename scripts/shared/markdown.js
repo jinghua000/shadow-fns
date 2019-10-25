@@ -36,7 +36,7 @@ const makeCatSee = content => CATEGORYS.includes(content)
 /**
  * backtop link
  */
-const backTop = link('Back to top', '#category')
+const backTop = link('Back to top', '#api-documentation')
 
 /**
  * view source
