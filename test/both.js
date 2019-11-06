@@ -1,16 +1,18 @@
 const eq = require('./util/eq')
+const equals = require('./util/equals')
 const f = require('../src')
 
 describe('test both', function () {
   
-  it('test', function () {
+  it('first call second, if succeed call first', function () {
 
-    let fn1 = f.pipe(f.trace('test true'), f.T)
-    let fn2 = f.pipe(f.trace('test false'), f.F)
+    let arr = []
+    let fn1 = () => arr.push(1) && true
+    let fn2 = () => arr.push(2) && false
 
-    eq(f.both(fn1, fn2)('a'), false)
-    eq(f.both(fn2, fn1)('b'), false)
-    eq(f.both(f.T, f.T)('c'), true)
+    f.both(fn1, fn2)()
+
+    equals(arr, [2])
 
   })
 

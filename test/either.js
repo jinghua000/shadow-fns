@@ -1,16 +1,18 @@
 const eq = require('./util/eq')
+const equals = require('./util/equals')
 const f = require('../src')
 
 describe('test either', function () {
   
-  it('test', function () {
+  it('first call second, if not succeed call first', function () {
 
-    let fn1 = f.pipe(f.trace('test true'), f.T)
-    let fn2 = f.pipe(f.trace('test false'), f.F)
+    let arr = []
+    let fn1 = () => arr.push(1) && false
+    let fn2 = () => arr.push(2) && true
 
-    eq(f.either(fn1, fn2)('a'), true)
-    eq(f.either(fn2, fn1)('b'), true)
-    eq(f.either(f.F, f.F)('c'), false)
+    f.either(fn1, fn2)()
+
+    equals(arr, [2])
 
   })
 

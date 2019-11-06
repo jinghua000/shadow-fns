@@ -4,13 +4,13 @@ const f = require('../src')
 
 describe('test forEach', function () {
   
-  it('for each array', function () {
+  it('for each array and return self', function () {
+    
+    let arr = []
+    let arr1 = [1, 2, 3]
 
-    let logElems = f.forEach(f.unary(console.log))
-    equals(logElems([1, 2, 3]), [1, 2, 3])
-    // logs: 1
-    // logs: 2
-    // logs: 3
+    equals(f.forEach(el => arr.push(el + 1))(arr1), [1, 2, 3])
+    equals(arr, [2, 3, 4])
 
   })
 
