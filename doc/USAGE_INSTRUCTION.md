@@ -159,7 +159,9 @@ f.add(1)(2) // => 3
 
 But **NOT ALL** methods are curried.
 
-See the [API doucmentation](./README.md), if `Category` has curried, it is curried.
+See the [API doucmentation](./README.md), if `Category` has `curry`, it is curried.
+
+> curry2 means first two parameters are curried, curry3 means first three, others similar.
 
 Just like `add, prop, has, ...`
 

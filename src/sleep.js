@@ -7,7 +7,7 @@ import _curry2 from './internal/_curry2'
  * @param {*} arg 
  * @return {Promise}
  * @since 0.1.0
- * @category Tools, curried
+ * @category Tools, curry2
  * @sign Number -> x -> Promise
  * @example
  * 

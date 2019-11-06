@@ -10,7 +10,7 @@ import _curry3 from './internal/_curry3'
  * @param {*} x
  * @return {*}
  * @since 0.1.0
- * @category Tools, curried
+ * @category Tools, curry3
  * @sign (a -> b, a -> c, a) -> a | c
  * @see unless, ifElse, cond
  * @example

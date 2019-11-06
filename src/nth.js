@@ -9,7 +9,7 @@ import _curry2 from './internal/_curry2'
  * @param {String|Array} list
  * @return {*}
  * @since 0.1.0
- * @category Tools
+ * @category Tools, curry2
  * @sign Number -> String -> String
  * @sign Number -> [a] -> a
  * @see first, last

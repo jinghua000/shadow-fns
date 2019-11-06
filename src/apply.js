@@ -10,7 +10,7 @@ import _curry2 from './internal/_curry2'
  * @param {Array} args
  * @return {*}
  * @since 0.1.0
- * @category Function, curried
+ * @category Function, curry2
  * @sign (...x -> a) -> [x] -> a
  * @see call
  * @example 

@@ -11,7 +11,7 @@ import path from './path'
  * @param {Object} obj
  * @return {Boolean}
  * @since 0.1.0
- * @category Object, curried
+ * @category Object, curry3
  * @sign (Array, x) -> Object -> Boolean
  * @see path, pathOr
  * @example

@@ -11,7 +11,7 @@ import path from './path'
  * @param {Object} obj
  * @return {*}
  * @since 0.1.0
- * @category Object, curried
+ * @category Object, curry3
  * @sign (Array, a) -> Object -> x | a
  * @see path, pathEq
  * @example

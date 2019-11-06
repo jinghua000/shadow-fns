@@ -14,7 +14,7 @@ import uniq from './uniq'
  * @param {Array} arr
  * @return {Array}
  * @since 0.1.0
- * @category Array, curried
+ * @category Array, curry2
  * @sign Array -> Array -> Array
  * @see difference, intersection, uniq
  * @example

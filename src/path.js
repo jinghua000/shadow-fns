@@ -12,7 +12,7 @@ import isNil from './isNil'
  * @param {Object} obj
  * @return {*} 
  * @since 0.1.0
- * @category Object, curried
+ * @category Object, curry2
  * @sign Array -> Object -> x
  * @see pathOr, pathEq
  * @example

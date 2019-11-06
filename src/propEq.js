@@ -12,7 +12,7 @@ import _curry3 from './internal/_curry3'
  * @param {Object} obj
  * @return {*}
  * @since 0.1.0
- * @category Object, curried
+ * @category Object, curry3
  * @sign (a, b) -> Object -> Boolean
  * @see prop, propOr
  * @example

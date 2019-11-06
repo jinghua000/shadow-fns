@@ -12,7 +12,7 @@ import merge from './merge'
  * @param {Object} obj
  * @return {Object}
  * @since 0.1.0
- * @category Object, curried
+ * @category Object, curry2
  * @sign [k] -> { k: v } -> { k: v }
  * @see pickBy, omit
  * @example

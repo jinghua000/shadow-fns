@@ -237,7 +237,7 @@ Like `+`
 
 The second parameter add the first
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> a -> a  
 **See**: [subtract](#subtract)  
 **Since**: 0.1.0  
@@ -268,7 +268,7 @@ with the same arguments
 
 New function's returns same as the origin function
 
-**Category**: [Function](#function), curried  
+**Category**: [Function](#function), curry2  
 **Sign**: (...x -> a) -> (...x -> b) -> (...x -> b)  
 **See**: [before](#before)  
 **Since**: 0.1.0  
@@ -329,7 +329,7 @@ Return the second if the second parameter is not true
 
 Return the first if the second parameter is true
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> b -> b | a  
 **See**: [or](#or)  
 **Since**: 0.1.0  
@@ -357,7 +357,7 @@ and function will called by the rest arguments of array
 
 Similar to `Function.prototype.apply`, but without context
 
-**Category**: [Function](#function), curried  
+**Category**: [Function](#function), curry2  
 **Sign**: (...x -> a) -> [x] -> a  
 **See**: [call](#call)  
 **Since**: 0.1.0  
@@ -414,7 +414,7 @@ else 0
 
 Used for sort array in ascending
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> a -> Number  
 **See**: [desc](#desc), [ascend](#ascend)  
 **Since**: 0.1.0  
@@ -439,7 +439,7 @@ f.sort(f.asc)(arr) // => [1,2,3,4,5]
 ## ascend ⇒ <code>Number</code>
 Pass a function and sort by the returns in ascending
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry3  
 **Sign**: (a -> x) -> a -> a -> Number  
 **See**: [asc](#asc), [descend](#descend)  
 **Since**: 0.1.0  
@@ -477,7 +477,7 @@ sortByAge(users)
 ## assoc ⇒ <code>Object</code>
 Return a new object (shallow copy) which associate the key and value
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry3  
 **Sign**: x -> x -> Object -> Object  
 **See**: [dissoc](#dissoc)  
 **Since**: 0.1.0  
@@ -509,7 +509,7 @@ with the same arguments
 
 New function's returns same as the origin function
 
-**Category**: [Function](#function), curried  
+**Category**: [Function](#function), curry2  
 **Sign**: (...x -> a) -> (...x -> b) -> (...x -> b)  
 **See**: [after](#after)  
 **Since**: 0.1.0  
@@ -567,7 +567,7 @@ Check the supplied parameters is satisfied both of the two function
 
 First sceond, then first, like `fn2 && fn1`
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry2  
 **Sign**: (...x -> a) -> (...x -> b) -> (...x -> a | b)  
 **See**: [either](#either), [everyPass](#everyPass)  
 **Since**: 0.1.0  
@@ -600,7 +600,7 @@ record the `fn` return as the value
 If the key is already exists, 
 return the corresponding value without invoke `fn`
 
-**Category**: [Function](#function), curried  
+**Category**: [Function](#function), curry2  
 **Sign**: (...x -> a) -> (...x -> a) -> (...x -> a)  
 **Since**: 0.1.0  
 
@@ -875,7 +875,7 @@ Return a equivalent function with `n` curried parameters
 
 Usual used in rest parameters
 
-**Category**: [Function](#function), curried  
+**Category**: [Function](#function), curry2  
 **Sign**: Number -> ((a, b, ..., z) -> result) -> a -> b -> ... -> z -> result  
 **See**: [curry](#curry), [partial](#partial)  
 **Since**: 0.1.0  
@@ -910,7 +910,7 @@ When invoke the new function,
 delays invoke `fn` until after wait `ms` milliseconds 
 from the last time the new function called
 
-**Category**: [Function](#function), curried  
+**Category**: [Function](#function), curry2  
 **Sign**: Number -> (...x -> a) -> (...x -> undefined)  
 **See**: [throttle](#throttle)  
 **Since**: 0.1.0  
@@ -974,7 +974,7 @@ else 0
 
 Used for sort array in descending
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> a -> Number  
 **See**: [asc](#asc), [descend](#descend)  
 **Since**: 0.1.0  
@@ -999,7 +999,7 @@ f.sort(f.desc)(arr) // => [5,4,3,2,1]
 ## descend ⇒ <code>Number</code>
 Pass a function and sort by the returns in descending
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry3  
 **Sign**: (a -> x) -> a -> a -> Number  
 **See**: [desc](#desc), [ascend](#ascend)  
 **Since**: 0.1.0  
@@ -1045,7 +1045,7 @@ Use `Array.prototype.includes`
 
 **NOTE:** Shallow Copy
 
-**Category**: [Array](#array), curried  
+**Category**: [Array](#array), curry2  
 **Sign**: Array -> Array -> Array  
 **See**: [intersection](#intersection), [union](#union), [uniq](#uniq)  
 **Since**: 0.1.0  
@@ -1071,7 +1071,7 @@ f.difference(arr1)(arr2) // => [7, 1]
 ## dissoc ⇒ <code>Object</code>
 Return a new object (shallow copy) which delete the key
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: x -> Object -> Object  
 **See**: [dissoc](#dissoc)  
 **Since**: 0.1.0  
@@ -1098,7 +1098,7 @@ Like `/`
 
 The second parameter divide the first
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: Number -> Number -> Number  
 **See**: [multiply](#multiply)  
 **Since**: 0.1.0  
@@ -1126,7 +1126,7 @@ Check the supplied parameters is satisfied either of the two function
 
 First sceond, then first, like `fn2 || fn1`
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry2  
 **Sign**: (...x -> a) -> (...x -> b) -> (...x -> a | b)  
 **See**: [both](#both), [somePass](#somePass)  
 **Since**: 0.1.0  
@@ -1182,7 +1182,7 @@ f.endsWith('plan')(str) // => true
 ## eq ⇒ <code>Boolean</code>
 Check two element strict equal by `===`
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **See**: [equals](#equals)  
 **Since**: 0.1.0  
 
@@ -1212,7 +1212,7 @@ Also `NaN` considered the same
 
 **NOTE:** Not support prototype chain
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> b -> Boolean  
 **See**: [eq](#eq)  
 **Since**: 0.1.0  
@@ -1522,7 +1522,7 @@ Group the array by the supplied function
 Return a object, function's returns as key, 
 satisfied elements as array values
 
-**Category**: [Array](#array), curried  
+**Category**: [Array](#array), curry2  
 **Sign**: (a -> b) -> [a] -> { b: [a] }  
 **Since**: 0.1.0  
 
@@ -1550,7 +1550,7 @@ Like `>`
 
 Check the second parameter is greater than the first
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> a -> Boolean  
 **See**: [lt](#lt), [gte](#gte)  
 **Since**: 0.1.0  
@@ -1579,7 +1579,7 @@ Like `>=`
 
 Check the second parameter is bigger than or equal with the first
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> a -> Boolean  
 **See**: [lte](#lte), [gt](#gt)  
 **Since**: 0.1.0  
@@ -1608,7 +1608,7 @@ Check Object has the supplied key
 
 Use `Object.prototype.hasOwnProperty`
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: x -> Object -> Boolean  
 **See**: [hasPath](#hasPath)  
 **Since**: 0.1.0  
@@ -1636,7 +1636,7 @@ Check the object has the path
 
 Check every element with `f.has`
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: Array -> Object -> Boolean  
 **See**: [has](#has)  
 **Since**: 0.1.0  
@@ -1691,7 +1691,7 @@ Pass parameters to the first supplied function,
 if true invoke the second one,
 else invoke the third one
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry3  
 **Sign**: (...a -> b, ...a -> c, ...a -> d) -> (...a -> c | d)  
 **See**: [when](#when), [unless](#unless), [cond](#cond)  
 **Since**: 0.1.0  
@@ -1787,7 +1787,7 @@ Use `Array.prototype.includes`
 
 **NOTE:** Shallow Copy
 
-**Category**: [Array](#array), curried  
+**Category**: [Array](#array), curry2  
 **Sign**: Array -> Array -> Array  
 **See**: [difference](#difference), [union](#union), [uniq](#uniq)  
 **Since**: 0.1.0  
@@ -1815,7 +1815,7 @@ Check the element is the instance of supplied constructor
 
 Support prototype chain
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry2  
 **Sign**: Function -> x -> Boolean  
 **See**: [type](#type)  
 **Since**: 0.1.0  
@@ -2054,7 +2054,7 @@ Like `<`
 
 Check the second parameter is less than the first
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> a -> Boolean  
 **See**: [gt](#gt), [lte](#lte)  
 **Since**: 0.1.0  
@@ -2083,7 +2083,7 @@ Like `<=`
 
 Check the second parameter is less than or equal with the first
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> a -> Boolean  
 **See**: [gte](#gte), [lt](#lt)  
 **Since**: 0.1.0  
@@ -2143,7 +2143,7 @@ Return a new object,
 pass every object value to function
 and set them as the returns of function
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: (a -> b) -> { k: a } -> { k: b }  
 **Since**: 0.1.0  
 
@@ -2196,7 +2196,7 @@ matchAll('{aa}-{bb}-{cc}')
 ## max ⇒ <code>Number</code> \| <code>String</code>
 Compare the two parameters and return the bigger one
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: (a, a) -> a  
 **See**: [min](#min)  
 **Since**: 0.1.0  
@@ -2249,7 +2249,7 @@ f.merge(obj1, obj2) // => { a: 123, b: 234 }
 ## min ⇒ <code>Number</code> \| <code>String</code>
 Compare the two parameters and return the smaller one
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: (a, a) -> a  
 **See**: [max](#max)  
 **Since**: 0.1.0  
@@ -2279,7 +2279,7 @@ and if supplied index is out of range will return the origin array.
 
 **NOTE:** Shallow Copy
 
-**Category**: [Array](#array), curried  
+**Category**: [Array](#array), curry3  
 **Sign**: Number -> Number -> [a] -> [a]  
 **Since**: 0.1.4  
 
@@ -2308,7 +2308,7 @@ Like `*`
 
 The second parameter multiply the first
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: Number -> Number -> Number  
 **See**: [divide](#divide)  
 **Since**: 0.1.0  
@@ -2334,7 +2334,7 @@ multiply3(3) // => 9
 ## nAry ⇒ <code>function</code>
 Pass the first `n` parameters to supplied function and ignore others
 
-**Category**: [Function](#function), curried  
+**Category**: [Function](#function), curry2  
 **Sign**: Number -> ((a, b, ..., z) -> result) -> ((a, b, ..., n) -> result)  
 **See**: [unary](#unary), [binary](#binary)  
 **Since**: 0.1.0  
@@ -2363,7 +2363,7 @@ Opposite to `Array.prototype.every`
 
 Only support first parameter(Function)
 
-**Category**: [Array](#array), curried  
+**Category**: [Array](#array), curry2  
 **Sign**: (a -> Boolean) -> [a] -> Boolean  
 **See**: [every](#every), [some](#some)  
 **Since**: 0.1.0  
@@ -2414,7 +2414,7 @@ Return the nth element of the data
 
 Support negative number
 
-**Category**: [Tools](#tools)  
+**Category**: [Tools](#tools), curry2  
 **Sign**: Number -> String -> String  
 **Sign**: Number -> [a] -> a  
 **See**: [first](#first), [last](#last)  
@@ -2447,7 +2447,7 @@ which not exists in supplied array
 
 **NOTE:** Shallow copy
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: [k] -> { k: v } -> { k: v }  
 **See**: [pick](#pick)  
 **Since**: 0.1.0  
@@ -2532,7 +2532,7 @@ Return the second if the second parameter is true
 
 Return the first if the second parameter is not true
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: a -> b -> b | a  
 **See**: [and](#and)  
 **Since**: 0.1.0  
@@ -2619,7 +2619,7 @@ If key not exist will return `undefined`
 
 If not pass path will return object self
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: Array -> Object -> x  
 **See**: [pathOr](#pathOr), [pathEq](#pathEq)  
 **Since**: 0.1.0  
@@ -2649,7 +2649,7 @@ Read the path of the object
 
 Check the returns is equal with the supplied value
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry3  
 **Sign**: (Array, x) -> Object -> Boolean  
 **See**: [path](#path), [pathOr](#pathOr)  
 **Since**: 0.1.0  
@@ -2678,7 +2678,7 @@ Read the path of object by `f.path`
 
 If not true return default value
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry3  
 **Sign**: (Array, a) -> Object -> x | a  
 **See**: [path](#path), [pathEq](#pathEq)  
 **Since**: 0.1.0  
@@ -2709,7 +2709,7 @@ Return a new object with the corresponding key and value
 
 **NOTE:** Shallow copy
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: [k] -> { k: v } -> { k: v }  
 **See**: [pickBy](#pickBy), [omit](#omit)  
 **Since**: 0.1.0  
@@ -2741,7 +2741,7 @@ Return a new object.
 **NOTE:** Shallow copy  
 **NOTE:** Not support prototype chain
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: ((v, k) -> Boolean) -> { k: v } -> { k: v }  
 **See**: [pick](#pick)  
 **Since**: 0.1.0  
@@ -2831,7 +2831,7 @@ Read the key of the object
 
 Like `obj[key]`
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: x -> Object -> x  
 **See**: [props](#props), [propOr](#propOr), [propEq](#propEq)  
 **Since**: 0.1.0  
@@ -2865,7 +2865,7 @@ Check the corresponding value is equal with supplied val
 
 Use `===`
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry3  
 **Sign**: (a, b) -> Object -> Boolean  
 **See**: [prop](#prop), [propOr](#propOr)  
 **Since**: 0.1.0  
@@ -2902,7 +2902,7 @@ Else return the default value
 
 Like `obj[key] || def`
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry3  
 **Sign**: (a, b) -> Object -> a | b  
 **See**: [prop](#prop), [propEq](#propEq)  
 **Since**: 0.1.0  
@@ -2931,7 +2931,7 @@ Select the values by the supplied keys
 
 Return an array
 
-**Category**: [Object](#object), curried  
+**Category**: [Object](#object), curry2  
 **Sign**: Array -> Object -> Array  
 **See**: [prop](#prop)  
 **Since**: 0.1.0  
@@ -2961,7 +2961,7 @@ Contains the min and the max
 
 **NOTE:** Support Integer Only
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry2  
 **Sign**: Number -> Number -> Number  
 **Since**: 0.1.0  
 
@@ -3015,7 +3015,7 @@ Opposite to `Array.prototype.filter`
 
 Only support first parameter
 
-**Category**: [Array](#array), curried  
+**Category**: [Array](#array), curry2  
 **Sign**: (a -> Boolean) -> [a] -> [a]  
 **See**: [filter](#filter)  
 **Since**: 0.1.0  
@@ -3125,7 +3125,7 @@ f.shuffle(arr) // => [2, 3, 1]
 ## sleep ⇒ <code>Promise</code>
 Wait for some time and return a `Promise` instance
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry2  
 **Sign**: Number -> x -> Promise  
 **Since**: 0.1.0  
 
@@ -3413,7 +3413,7 @@ Like `-`
 
 The second parameter subtract the first
 
-**Category**: [Logic](#logic), curried  
+**Category**: [Logic](#logic), curry2  
 **Sign**: Number -> Number -> Number  
 **See**: [add](#add)  
 **Since**: 0.1.0  
@@ -3473,7 +3473,7 @@ To
 
 **NOTE:** Not Pure
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry2  
 **Sign**: (a -> x) -> a -> a  
 **Since**: 0.1.0  
 
@@ -3502,7 +3502,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 But this is a little different,
 it is curried and `RegExp` is the first parameter
 
-**Category**: [Native](#native), curried  
+**Category**: [Native](#native), curry2  
 **Sign**: RegExp -> String -> Boolean  
 **See**: [match](#match)  
 **Since**: 0.1.0  
@@ -3561,7 +3561,7 @@ When invoke the new function,
 `fn` will be invoked,
 and at most invoke once in `ms` milliseconds
 
-**Category**: [Function](#function), curried  
+**Category**: [Function](#function), curry2  
 **Sign**: Number -> (...x -> a) -> (...x -> a)  
 **See**: [debounce](#debounce)  
 **Since**: 0.1.0  
@@ -3625,7 +3625,7 @@ waitSum() // => 'abc'
 Call the supplied function for `n` times
 and push the returns to an array
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry2  
 **Sign**: Number -> (a -> b) -> (a -> b)  
 **Since**: 0.1.0  
 
@@ -3758,7 +3758,7 @@ Use with function like `f.pipe`
 
 To test what parameters passed in
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry2  
 **Sign**: String -> a -> a  
 **Since**: 0.1.0  
 
@@ -3820,7 +3820,7 @@ Call the first function
 
 If throw an error, call the next
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry2  
 **Sign**: (...a -> b, ...a -> c) -> (...a -> b | c)  
 **Since**: 0.1.0  
 
@@ -3922,7 +3922,7 @@ fn('a', 'b', 'c') // => 'abc'
 Change a curried function to an uncurry equivalent function
 with `n` arugments
 
-**Category**: [Function](#function), curried  
+**Category**: [Function](#function), curry2  
 **Sign**: Number -> (a -> b -> ... -> n -> result) -> (a, b, ..., n) -> result  
 **See**: [uncurry](#uncurry), [curry](#curry)  
 **Since**: 0.1.0  
@@ -3954,7 +3954,7 @@ Order from second to first
 
 **NOTE:** Shallow Copy
 
-**Category**: [Array](#array), curried  
+**Category**: [Array](#array), curry2  
 **Sign**: Array -> Array -> Array  
 **See**: [difference](#difference), [intersection](#intersection), [uniq](#uniq)  
 **Since**: 0.1.0  
@@ -4008,7 +4008,7 @@ Pass parameter to the first supplied function,
 if not true invoke the second one,
 else return self
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry3  
 **Sign**: (a -> b, a -> c, a) -> a | c  
 **See**: [when](#when), [ifElse](#ifElse), [cond](#cond)  
 **Since**: 0.1.0  
@@ -4063,7 +4063,7 @@ Pass parameter to the first supplied function,
 if true invoke the second one,
 else return self
 
-**Category**: [Tools](#tools), curried  
+**Category**: [Tools](#tools), curry3  
 **Sign**: (a -> b, a -> c, a) -> a | c  
 **See**: [unless](#unless), [ifElse](#ifElse), [cond](#cond)  
 **Since**: 0.1.0  

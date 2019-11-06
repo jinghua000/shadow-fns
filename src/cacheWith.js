@@ -15,7 +15,7 @@ import _has from './internal/_has'
  * @param {Function} fn - Origin function
  * @return {Function}
  * @since 0.1.0
- * @category Function, curried
+ * @category Function, curry2
  * @sign (...x -> a) -> (...x -> a) -> (...x -> a)
  * @example
  * 

@@ -10,7 +10,7 @@ import has from './has'
  * @param {Object} obj 
  * @return {Boolean}
  * @since 0.1.0
- * @category Object, curried
+ * @category Object, curry2
  * @sign Array -> Object -> Boolean
  * @see has
  * @example
