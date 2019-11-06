@@ -11,7 +11,7 @@ import tap from './tap'
  * @param {Array} arr
  * @return {Object}
  * @since 0.1.0
- * @category Array, curried
+ * @category Array, curry2
  * @sign (a -> b) -> [a] -> { b: [a] }
  * @example
  * 

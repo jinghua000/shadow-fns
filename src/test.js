@@ -12,7 +12,7 @@ import _curry2 from './internal/_curry2'
  * @param {String} str
  * @return {Boolean}
  * @since 0.1.0
- * @category Native, curried
+ * @category Native, curry2
  * @sign RegExp -> String -> Boolean
  * @see match
  * @example

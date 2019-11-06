@@ -9,7 +9,7 @@ import asc from './asc'
  * @param {*} b 
  * @return {Number}
  * @since 0.1.0
- * @category Tools, curried
+ * @category Tools, curry3
  * @sign (a -> x) -> a -> a -> Number
  * @see asc, descend
  * @example

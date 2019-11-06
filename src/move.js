@@ -13,7 +13,7 @@ import _curry3 from './internal/_curry3'
  * @param {Array} arr
  * @return {Array}
  * @since 0.1.4
- * @category Array, curried
+ * @category Array, curry3
  * @sign Number -> Number -> [a] -> [a]
  * @example
  * 

@@ -9,7 +9,7 @@ import _curry2 from './internal/_curry2'
  * @param {Function} fn 
  * @return {Function}
  * @since 0.1.0
- * @category Function, curried
+ * @category Function, curry2
  * @sign Number -> ((a, b, ..., z) -> result) -> a -> b -> ... -> z -> result
  * @see curry, partial
  * @example

@@ -9,7 +9,7 @@ import _curry2 from './internal/_curry2'
  * @param {Number} e
  * @return {Number}
  * @since 0.1.0
- * @category Logic, curried
+ * @category Logic, curry2
  * @sign Number -> Number -> Number
  * @see add
  * @example

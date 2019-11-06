@@ -10,7 +10,7 @@ import _curry3 from './internal/_curry3'
  * @param {Object} obj 
  * @return {Object}
  * @since 0.1.0
- * @category Object, curried
+ * @category Object, curry3
  * @sign x -> x -> Object -> Object
  * @see dissoc
  * @example

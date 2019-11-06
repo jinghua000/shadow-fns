@@ -11,7 +11,7 @@ import _has from './internal/_has'
  * @param {Object} obj 
  * @return {Boolean}
  * @since 0.1.0
- * @category Object, curried
+ * @category Object, curry2
  * @sign x -> Object -> Boolean
  * @see hasPath
  * @example

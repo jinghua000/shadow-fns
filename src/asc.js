@@ -11,7 +11,7 @@ import _curry2 from './internal/_curry2'
  * @param {*} b 
  * @return {Number}
  * @since 0.1.0
- * @category Logic, curried
+ * @category Logic, curry2
  * @sign a -> a -> Number
  * @see desc, ascend
  * @example

@@ -9,7 +9,7 @@ import _curry2 from './internal/_curry2'
  * @param {Object} obj
  * @return {Array}
  * @since 0.1.0
- * @category Object, curried
+ * @category Object, curry2
  * @sign Array -> Object -> Array
  * @see prop
  * @example
