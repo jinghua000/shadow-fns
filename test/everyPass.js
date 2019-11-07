@@ -1,21 +1,22 @@
 const eq = require('./util/eq')
+const equals = require('./util/equals')
 const f = require('../src')
 
 describe('test everyPass', function () {
   
-  it('test', function () {
+  it('exit when condition return false', function () {
+    
+    let arr = []
     
     let fn = f.everyPass(
-      f.T, 
-      f.pipe(f.trace('test1'), f.T), 
-      f.T,
-      f.pipe(f.trace('test2'), f.T), 
-      f.F,
-      f.pipe(f.trace('test3'), f.T), 
+      () => arr.push(1) && true, 
+      () => arr.push(2) && false, 
+      () => arr.push(3) && true, 
     )
+    
+    fn()
 
-    eq(fn('everyPass'), false)
-    // test3 will not log
+    equals(arr, [1, 2])
 
   })
 
