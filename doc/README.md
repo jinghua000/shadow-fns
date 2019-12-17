@@ -2619,6 +2619,8 @@ If key not exist will return `undefined`
 
 If not pass path will return object self
 
+Can also handle array.
+
 **Category**: [Object](#object), curry2  
 **Sign**: Array -> Object -> x  
 **See**: [pathOr](#pathOr), [pathEq](#pathEq)  
