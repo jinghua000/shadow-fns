@@ -8,6 +8,8 @@ import isNil from './isNil'
  * 
  * If not pass path will return object self
  * 
+ * Can also handle array.
+ * 
  * @param {Array} arr 
  * @param {Object} obj
  * @return {*} 

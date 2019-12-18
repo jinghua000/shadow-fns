@@ -24,7 +24,7 @@ describe('test path', function () {
 
   })
 
-  it('can do with array', function () {
+  it('can work with array', function () {
 
     eq(f.path([0, 0, 0], [[[123]]]), 123)
 
