@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.1.5 (20191218)
+
+Remove
+
+- `catch`: This function's name is unfriendly and is actually unnecessary in Promise chain.
+
+Add
+
+- Types declare file, hmm... although all `any` - [Detail](./types/index.d.ts)
+
 ## v0.1.4 (20191025)
 
 Add 

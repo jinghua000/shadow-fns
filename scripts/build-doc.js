@@ -2,11 +2,20 @@
 
 const jsdoc2md = require('jsdoc-to-markdown')
 const dmd = require('dmd')
-const path = require('path')
-const f = require('../lib')
+const join = require('current-path-join')
+const chalk = require('chalk')
 const fs = require('fs')
-const docPath = path.join(__dirname, '../doc/README.md')
-const { makeSees, makeSee, makeCatSees, viewSource, backTop, categoryTitle } = require('./shared/markdown')
+// ...
+const f = require('../lib')
+const docPath = join('../doc/README.md')
+const { 
+  makeSees, 
+  makeSee, 
+  makeCatSees, 
+  viewSource, 
+  backTop, 
+  categoryTitle 
+} = require('./shared/markdown')
 const { CATEGORYS } = require('./shared/config')
 
 /**
@@ -57,9 +66,6 @@ function processData (data) {
       console.warn(`${datum.id} has not since field`)
     }
 
-    datum.id = datum.id.replace(/_/g, '')
-    datum.longname = datum.longname.replace(/_/g, '')
-    datum.name = datum.name.replace(/_/g, '')
     datum.category = makeCatSees(f.or('', datum.category))
     datum.see = f.or([], datum.see).map(makeSees)
     datum.scope = undefined
@@ -147,10 +153,10 @@ function generateAll () {
     Object.keys(f).sort(f.asc).forEach((key, index) => {
       // if (!['toPairs', 'pick'].includes(key)) return
 
-      const filePath = path.join(__dirname, `../src/${key}.js`)
+      const filePath = join(`../src/${key}.js`)
 
-      console.log('index:', index)
-      console.log('filesPath:', filePath)
+      console.log('index:', chalk.yellow(index))
+      console.log('filesPath:', chalk.green(filePath))
 
       docArr.push(generate(filePath))
     })

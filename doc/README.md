@@ -100,7 +100,6 @@
 
 ### Native 
 
-- [catch](#catch)  
 - [concat](#concat)  
 - [endsWith](#endsWith)  
 - [every](#every)  
@@ -653,34 +652,6 @@ f.call(Number)('1') // => ERROR!
   
 
 [View source](../src/call.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
-
-<a name="catch"></a>
-
-## catch ⇒ <code>Promise</code>
-Just like `Promise.prototype.catch`
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch
-
-**Category**: [Native](#native)  
-**Sign**: Function -> Promise -> Promise  
-**See**: [then](#then)  
-**Since**: 0.1.0  
-
-| Param | Type |
-| --- | --- |
-| fn | <code>function</code> | 
-| data | <code>Promise</code> | 
-
-**Example**  
-```js
-let fetchData = () => Promise.reject({ name: 'Eric' })
-let getName = f.catch(f.prop('name'))
-
-getName(fetchData()).then(console.log) // => logs: Eric
-```
-  
-
-[View source](../src/catch.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="clone"></a>
 
@@ -3534,7 +3505,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Category**: [Native](#native)  
 **Sign**: (Function, Function?) -> Promise -> Promise  
-**See**: [catch](#catch)  
 **Since**: 0.1.0  
 
 | Param | Type |

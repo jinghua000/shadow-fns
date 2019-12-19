@@ -12,7 +12,6 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @since 0.1.0
  * @category Native
  * @sign (Function, Function?) -> Promise -> Promise
- * @see catch
  * @example
  *    
  * let fetchData = () => Promise.resolve({ name: 'Eric' })
