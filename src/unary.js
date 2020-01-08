@@ -8,7 +8,7 @@ import nAry from './nAry'
  * @since 0.1.0
  * @category Function
  * @sign ((a, b, ..., z) -> result) -> (a -> result)
- * @see binary, uAry
+ * @see binary, nAry
  * @example
  * 
  * let arr = [1, 2, 3]

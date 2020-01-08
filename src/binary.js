@@ -8,7 +8,7 @@ import nAry from './nAry'
  * @since 0.1.0
  * @category Function
  * @sign ((a, b, ..., z) -> result) -> ((a, b) -> result)
- * @see unary, uAry
+ * @see unary, nAry
  * @example
  * 
  * let printThree = (a, b, c) => [a, b, c]

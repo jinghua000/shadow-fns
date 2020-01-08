@@ -8,7 +8,7 @@ Remove
 
 Add
 
-- Types declare file, hmm... although all `any` - [Detail](./types/index.d.ts)
+- Types declare file, hmm... although all of them were `any` - [Detail](./types/index.d.ts)
 
 ## v0.1.4 (20191025)
 
