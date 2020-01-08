@@ -1,4 +1,4 @@
-import nAry from './nAry'
+import _nAry from './internal/_nAry'
 
 /**
  * Pass the first parameters to supplied function and ignore others
@@ -16,6 +16,6 @@ import nAry from './nAry'
  * arr.map(parseInt) // => [1, NaN, NaN]
  * arr.map(f.unary(parseInt)) // => [1, 2, 3]
  */
-const unary = nAry(1)
+const unary = _nAry(1)
 
 export default unary
