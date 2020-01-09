@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.6
+## v0.1.6 (20200109)
 
 - Change pack tool from `webpack` to `rollup`,
 and that make umd version became more tiny! 
