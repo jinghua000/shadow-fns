@@ -1,4 +1,3 @@
-const eq = require('./util/eq')
 const equals = require('./util/equals')
 const f = require('../src')
 

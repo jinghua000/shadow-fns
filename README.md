@@ -30,8 +30,13 @@ Chasing for more simplify and singleness function.
 ### Browser
 
 ```html
-<script src="./dist/shadow-fns.min.js"></script>
+<script src="./dist/shadow-fns.umd.min.js"></script>
 ```
+
+> You can also import from CND  
+> 
+> `https://cdn.jsdelivr.net/npm/shadow-fns@0.1.6/dist/shadow-fns.umd.js`  
+> `https://cdn.jsdelivr.net/npm/shadow-fns@0.1.6/dist/shadow-fns.umd.min.js`  
 
 then
 
@@ -55,13 +60,13 @@ or
 yarn add --dev shadow-fns
 ```
 
-then
+then in cjs
 
 ```javascript
 const f = require('shadow-fns')
 ```
 
-or
+or in es
 
 ```javascript
 import { * as f } from 'shadow-fns'
@@ -94,9 +99,9 @@ const calc = pipe(add(2), multiply(2))
 calc(3) // => 10
 ```
 
-If you are using packing tools like webpack, you can import source code directly,
+And if you are using es module, you can import source code directly,
 
-which can show the comments and jump to the source, will do much help to develop.  
+which can show the comments and jump to the source in some IDE, will do much help to develop.  
 
 ```javascript
 import { * as f } from 'shadow-fns/src'

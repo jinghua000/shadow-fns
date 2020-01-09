@@ -36,7 +36,7 @@ const equals = _curry2((x, e) => {
     if (length !== x.length) return false
 
     for (let i = 0; i < length; i++) {
-      if (!equals(x[i])(e[i])) return false
+      if (!equals(x[i], e[i])) return false
     }
 
     return true
@@ -49,7 +49,7 @@ const equals = _curry2((x, e) => {
     if (length !== keys(x).length) return false
 
     for (let k of _keys) {
-      if (!equals(x[k])(e[k])) return false
+      if (!equals(x[k], e[k])) return false
     }
 
     return true
