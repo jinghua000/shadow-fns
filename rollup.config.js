@@ -11,12 +11,12 @@ const plugins = [
 const config = (function () {
   if (+process.env.IS_TESTING === 1) {
     return {
-      input: 'demo/index.js',
+      input: 'demo/packing-test.js',
       plugins,
       output: [
         {
           name: 'demo',
-          file: 'demo/testing.umd.js',
+          file: 'demo/packing-test.umd.js',
           format: 'umd'
         }, 
       ],
