@@ -540,7 +540,7 @@ Pass the first two parameters to supplied function and ignore others
 
 **Category**: [Function](#function)  
 **Sign**: ((a, b, ..., z) -> result) -> ((a, b) -> result)  
-**See**: [unary](#unary), [uAry](#uAry)  
+**See**: [unary](#unary), [nAry](#nAry)  
 **Since**: 0.1.0  
 
 | Param | Type |
@@ -3845,7 +3845,7 @@ Pass the first parameters to supplied function and ignore others
 
 **Category**: [Function](#function)  
 **Sign**: ((a, b, ..., z) -> result) -> (a -> result)  
-**See**: [binary](#binary), [uAry](#uAry)  
+**See**: [binary](#binary), [nAry](#nAry)  
 **Since**: 0.1.0  
 
 | Param | Type |

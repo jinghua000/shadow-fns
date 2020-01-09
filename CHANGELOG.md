@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.1.6
+
+- Change pack tool from `webpack` to `rollup`,
+and that make umd version became more tiny! 
+
+> Half of the original one.
+
+- More friendly for `Tree-Shaking`, you can now import required functions without any redundant code.
+
 ## v0.1.5 (20191218)
 
 Remove

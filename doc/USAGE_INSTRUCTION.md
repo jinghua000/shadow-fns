@@ -16,7 +16,7 @@ See also [Full API documentation](./README.md).
 
 This category contains some basic logic, it's simple to use but notice that they are always `function first, data last`
 
-For Example  
+For example:  
 
 ```js
 f.add('a', 'b') // => 'ba'
@@ -176,6 +176,35 @@ f.add(1)() // => this will not work
 
 f.add(1)()()()(2) // => 3
 ```
+
+**But Notice**
+
+Call functions with curried way will be more cost.
+
+For example:
+
+```js
+f.add(1, 2)
+f.add(1)(2) // => this way will be more cost!
+```
+
+Because the internal implementation of `curry` will check number of arguments,
+if not enough, will return a new function.
+
+Every time invoke the curried function with no enough arguments will generate a new one.
+
+So, more costing.
+
+The better way is define the required function first for reusing.
+
+```js
+const add1 = f.add(1)
+
+// then do other things
+// ...
+```
+
+> You can check the detail by script `yarn test:performance`
 
 ## Trace
 

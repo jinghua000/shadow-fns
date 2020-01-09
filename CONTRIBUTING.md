@@ -48,7 +48,7 @@ Others check the `package.json`.
 
 Mainly
 
-- [webpack](https://webpack.js.org)
+- [rollup](https://rollupjs.org/guide/en/)
 - [mocha](https://mochajs.org)
 - [babel](https://babeljs.io)
 - [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown)
