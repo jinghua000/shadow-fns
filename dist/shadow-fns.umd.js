@@ -707,7 +707,7 @@
       if (length !== x.length) return false
 
       for (let i = 0; i < length; i++) {
-        if (!equals(x[i])(e[i])) return false
+        if (!equals(x[i], e[i])) return false
       }
 
       return true
@@ -720,7 +720,7 @@
       if (length !== keys(x).length) return false
 
       for (let k of _keys) {
-        if (!equals(x[k])(e[k])) return false
+        if (!equals(x[k], e[k])) return false
       }
 
       return true
@@ -3285,7 +3285,7 @@
   ));
 
   var name = "shadow-fns";
-  var version = "0.1.5";
+  var version = "0.1.6";
   var description = "A javascript function library.";
   var main = "lib/index.js";
   var module = "src/index.js";
@@ -3293,6 +3293,7 @@
   var scripts = {
   	test: "mocha --require @babel/register",
   	"test:pack": "IS_TESTING=1 rollup -c",
+  	"test:performance": "node demo/performance-test.js",
   	cover: "yarn cover:unit && yarn cover:report && yarn cover:check",
   	"cover:unit": "nyc npm test",
   	"cover:report": "nyc report --reporter=lcov",
