@@ -14,11 +14,11 @@ import _curry2 from './internal/_curry2'
  * @see curry, partial
  * @example
  * 
- * let join = (...args) => args.join('')
+ * const join = (...args) => args.join('')
  * join(1, 2, 3, 4) // => '1234'
  * join(1, 2, 3) // => '123'
  * 
- * join3 = f.curryN(3)(join)
+ * const join3 = f.curryN(3)(join)
  * join3(1, 2, 3) // => '123'
  * join3(1, 2)(3) // => '123'
  * join3(1)(2, 3) // => '123'

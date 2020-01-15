@@ -12,7 +12,7 @@
  * @example
  * 
  * class Animal {}
- * let makeAnimal = f.construct(Animal)
+ * const makeAnimal = f.construct(Animal)
  * 
  * makeAnimal('Rabbit') // => new Animal('Rabbit')
  */

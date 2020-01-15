@@ -14,10 +14,10 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @sign ...a -> a -> a
  * @example
  * 
- * let str = 'i have'
+ * const str = 'i have'
  * f.concat(' a', ' plan')(str) // => 'i have a plan'
  * 
- * let arr = [1, 2, 3]
+ * const arr = [1, 2, 3]
  * f.concat(4, [5])(arr) // => [1, 2, 3, 4, 5]
  */
 const concat = _nativeSelfFn('concat')

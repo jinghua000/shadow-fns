@@ -17,7 +17,7 @@ import _curry2 from './internal/_curry2'
  * @example
  * 
  * let num = 0
- * let fn = f.debounce(100)(() => num += 1) 
+ * const fn = f.debounce(100)(() => num += 1) 
  * 
  * fn()
  * fn()

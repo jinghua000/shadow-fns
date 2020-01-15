@@ -10,7 +10,7 @@
  * @see identity
  * @example
  *    
- * let obj = {}
+ * const obj = {}
  * 
  * f.always(10)(123) // => 10
  * f.always(10)(null) // => 10

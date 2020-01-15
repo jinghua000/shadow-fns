@@ -20,7 +20,7 @@ import _has from './internal/_has'
  * @example
  * 
  * let num = 0
- * let add = f.cacheWith(f.identity)(() => num += 1)
+ * const add = f.cacheWith(f.identity)(() => num += 1)
  * 
  * add(1) // => 1
  * add(1) // => 1
@@ -28,10 +28,10 @@ import _has from './internal/_has'
  * add(2) // => 3
  */
 const cacheWith = _curry2((cacheFn, fn) => {
-  let cache = {}
+  const cache = {}
 
   return (...args) => {
-    let key = cacheFn(...args)
+    const key = cacheFn(...args)
 
     if (!_has(cache, key)) {
       cache[key] = fn(...args)

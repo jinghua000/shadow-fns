@@ -15,7 +15,7 @@ import _curry2 from './internal/_curry2'
  * @see either, everyPass
  * @example
  * 
- * let isBetween = f.both(f.gt(5), f.lt(10))
+ * const isBetween = f.both(f.gt(5), f.lt(10))
  * isBetween(8) // => true
  * isBetween(11) // => false
  */

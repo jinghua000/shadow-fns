@@ -21,8 +21,8 @@ import uniq from './uniq'
  * @see intersection, union, uniq
  * @example
  * 
- * let arr1 = [1, 3, 5]
- * let arr2 = [3, 5, 7]
+ * const arr1 = [1, 3, 5]
+ * const arr2 = [3, 5, 7]
  * 
  * f.difference(arr1)(arr2) // => [7, 1]
  */

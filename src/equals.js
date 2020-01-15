@@ -31,7 +31,7 @@ const equals = _curry2((x, e) => {
   const t2 = type(x)
 
   if (t1 === 'Array' && t2 === 'Array') {
-    let length = e.length
+    const length = e.length
 
     if (length !== x.length) return false
 
@@ -43,12 +43,12 @@ const equals = _curry2((x, e) => {
   }
 
   if (t1 === 'Object' && t2 === 'Object') {
-    let _keys = keys(e)
-    let length = _keys.length
+    const _keys = keys(e)
+    const length = _keys.length
 
     if (length !== keys(x).length) return false
 
-    for (let k of _keys) {
+    for (const k of _keys) {
       if (!equals(x[k], e[k])) return false
     }
 

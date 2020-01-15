@@ -18,14 +18,14 @@ import _curry2 from './internal/_curry2'
  * @see after
  * @example
  * 
- * let fn = () => console.log('i am coming')
- * let fnx = () => console.log('i am before')
+ * const fn1 = () => console.log('i am fn1')
+ * const fn2 = () => console.log('i am fn2')
  * 
- * fn = f.before(fnx)(fn)
+ * fn = f.before(fn1)(fn2)
  * 
  * fn()
- * // logs: i am before
- * // logs: i am coming
+ * // logs: i am fn1
+ * // logs: i am fn2
  */
 const before = _curry2((fnx, fn) => (...args) => { 
   fnx(...args)

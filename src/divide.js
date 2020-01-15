@@ -14,7 +14,7 @@ import _curry2 from './internal/_curry2'
  * @see multiply
  * @example 
  * 
- * let divide3 = f.divide(3)
+ * const divide3 = f.divide(3)
  * 
  * divide3(9) // => 3
  * divide3(12) // => 4

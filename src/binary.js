@@ -11,10 +11,10 @@ import _nAry from './internal/_nAry'
  * @see unary, nAry
  * @example
  * 
- * let printThree = (a, b, c) => [a, b, c]
+ * const printThree = (a, b, c) => [a, b, c]
  * printThree(1, 2, 3) // => [1, 2, 3]
  * 
- * let printTwo = f.binary(printThree)
+ * const printTwo = f.binary(printThree)
  * printTwo(1, 2, 3) // => [1, 2, undefined]
  */
 const binary = _nAry(2)
