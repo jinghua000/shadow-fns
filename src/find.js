@@ -15,8 +15,8 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @see findIndex
  * @example
  * 
- * let firstBiggerThan2 = f.find(f.gt(2))
- * let arr = [2, 3, 4, 5]
+ * const firstBiggerThan2 = f.find(f.gt(2))
+ * const arr = [2, 3, 4, 5]
  * 
  * firstBiggerThan2(arr) // => 3
  */

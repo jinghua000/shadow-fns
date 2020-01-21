@@ -14,7 +14,7 @@ import _curry2 from './internal/_curry2'
  * @see lt, gte
  * @example
  * 
- * let greaterThan5 = f.gt(5)
+ * const greaterThan5 = f.gt(5)
  * 
  * greaterThan5(6) // => true
  * greaterThan5(5) // => false

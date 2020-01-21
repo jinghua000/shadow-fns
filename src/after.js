@@ -20,15 +20,15 @@ import _curry2 from './internal/_curry2'
  * 
  * const fn1 = () => console.log('i am fn1')
  * const fn2 = () => console.log('i am fn2')
- *    
- * fn = f.after(fn1)(fn2)
+ * 
+ * const fn = f.after(fn1)(fn2)
  * 
  * fn()
  * // logs: i am fn2
  * // logs: i am fn1
  */
 const after = _curry2((fnx, fn) => (...args) => { 
-  let result = fn(...args)
+  const result = fn(...args)
   fnx(...args)
 
   return result

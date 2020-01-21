@@ -16,7 +16,7 @@ import path from './path'
  * @see path, pathOr
  * @example
  * 
- * let checkPath = f.pathEq(['a', 'a'], 123)
+ * const checkPath = f.pathEq(['a', 'a'], 123)
  * 
  * checkPath({ b: 999 }) // => false
  * checkPath({ a: { a: 123 } }) // => true

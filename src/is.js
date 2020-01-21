@@ -16,7 +16,7 @@ import isNil from './isNil'
  * @example
  * 
  * class C {}
- * let c = new C()
+ * const c = new C()
  * 
  * f.is(C)(c) // => true  
  * f.is(Object)(c) // => true  

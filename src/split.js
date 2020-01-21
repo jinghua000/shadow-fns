@@ -15,8 +15,8 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @see join
  * @example
  * 
- * let str = 'i have a plan'
- * let splitWithBlank = f.split(' ')
+ * const str = 'i have a plan'
+ * const splitWithBlank = f.split(' ')
  * 
  * splitWithBlank(str) // => ['i', 'have', 'a', 'plan']
  */

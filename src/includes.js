@@ -16,7 +16,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @sign x -> a -> Boolean
  * @example
  * 
- * let includes = f.includes('yes')
+ * const includes = f.includes('yes')
  * 
  * includes(['i', 'say', 'yes', '!']) // => true
  * includes('i say yes!') // => true

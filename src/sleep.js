@@ -11,8 +11,8 @@ import _curry2 from './internal/_curry2'
  * @sign Number -> x -> Promise
  * @example
  * 
- * let fn = res => 'result is' + res
- * let sleepOneSec = sleep(1000)
+ * const fn = res => 'result is' + res
+ * const sleepOneSec = sleep(1000)
  * 
  * sleepOneSec('hello').then(fn) 
  * // => after 1 sceond: 'result is hello'

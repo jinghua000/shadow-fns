@@ -14,7 +14,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @sign (x -> a) -> Array -> a
  * @example
  * 
- * let sum = f.reduce((acc, cur) => acc += cur)
+ * const sum = f.reduce((acc, cur) => acc += cur)
  * 
  * sum([1, 2, 3]) // => 6
  */

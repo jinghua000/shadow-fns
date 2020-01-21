@@ -15,8 +15,8 @@ import tap from './tap'
  * @sign (a -> b) -> [a] -> { b: [a] }
  * @example
  * 
- * let arr = [1, 2, 3, 4, 5]
- * let group = f.groupBy(e => e < 3 ? 'small' : 'big')
+ * const arr = [1, 2, 3, 4, 5]
+ * const group = f.groupBy(e => e < 3 ? 'small' : 'big')
  * 
  * group(arr)
  * // => { small: [1, 2], big: [3, 4, 5] }

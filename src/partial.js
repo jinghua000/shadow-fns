@@ -12,8 +12,8 @@
  * @see curry, partialRight
  * @example
  * 
- * let sum = (a, b, c) => a + b + c
- * let sumAB = f.partial(sum)('a', 'b')
+ * const sum = (a, b, c) => a + b + c
+ * const sumAB = f.partial(sum)('a', 'b')
  * 
  * sumAB('c') // => 'abc'
  * sumAB('d') // => 'abd'

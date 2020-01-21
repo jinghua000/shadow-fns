@@ -13,8 +13,8 @@ import _curry2 from './internal/_curry2'
  * @see uncurry, curry
  * @example
  * 
- * let add = a => b => c => a + b + c
- * let fn = f.uncurryN(2)(add)
+ * const add = a => b => c => a + b + c
+ * const fn = f.uncurryN(2)(add)
  * 
  * fn('a', 'b')('c') // => 'abc'
  */

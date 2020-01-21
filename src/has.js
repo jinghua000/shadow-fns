@@ -16,7 +16,7 @@ import _has from './internal/_has'
  * @see hasPath
  * @example
  * 
- * let hasA = f.has('a')
+ * const hasA = f.has('a')
  * 
  * hasA({ a: 123 }) // => true
  * hasA({ b: 123 }) // => fasle

@@ -16,7 +16,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @see indexOf
  * @example
  * 
- * let findIndexA = f.lastIndexOf('a')
+ * const findIndexA = f.lastIndexOf('a')
  * 
  * findIndexA('abcabc') // => 3
  * findIndexA(['b', 'c', 'a', 'a']) // => 3

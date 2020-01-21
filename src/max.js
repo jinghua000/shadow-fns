@@ -12,7 +12,7 @@ import _curry2 from './internal/_curry2'
  * @see min
  * @example
  * 
- * let arr = [1, 3, 10, 4, 9]
+ * const arr = [1, 3, 10, 4, 9]
  * 
  * arr.reduce(f.max) // => 10
  */

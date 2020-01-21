@@ -14,13 +14,13 @@
  * @see everyPass, either
  * @example
  * 
- * let somePass = f.somePass(f.gt(5), f.gt(10), f.gt(15))
+ * const somePass = f.somePass(f.gt(5), f.gt(10), f.gt(15))
  * 
  * somePass(12) // => true
  * somePass(3) // => false
  */
 const somePass = (...fns) => (...args) => {
-  for (let fn of fns) {
+  for (const fn of fns) {
     if (fn(...args)) return true
   }
   return false

@@ -16,7 +16,7 @@ describe('test other things', function () {
       
       const buffer = fs.readFileSync(testFilePath)
 
-      eq(buffer.length, 2060)
+      eq(buffer.length, 2064)
 
       done()
     })

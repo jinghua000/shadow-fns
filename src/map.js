@@ -14,7 +14,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @sign (a -> b) -> [a] -> [b]
  * @example
  * 
- * let mapDouble = f.map(f.multiply(2))
+ * const mapDouble = f.map(f.multiply(2))
  * 
  * mapSquare([1, 2, 3]) // => [2, 4, 6]
  */

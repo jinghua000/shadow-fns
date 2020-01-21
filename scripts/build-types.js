@@ -1,7 +1,7 @@
 const fs = require('fs-extra')
 const join = require('current-path-join')
 const chalk = require('chalk')
-// ...
+
 const f = require('../lib')
 const filePath = join('../types/index.d.ts')
 

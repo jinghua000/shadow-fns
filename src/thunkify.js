@@ -13,8 +13,8 @@
  * @see partial, partialRight
  * @example
  * 
- * let sum = (a, b, c) => a + b + c
- * let waitSum = f.thunkify(sum)('a', 'b', 'c')
+ * const sum = (a, b, c) => a + b + c
+ * const waitSum = f.thunkify(sum)('a', 'b', 'c')
  * 
  * waitSum() // => 'abc'
  */

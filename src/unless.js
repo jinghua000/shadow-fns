@@ -15,7 +15,7 @@ import _curry3 from './internal/_curry3'
  * @see when, ifElse, cond
  * @example
  * 
- * let cannotBelow3 = f.unless(f.gt(3), f.always('so small'))
+ * const cannotBelow3 = f.unless(f.gt(3), f.always('so small'))
  * 
  * cannotBelow3(5) // => 5
  * cannotBelow3(1) // => 'so small'

@@ -15,7 +15,7 @@ import _curry3 from './internal/_curry3'
  * @see when, unless, cond
  * @example
  * 
- * let check3 = f.ifElse(f.gt(3), f.always('so big'), f.always('so small'))
+ * const check3 = f.ifElse(f.gt(3), f.always('so big'), f.always('so small'))
  * check3(5) // => 'so big'
  * check3(1) // => 'so small'
  */

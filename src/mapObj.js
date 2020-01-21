@@ -18,8 +18,8 @@ import tap from './tap'
  * @sign (a -> b) -> { k: a } -> { k: b }
  * @example 
  * 
- * let obj = { a: 1, b: 2, c: 3 }
- * let everyAdd1 = f.mapObj(f.add(1))
+ * const obj = { a: 1, b: 2, c: 3 }
+ * const everyAdd1 = f.mapObj(f.add(1))
  * 
  * everyAdd1(obj) // => { a: 2, b: 3, c: 4 }
  */

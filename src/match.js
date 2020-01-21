@@ -14,7 +14,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @see test
  * @example
  * 
- * let matchAll = f.match(/\{.*?\}/g)
+ * const matchAll = f.match(/\{.*?\}/g)
  * 
  * matchAll('{aa}-{bb}-{cc}')
  * // => ['{aa}', '{bb}', '{cc}']

@@ -15,7 +15,7 @@ import has from './has'
  * @see has
  * @example
  * 
- * let hasPath = f.hasPath(['a', 'a'])
+ * const hasPath = f.hasPath(['a', 'a'])
  * 
  * hasPath({ a: { a: 123 } }) // => true
  * hasPath({ b: 123 }) // => false
@@ -23,7 +23,7 @@ import has from './has'
 const hasPath = _curry2((arr, obj) => {
   let val = obj
 
-  for (let k of arr) {
+  for (const k of arr) {
     if (!has(k)(val)) return false
     val = val[k]
   }

@@ -14,7 +14,7 @@ import _curry2 from './internal/_curry2'
  * @see lte, gt
  * @example
  * 
- * let greaterOrEuqal5 = f.gte(5)
+ * const greaterOrEuqal5 = f.gte(5)
  * 
  * greaterOrEuqal5(6) // => true
  * greaterOrEuqal5(5) // => true

@@ -12,8 +12,8 @@
  * @sign (...x -> a) -> (...x -> a)
  * @example
  * 
- * let add1 = f.add(1)
- * let addOnce = f.once(add1)
+ * const add1 = f.add(1)
+ * const addOnce = f.once(add1)
  * 
  * addOnce(10) // => 11
  * addOnce(20) // => 11

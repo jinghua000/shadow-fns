@@ -15,7 +15,7 @@ import _curry2 from './internal/_curry2'
  * @sign String -> a -> a
  * @example
  * 
- * let add3 = f.pipe(
+ * const add3 = f.pipe(
  *   f.add(1), 
  *   f.trace('what i am?')
  *   f.add(1), 

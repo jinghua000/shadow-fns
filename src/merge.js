@@ -12,8 +12,8 @@
  * @sign ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }
  * @example
  * 
- * let obj1 = { a: 123 }
- * let obj2 = { b: 234 }
+ * const obj1 = { a: 123 }
+ * const obj2 = { b: 234 }
  * 
  * f.merge(obj1, obj2) // => { a: 123, b: 234 }
  */

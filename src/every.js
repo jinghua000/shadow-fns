@@ -15,7 +15,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @see some, none
  * @example
  * 
- * let everyGreaterThan3 = f.every(f.gt(3))
+ * const everyGreaterThan3 = f.every(f.gt(3))
  * 
  * everyGreaterThan3([2, 3, 4]) // => false
  * everyGreaterThan3([4, 5, 6]) // => true

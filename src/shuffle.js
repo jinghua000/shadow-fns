@@ -12,19 +12,20 @@ import random from './random'
  * @sign [a] -> [a]
  * @example
  * 
- * let arr = [1, 2, 3]
+ * const arr = [1, 2, 3]
  * 
  * f.shuffle(arr) // => [2, 3, 1]
  */
 const shuffle = arr => {
-  let _arr = [].concat(arr)
-  let length = _arr.length
-  let maxIndex = length - 1
+  const _arr = [].concat(arr)
+  const length = _arr.length
+  const maxIndex = length - 1
+  
   let i = 0
 
   while (i < length) {
-    let rand = random(i, maxIndex)
-    let val = _arr[rand]
+    const rand = random(i, maxIndex)
+    const val = _arr[rand]
 
     _arr[rand] = _arr[i]
     _arr[i] = val

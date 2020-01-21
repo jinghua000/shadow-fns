@@ -13,6 +13,6 @@
  * f.isNil(undefined) // => true
  * f.isNil('undefined') // => false
  */
-const isNil = e => e === undefined || e === null
+const isNil = e => e == null
 
 export default isNil

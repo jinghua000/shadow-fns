@@ -20,15 +20,15 @@ import tap from './tap'
  * @see pick
  * @example
  * 
- * let obj = { a: 1, b: 2, c: 3}
- * let pickBy = f.pickBy(f.gte(2))
+ * const obj = { a: 1, b: 2, c: 3}
+ * const pickBy = f.pickBy(f.gte(2))
  * 
  * pickBy(obj) // => { b: 2, c: 3 }
  */
 const pickBy = _curry2((fn, obj) => tap(
   _obj => keys(obj).forEach(
     key => {
-      let val = obj[key]
+      const val = obj[key]
       fn(val, key) && (_obj[key] = val)
     }
   ), {}

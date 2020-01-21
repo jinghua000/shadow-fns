@@ -11,7 +11,7 @@
  * @see always
  * @example
  * 
- * let obj = {}
+ * const obj = {}
  * 
  * f.identity(10) // => 10
  * f.identity(obj) === obj // => true

@@ -15,7 +15,7 @@ import _curry3 from './internal/_curry3'
  * @see unless, ifElse, cond
  * @example
  * 
- * let cannotOver3 = f.when(f.gt(3), f.always('so big'))
+ * const cannotOver3 = f.when(f.gt(3), f.always('so big'))
  * 
  * cannotOver3(5) // => 'so big'
  * cannotOver3(1) // => 1

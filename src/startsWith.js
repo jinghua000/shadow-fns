@@ -15,7 +15,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @see endsWith
  * @example
  * 
- * let str = 'i have a plan'
+ * const str = 'i have a plan'
  * 
  * f.startsWith('i have')(str) // => true
  */

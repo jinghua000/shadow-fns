@@ -14,7 +14,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @see split
  * @example
  * 
- * let arr = ['i', 'have', 'a', 'plan']
+ * const arr = ['i', 'have', 'a', 'plan']
  * 
  * f.join(' ')(arr) // => 'i have a plan'
  */

@@ -15,8 +15,8 @@ import opposite from './opposite'
  * @see filter
  * @example
  * 
- * let notGreaterThan3 = f.reject(f.gt(3))
- * let arr = [1, 2, 3, 4, 5]
+ * const notGreaterThan3 = f.reject(f.gt(3))
+ * const arr = [1, 2, 3, 4, 5]
  * 
  * notGreaterThan3(arr) // => [1, 2, 3]
  */

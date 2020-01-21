@@ -18,7 +18,7 @@ import tap from './tap'
  * @sign (a -> x) -> [a] -> [a]
  * @example
  * 
- * let logElems = f.forEach(f.unary(console.log))
+ * const logElems = f.forEach(f.unary(console.log))
  * 
  * logElems([1, 2, 3]) // => [1, 2, 3]
  * // logs: 1

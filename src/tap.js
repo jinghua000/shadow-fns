@@ -7,7 +7,7 @@ import _curry2 from './internal/_curry2'
  * 
  * This function usual use in case like this 
  * 
- * `function foo () { let a = {}; a.a = 123; return a }`
+ * `function foo () { const a = {}; a.a = 123; return a }`
  * 
  * To
  * 
@@ -23,7 +23,7 @@ import _curry2 from './internal/_curry2'
  * @sign (a -> x) -> a -> a
  * @example
  *    
- * let fn = obj => obj.a = 123
+ * const fn = obj => obj.a = 123
  * 
  * f.tap(fn)({}) // => { a: 123 }
  */

@@ -14,7 +14,7 @@ import _curry2 from './internal/_curry2'
  * @see gte, lt
  * @example
  * 
- * let lessOrEqual5 = f.lte(5)
+ * const lessOrEqual5 = f.lte(5)
  * 
  * lessOrEqual5(6) // => false
  * lessOrEqual5(5) // => true

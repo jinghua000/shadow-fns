@@ -19,8 +19,8 @@ import uniq from './uniq'
  * @see difference, intersection, uniq
  * @example
  * 
- * let arr1 = [1, 2, 3]
- * let arr2 = [2, 2, 3, 4]
+ * const arr1 = [1, 2, 3]
+ * const arr2 = [2, 2, 3, 4]
  * 
  * f.union(arr1)(arr2) // => [2, 3, 4, 1]
  */

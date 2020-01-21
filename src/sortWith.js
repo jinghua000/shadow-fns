@@ -19,12 +19,12 @@
  * @example
  *    
  * // sort by age asc, then sort by name asc
- * let sortMethod = f.sortWith(
+ * const sortMethod = f.sortWith(
  *   f.ascend(f.prop('age')), 
  *   f.ascend(f.prop('name'))
  * )
  * 
- * let users = [
+ * const users = [
  *   { name: 'Elika', age: 10 },
  *   { name: 'Alice', age: 10 },
  *   { name: 'Mike', age: 5 },
@@ -43,7 +43,7 @@ const sortWith = (...fns) => arr => [].concat(arr).sort(
   (a, b) => {
     let res
 
-    for (let fn of fns) {
+    for (const fn of fns) {
       res = fn(a, b)
       if (res !== 0) break
     }
