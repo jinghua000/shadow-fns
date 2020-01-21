@@ -132,3 +132,4 @@ export declare const uniq: (...args: any[]) => any;
 export declare const unless: (...args: any[]) => any;
 export declare const values: (...args: any[]) => any;
 export declare const when: (...args: any[]) => any;
+export declare const zip: (...args: any[]) => any;

@@ -5,7 +5,6 @@
 Add
 
 - zip
-- transpose
 
 And improve some API code example and internal implementation.
 

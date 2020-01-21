@@ -74,6 +74,7 @@
 - [sum](#sum)  
 - [union](#union)  
 - [uniq](#uniq)  
+- [zip](#zip)  
 
 
 ### Object 
@@ -279,14 +280,14 @@ New function's returns same as the origin function
 
 **Example**  
 ```js
-let fn = () => console.log('i am coming')
-let fnx = () => console.log('i am after')
-   
-fn = f.after(fnx)(fn)
+const fn1 = () => console.log('i am fn1')
+const fn2 = () => console.log('i am fn2')
+
+const fn = f.after(fn1)(fn2)
 
 fn()
-// logs: i am coming
-// logs: i am after
+// logs: i am fn2
+// logs: i am fn1
 ```
   
 
@@ -309,7 +310,7 @@ Always return the first parameter
 
 **Example**  
 ```js
-let obj = {}
+const obj = {}
 
 f.always(10)(123) // => 10
 f.always(10)(null) // => 10
@@ -368,8 +369,8 @@ Similar to `Function.prototype.apply`, but without context
 
 **Example**  
 ```js
-let print = (...args) => args
-let fn = f.apply(print)
+const print = (...args) => args
+const fn = f.apply(print)
 
 fn([1, 2, 3]) // => [1, 2, 3]
 ```
@@ -393,9 +394,9 @@ Apply the arguments to the supplied function
 
 **Example**  
 ```js
-let fn1 = (...args) => args
-let fn2 = (...args) => f.sum(args)
-let applyTo = f.applyTo('a', 'b', 'c')
+const fn1 = (...args) => args
+const fn2 = (...args) => f.sum(args)
+const applyTo = f.applyTo('a', 'b', 'c')
    
 applyTo(fn1) // => ['a', 'b', 'c']
 applyTo(fn2) // => 'abc'
@@ -425,7 +426,7 @@ Used for sort array in ascending
 
 **Example**  
 ```js
-let arr = [3,2,1,4,5]
+const arr = [3,2,1,4,5]
 
 f.sort(f.asc)(arr) // => [1,2,3,4,5]
 ```
@@ -489,7 +490,7 @@ Return a new object (shallow copy) which associate the key and value
 
 **Example**  
 ```js
-let obj = { a: 123 }
+const obj = { a: 123 }
 
 f.assoc('b', 234)(obj) // => { a: 123, b: 234 }
 ```
@@ -520,14 +521,14 @@ New function's returns same as the origin function
 
 **Example**  
 ```js
-let fn = () => console.log('i am coming')
-let fnx = () => console.log('i am before')
+const fn1 = () => console.log('i am fn1')
+const fn2 = () => console.log('i am fn2')
 
-fn = f.before(fnx)(fn)
+fn = f.before(fn1)(fn2)
 
 fn()
-// logs: i am before
-// logs: i am coming
+// logs: i am fn1
+// logs: i am fn2
 ```
   
 
@@ -549,10 +550,10 @@ Pass the first two parameters to supplied function and ignore others
 
 **Example**  
 ```js
-let printThree = (a, b, c) => [a, b, c]
+const printThree = (a, b, c) => [a, b, c]
 printThree(1, 2, 3) // => [1, 2, 3]
 
-let printTwo = f.binary(printThree)
+const printTwo = f.binary(printThree)
 printTwo(1, 2, 3) // => [1, 2, undefined]
 ```
   
@@ -579,7 +580,7 @@ First sceond, then first, like `fn2 && fn1`
 
 **Example**  
 ```js
-let isBetween = f.both(f.gt(5), f.lt(10))
+const isBetween = f.both(f.gt(5), f.lt(10))
 isBetween(8) // => true
 isBetween(11) // => false
 ```
@@ -611,7 +612,7 @@ return the corresponding value without invoke `fn`
 **Example**  
 ```js
 let num = 0
-let add = f.cacheWith(f.identity)(() => num += 1)
+const add = f.cacheWith(f.identity)(() => num += 1)
 
 add(1) // => 1
 add(1) // => 1
@@ -672,8 +673,8 @@ Support `[]` and `{}`, others will return themself
 
 **Example**  
 ```js
-let arr = [{}, {}, {}]
-let arr2 = f.clone(arr) // => [{}, {}, {}]
+const arr = [{}, {}, {}]
+const arr2 = f.clone(arr) // => [{}, {}, {}]
 arr[0] === arr2[0] // => false
 ```
   
@@ -733,10 +734,10 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let str = 'i have'
+const str = 'i have'
 f.concat(' a', ' plan')(str) // => 'i have a plan'
 
-let arr = [1, 2, 3]
+const arr = [1, 2, 3]
 f.concat(4, [5])(arr) // => [1, 2, 3, 4, 5]
 ```
   
@@ -763,15 +764,15 @@ else next
 
 **Example**  
 ```js
-let judgeMan = f.cond(
+const judgeMan = f.cond(
   [f.gt(90), f.always('good man')],
   [f.gt(70), f.always('common man')],
   [f.gt(50), f.always('weak man')],
   [f.T, f.always('unless man')]
 )
 
-let man1 = { name: 'Dark', point: 80 }
-let man2 = { name: 'White', point: 30 }
+const man1 = { name: 'Dark', point: 80 }
+const man2 = { name: 'White', point: 30 }
 
 judgeMan(man1.point) // => 'common man'
 judgeMan(man2.point) // => 'unless man'
@@ -799,7 +800,7 @@ Like `new MyClass()`
 **Example**  
 ```js
 class Animal {}
-let makeAnimal = f.construct(Animal)
+const makeAnimal = f.construct(Animal)
 
 makeAnimal('Rabbit') // => new Animal('Rabbit')
 ```
@@ -826,8 +827,8 @@ Return a curried equivalent function
 
 **Example**  
 ```js
-let fn = (a, b, c, d) => a + b + c + d
-fn = f.curry(fn)
+const add = (a, b, c, d) => a + b + c + d
+fn = f.curry(add)
 
 fn(1, 2, 3, 4) // => 10
 fn(1, 2)(3, 4) // => 10
@@ -858,11 +859,11 @@ Usual used in rest parameters
 
 **Example**  
 ```js
-let join = (...args) => args.join('')
+const join = (...args) => args.join('')
 join(1, 2, 3, 4) // => '1234'
 join(1, 2, 3) // => '123'
 
-join3 = f.curryN(3)(join)
+const join3 = f.curryN(3)(join)
 join3(1, 2, 3) // => '123'
 join3(1, 2)(3) // => '123'
 join3(1)(2, 3) // => '123'
@@ -894,7 +895,7 @@ from the last time the new function called
 **Example**  
 ```js
 let num = 0
-let fn = f.debounce(100)(() => num += 1) 
+const fn = f.debounce(100)(() => num += 1) 
 
 fn()
 fn()
@@ -919,6 +920,7 @@ Supplied object will not change
 
 **Category**: [Object](#object)  
 **Sign**: ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }  
+**See**: [merge](#merge)  
 **Since**: 0.1.0  
 
 | Param | Type |
@@ -927,8 +929,8 @@ Supplied object will not change
 
 **Example**  
 ```js
-let obj1 = { a: { a: 123, b: 234 } }
-let obj2 = { a: { a: 234 } }
+const obj1 = { a: { a: 123, b: 234 } }
+const obj2 = { a: { a: 234 } }
 
 f.deepMerge(obj1, obj2) // => { a: { a: 234, b: 234 } }
 ```
@@ -957,7 +959,7 @@ Used for sort array in descending
 
 **Example**  
 ```js
-let arr = [3,2,1,4,5]
+const arr = [3,2,1,4,5]
 
 f.sort(f.desc)(arr) // => [5,4,3,2,1]
 ```
@@ -1028,8 +1030,8 @@ Use `Array.prototype.includes`
 
 **Example**  
 ```js
-let arr1 = [1, 3, 5]
-let arr2 = [3, 5, 7]
+const arr1 = [1, 3, 5]
+const arr2 = [3, 5, 7]
 
 f.difference(arr1)(arr2) // => [7, 1]
 ```
@@ -1054,7 +1056,7 @@ Return a new object (shallow copy) which delete the key
 
 **Example**  
 ```js
-let obj = { a: 123, b: 234 }
+const obj = { a: 123, b: 234 }
 
 f.dissoc('b')(obj) // => { a: 123 }
 ```
@@ -1081,7 +1083,7 @@ The second parameter divide the first
 
 **Example**  
 ```js
-let divide3 = f.divide(3)
+const divide3 = f.divide(3)
 
 divide3(9) // => 3
 divide3(12) // => 4
@@ -1110,7 +1112,7 @@ First sceond, then first, like `fn2 || fn1`
 
 **Example**  
 ```js
-let isSatisfied = f.either(f.gt(15), f.lt(10))
+const isSatisfied = f.either(f.gt(15), f.lt(10))
 
 isSatisfied(8) // => true
 isSatisfied(11) // => false
@@ -1140,7 +1142,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let str = 'i have a plan'
+const str = 'i have a plan'
 
 f.endsWith('plan')(str) // => true
 ```
@@ -1223,7 +1225,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let everyGreaterThan3 = f.every(f.gt(3))
+const everyGreaterThan3 = f.every(f.gt(3))
 
 everyGreaterThan3([2, 3, 4]) // => false
 everyGreaterThan3([4, 5, 6]) // => true
@@ -1251,7 +1253,7 @@ From left-to-right
 
 **Example**  
 ```js
-let everyPass = f.everyPass(f.gt(5), f.gt(10), f.gt(15))
+const everyPass = f.everyPass(f.gt(5), f.gt(10), f.gt(15))
 
 everyPass(12) // => false
 everyPass(20) // => true
@@ -1280,8 +1282,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let greaterThan3 = f.filter(f.gt(3))
-let arr = [1, 2, 3, 4, 5]
+const greaterThan3 = f.filter(f.gt(3))
+const arr = [1, 2, 3, 4, 5]
 
 greaterThan3(arr) // => [4, 5]
 ```
@@ -1309,8 +1311,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let firstBiggerThan2 = f.find(f.gt(2))
-let arr = [2, 3, 4, 5]
+const firstBiggerThan2 = f.find(f.gt(2))
+const arr = [2, 3, 4, 5]
 
 firstBiggerThan2(arr) // => 3
 ```
@@ -1338,8 +1340,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let firstIndexBiggerThan2 = f.findIndex(f.gt(2))
-let arr = [2, 3, 4, 5]
+const firstIndexBiggerThan2 = f.findIndex(f.gt(2))
+const arr = [2, 3, 4, 5]
 
 firstIndexBiggerThan2(arr) // => 1
 ```
@@ -1364,10 +1366,10 @@ Return the first element of the data
 
 **Example**  
 ```js
-let str = 'abcdefg'
+const str = 'abcdefg'
 f.first(str) // => a
 
-let arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5]
 f.first(arr) // => 1
 ```
   
@@ -1393,7 +1395,7 @@ Return a new array
 
 **Example**  
 ```js
-let arr = [1, [2], [[3, 4], 5]]
+const arr = [1, [2], [[3, 4], 5]]
 
 f.flatten(arr) // => [1, 2, 3, 4, 5]
 ```
@@ -1416,8 +1418,8 @@ Return a equivalent function and arguments is flipped!
 
 **Example**  
 ```js
-let print = (...args) => args
-let flipPrint = f.flip(print)
+const print = (...args) => args
+const flipPrint = f.flip(print)
 
 print(1, 2, 3) // => [1, 2, 3]
 flipPrint(1, 2, 3) // => [3, 2, 1]
@@ -1449,7 +1451,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let logElems = f.forEach(f.unary(console.log))
+const logElems = f.forEach(f.unary(console.log))
 
 logElems([1, 2, 3]) // => [1, 2, 3]
 // logs: 1
@@ -1504,8 +1506,8 @@ satisfied elements as array values
 
 **Example**  
 ```js
-let arr = [1, 2, 3, 4, 5]
-let group = f.groupBy(e => e < 3 ? 'small' : 'big')
+const arr = [1, 2, 3, 4, 5]
+const group = f.groupBy(e => e < 3 ? 'small' : 'big')
 
 group(arr)
 // => { small: [1, 2], big: [3, 4, 5] }
@@ -1533,7 +1535,7 @@ Check the second parameter is greater than the first
 
 **Example**  
 ```js
-let greaterThan5 = f.gt(5)
+const greaterThan5 = f.gt(5)
 
 greaterThan5(6) // => true
 greaterThan5(5) // => false
@@ -1562,7 +1564,7 @@ Check the second parameter is bigger than or equal with the first
 
 **Example**  
 ```js
-let greaterOrEuqal5 = f.gte(5)
+const greaterOrEuqal5 = f.gte(5)
 
 greaterOrEuqal5(6) // => true
 greaterOrEuqal5(5) // => true
@@ -1591,7 +1593,7 @@ Use `Object.prototype.hasOwnProperty`
 
 **Example**  
 ```js
-let hasA = f.has('a')
+const hasA = f.has('a')
 
 hasA({ a: 123 }) // => true
 hasA({ b: 123 }) // => fasle
@@ -1619,7 +1621,7 @@ Check every element with `f.has`
 
 **Example**  
 ```js
-let hasPath = f.hasPath(['a', 'a'])
+const hasPath = f.hasPath(['a', 'a'])
 
 hasPath({ a: { a: 123 } }) // => true
 hasPath({ b: 123 }) // => false
@@ -1646,7 +1648,7 @@ It will be useful in some special case
 
 **Example**  
 ```js
-let obj = {}
+const obj = {}
 
 f.identity(10) // => 10
 f.identity(obj) === obj // => true
@@ -1675,7 +1677,7 @@ else invoke the third one
 
 **Example**  
 ```js
-let check3 = f.ifElse(f.gt(3), f.always('so big'), f.always('so small'))
+const check3 = f.ifElse(f.gt(3), f.always('so big'), f.always('so small'))
 check3(5) // => 'so big'
 check3(1) // => 'so small'
 ```
@@ -1704,7 +1706,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let includes = f.includes('yes')
+const includes = f.includes('yes')
 
 includes(['i', 'say', 'yes', '!']) // => true
 includes('i say yes!') // => true
@@ -1735,7 +1737,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let findIndexA = f.indexOf('a')
+const findIndexA = f.indexOf('a')
 
 findIndexA('abcabc') // => 0
 findIndexA(['b', 'c', 'a']) // => 2
@@ -1770,8 +1772,8 @@ Use `Array.prototype.includes`
 
 **Example**  
 ```js
-let arr1 = [1, 3, 5]
-let arr2 = [7, 5, 3]
+const arr1 = [1, 3, 5]
+const arr2 = [7, 5, 3]
 
 f.intersection(arr1)(arr2) // => [5, 3]
 ```
@@ -1799,7 +1801,7 @@ Support prototype chain
 **Example**  
 ```js
 class C {}
-let c = new C()
+const c = new C()
 
 f.is(C)(c) // => true  
 f.is(Object)(c) // => true  
@@ -1904,7 +1906,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let arr = ['i', 'have', 'a', 'plan']
+const arr = ['i', 'have', 'a', 'plan']
 
 f.join(' ')(arr) // => 'i have a plan'
 ```
@@ -1930,7 +1932,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let obj = { a: 1, b: 2, c: 3 }
+const obj = { a: 1, b: 2, c: 3 }
 
 keys(obj) // => ['a', 'b', 'c']
 ```
@@ -1955,10 +1957,10 @@ Return the last element of the data
 
 **Example**  
 ```js
-let str = 'abcdefg'
+const str = 'abcdefg'
 f.last(str) // => g
 
-let arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5]
 f.last(arr) // => 5
 ```
   
@@ -1986,7 +1988,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let findIndexA = f.lastIndexOf('a')
+const findIndexA = f.lastIndexOf('a')
 
 findIndexA('abcabc') // => 3
 findIndexA(['b', 'c', 'a', 'a']) // => 3
@@ -2037,7 +2039,7 @@ Check the second parameter is less than the first
 
 **Example**  
 ```js
-let lessThan5 = f.lt(5)
+const lessThan5 = f.lt(5)
 
 lessThan5(6) // => false
 lessThan5(5) // => false
@@ -2066,7 +2068,7 @@ Check the second parameter is less than or equal with the first
 
 **Example**  
 ```js
-let lessOrEqual5 = f.lte(5)
+const lessOrEqual5 = f.lte(5)
 
 lessOrEqual5(6) // => false
 lessOrEqual5(5) // => true
@@ -2095,7 +2097,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let mapDouble = f.map(f.multiply(2))
+const mapDouble = f.map(f.multiply(2))
 
 mapSquare([1, 2, 3]) // => [2, 4, 6]
 ```
@@ -2125,8 +2127,8 @@ and set them as the returns of function
 
 **Example**  
 ```js
-let obj = { a: 1, b: 2, c: 3 }
-let everyAdd1 = f.mapObj(f.add(1))
+const obj = { a: 1, b: 2, c: 3 }
+const everyAdd1 = f.mapObj(f.add(1))
 
 everyAdd1(obj) // => { a: 2, b: 3, c: 4 }
 ```
@@ -2153,7 +2155,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let matchAll = f.match(/\{.*?\}/g)
+const matchAll = f.match(/\{.*?\}/g)
 
 matchAll('{aa}-{bb}-{cc}')
 // => ['{aa}', '{bb}', '{cc}']
@@ -2179,7 +2181,7 @@ Compare the two parameters and return the bigger one
 
 **Example**  
 ```js
-let arr = [1, 3, 10, 4, 9]
+const arr = [1, 3, 10, 4, 9]
 
 arr.reduce(f.max) // => 10
 ```
@@ -2198,6 +2200,7 @@ Use `Object.assign` to merge the objects passed and return a new object
 
 **Category**: [Object](#object)  
 **Sign**: ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }  
+**See**: [deepMerge](#deepMerge)  
 **Since**: 0.1.0  
 
 | Param | Type |
@@ -2206,8 +2209,8 @@ Use `Object.assign` to merge the objects passed and return a new object
 
 **Example**  
 ```js
-let obj1 = { a: 123 }
-let obj2 = { b: 234 }
+const obj1 = { a: 123 }
+const obj2 = { b: 234 }
 
 f.merge(obj1, obj2) // => { a: 123, b: 234 }
 ```
@@ -2232,7 +2235,7 @@ Compare the two parameters and return the smaller one
 
 **Example**  
 ```js
-let arr = [1, 3, 10, 4, 9]
+const arr = [1, 3, 10, 4, 9]
 
 arr.reduce(f.min) // => 1
 ```
@@ -2262,7 +2265,7 @@ and if supplied index is out of range will return the origin array.
 
 **Example**  
 ```js
-let arr = [1, 2, 3, 4]
+const arr = [1, 2, 3, 4]
 
 f.move(1, 2, arr) // => [1, 3, 2, 4]
 f.move(-1, 0, arr) // => [4, 1, 2, 3]
@@ -2291,7 +2294,7 @@ The second parameter multiply the first
 
 **Example**  
 ```js
-let multiply3 = f.multiply(3)
+const multiply3 = f.multiply(3)
 
 multiply3(2) // => 6
 multiply3(3) // => 9
@@ -2317,10 +2320,10 @@ Pass the first `n` parameters to supplied function and ignore others
 
 **Example**  
 ```js
-let printThree = (a, b, c) => [a, b, c]
+const printThree = (a, b, c) => [a, b, c]
 printThree(1, 2, 3) // => [1, 2, 3]
 
-let printTwo = f.nAry(2)(printThree)
+const printTwo = f.nAry(2)(printThree)
 printTwo(1, 2, 3) // => [1, 2, undefined]
 ```
   
@@ -2346,7 +2349,7 @@ Only support first parameter(Function)
 
 **Example**  
 ```js
-let noneGreaterThan3 = f.none(f.gt(3))
+const noneGreaterThan3 = f.none(f.gt(3))
 
 noneGreaterThan3([1, 2, 3]) // => true
 noneGreaterThan3([2, 3, 4]) // => false
@@ -2398,11 +2401,11 @@ Support negative number
 
 **Example**  
 ```js
-let str = 'abcdefg'
+const str = 'abcdefg'
 f.nth(3)(str) // => d
 f.nth(-2)(str) // => f
 
-let arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5]
 f.nth(5)(arr) // => undefined
 f.nth(-1)(arr) // => 5
 ```
@@ -2430,8 +2433,8 @@ which not exists in supplied array
 
 **Example**  
 ```js
-let omit = f.omit(['a', 'b'])
-let obj = { a: 1, b: 2, c: 3 }
+const omit = f.omit(['a', 'b'])
+const obj = { a: 1, b: 2, c: 3 }
 
 omit(obj) // => { c: 3 }
 ```
@@ -2458,8 +2461,8 @@ The next time called will return the same result
 
 **Example**  
 ```js
-let add1 = f.add(1)
-let addOnce = f.once(add1)
+const add1 = f.add(1)
+const addOnce = f.once(add1)
 
 addOnce(10) // => 11
 addOnce(20) // => 11
@@ -2484,8 +2487,8 @@ Return a function and the returns of that is opposite to the function passed
 
 **Example**  
 ```js
-let gt3 = f.gt(3)
-let arr = [1, 2, 3, 4, 5]
+const gt3 = f.gt(3)
+const arr = [1, 2, 3, 4, 5]
 
 arr.filter(gt3) // => [4, 5]
 arr.filter(f.opposite(gt3)) // => [1, 2, 3]
@@ -2542,8 +2545,8 @@ Similar to `f.curry`
 
 **Example**  
 ```js
-let sum = (a, b, c) => a + b + c
-let sumAB = f.partial(sum)('a', 'b')
+const sum = (a, b, c) => a + b + c
+const sumAB = f.partial(sum)('a', 'b')
 
 sumAB('c') // => 'abc'
 sumAB('d') // => 'abd'
@@ -2571,8 +2574,8 @@ But arguments start at right (arguments order still left-to-right)
 
 **Example**  
 ```js
-let sum = (a, b, c) => a + b + c
-let sumBeforeAB = f.partial(sum)('a', 'b')
+const sum = (a, b, c) => a + b + c
+const sumBeforeAB = f.partial(sum)('a', 'b')
 
 sumAB('c') // => 'cab'
 sumAB('d') // => 'dab'
@@ -2604,9 +2607,9 @@ Can also handle array.
 
 **Example**  
 ```js
-let readPath = f.path(['a', 'a'])
-let obj1 = { a: { a: 123 } }
-let obj2 = { a: { b: 123 } }
+const readPath = f.path(['a', 'a'])
+const obj1 = { a: { a: 123 } }
+const obj2 = { a: { b: 123 } }
 
 readPath(obj1) // => 123
 readPath(obj2) // => undefined
@@ -2635,7 +2638,7 @@ Check the returns is equal with the supplied value
 
 **Example**  
 ```js
-let checkPath = f.pathEq(['a', 'a'], 123)
+const checkPath = f.pathEq(['a', 'a'], 123)
 
 checkPath({ b: 999 }) // => false
 checkPath({ a: { a: 123 } }) // => true
@@ -2664,7 +2667,7 @@ If not true return default value
 
 **Example**  
 ```js
-let readPathOr = f.pathOr(['a', 'a'], 'no!')
+const readPathOr = f.pathOr(['a', 'a'], 'no!')
 
 readPathOr({ a: 123 }) // => no!
 readPathOr({ a: { a: 'yes' } }) // => yes!
@@ -2694,8 +2697,8 @@ Return a new object with the corresponding key and value
 
 **Example**  
 ```js
-let pickAB = f.pick(['a', 'b'])
-let obj = { a: 123, b: 234, c: 345 }
+const pickAB = f.pick(['a', 'b'])
+const obj = { a: 123, b: 234, c: 345 }
 
 pickAB(obj) // => { a: 123, b: 234 }
 ```
@@ -2726,8 +2729,8 @@ Return a new object.
 
 **Example**  
 ```js
-let obj = { a: 1, b: 2, c: 3}
-let pickBy = f.pickBy(f.gte(2))
+const obj = { a: 1, b: 2, c: 3}
+const pickBy = f.pickBy(f.gte(2))
 
 pickBy(obj) // => { b: 2, c: 3 }
 ```
@@ -2756,7 +2759,7 @@ Except the first function, others should be unary
 **Example**  
 ```js
 // add 1 then multiply 2
-let calc = f.pipe(f.add(1), f.multiply(2))
+const calc = f.pipe(f.add(1), f.multiply(2))
 
 calc(1) // => 4
 calc(3) // => 8
@@ -2786,10 +2789,10 @@ Every functions need return a `Promise`
 
 **Example**  
 ```js
-let addA = arg => new Promise(res => setTimeout(res, 100, arg + 'a'))
-let addB = arg => new Promise(res => setTimeout(res, 100, arg + 'b'))
-let addC = arg => new Promise(res => setTimeout(res, 100, arg + 'c'))
-let addABC = f.pipeAsync(addA, addB, addC)
+const addA = arg => new Promise(res => setTimeout(res, 100, arg + 'a'))
+const addB = arg => new Promise(res => setTimeout(res, 100, arg + 'b'))
+const addC = arg => new Promise(res => setTimeout(res, 100, arg + 'c'))
+const addABC = f.pipeAsync(addA, addB, addC)
 
 addABC('').then(console.log) // => after 300 ms logs: 'abc'
 ```
@@ -2816,10 +2819,10 @@ Like `obj[key]`
 
 **Example**  
 ```js
-let a = { a: 1, b: 0 }
-let b = { a: 2 }
-let getA = f.prop('a')
-let getB = f.prop('b')
+const a = { a: 1, b: 0 }
+const b = { a: 2 }
+const getA = f.prop('a')
+const getB = f.prop('b')
 
 getA(a) // => 1
 getA(b) // => 2
@@ -2851,9 +2854,9 @@ Use `===`
 
 **Example**  
 ```js
-let checkEq = f.propEq('a', 123)
-let obj1 = { a: 123 }
-let obj2 = { a: 234 }
+const checkEq = f.propEq('a', 123)
+const obj1 = { a: 123 }
+const obj2 = { a: 234 }
 
 checkEq(obj1) // => true
 checkEq(obj2) // => false
@@ -2888,7 +2891,7 @@ Like `obj[key] || def`
 
 **Example**  
 ```js
-let readA = f.propOr('a', false)
+const readA = f.propOr('a', false)
 
 readA({ a: 123 }) // => 123
 readA({}) // => false
@@ -2916,7 +2919,7 @@ Return an array
 
 **Example**  
 ```js
-let obj = { a: 1, b: 2, c: 3 }
+const obj = { a: 1, b: 2, c: 3 }
 
 f.props(['a', 'b', 'c', 'd'])(obj)
 // => [1, 2, 3, undefined]
@@ -2973,7 +2976,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let sum = f.reduce((acc, cur) => acc += cur)
+const sum = f.reduce((acc, cur) => acc += cur)
 
 sum([1, 2, 3]) // => 6
 ```
@@ -3000,8 +3003,8 @@ Only support first parameter
 
 **Example**  
 ```js
-let notGreaterThan3 = f.reject(f.gt(3))
-let arr = [1, 2, 3, 4, 5]
+const notGreaterThan3 = f.reject(f.gt(3))
+const arr = [1, 2, 3, 4, 5]
 
 notGreaterThan3(arr) // => [1, 2, 3]
 ```
@@ -3030,7 +3033,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let replace = f.replace(/yes/, 'no')
+const replace = f.replace(/yes/, 'no')
 
 replace('yes yes i will yes')
 // => no no i will no
@@ -3060,7 +3063,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let arr = [1, 2, 3]
+const arr = [1, 2, 3]
 
 f.reverse(arr) // [3, 2, 1]
 ```
@@ -3085,7 +3088,7 @@ Shallow Copy
 
 **Example**  
 ```js
-let arr = [1, 2, 3]
+const arr = [1, 2, 3]
 
 f.shuffle(arr) // => [2, 3, 1]
 ```
@@ -3109,8 +3112,8 @@ Wait for some time and return a `Promise` instance
 
 **Example**  
 ```js
-let fn = res => 'result is' + res
-let sleepOneSec = sleep(1000)
+const fn = res => 'result is' + res
+const sleepOneSec = sleep(1000)
 
 sleepOneSec('hello').then(fn) 
 // => after 1 sceond: 'result is hello'
@@ -3139,7 +3142,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let slice2 = f.slice(2, 4)
+const slice2 = f.slice(2, 4)
 
 slice2([1, 2, 3, 4, 5]) // => [3, 4]
 slice2('abced') // => 'ce'
@@ -3168,7 +3171,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let someGreaterThan3 = f.some(f.gt(3))
+const someGreaterThan3 = f.some(f.gt(3))
 
 someGreaterThan3([2, 3, 4]) // => true
 someGreaterThan3([1, 2, 3]) // => false
@@ -3198,7 +3201,7 @@ Default `false`
 
 **Example**  
 ```js
-let somePass = f.somePass(f.gt(5), f.gt(10), f.gt(15))
+const somePass = f.somePass(f.gt(5), f.gt(10), f.gt(15))
 
 somePass(12) // => true
 somePass(3) // => false
@@ -3230,7 +3233,7 @@ But it will not change the supplied array
 
 **Example**  
 ```js
-let sortAsc = f.sort(f.asc)
+const sortAsc = f.sort(f.asc)
 
 sortAsc([10, 9, 1, 3, 2]) // => [1, 2, 3, 9, 10]
 ```
@@ -3264,12 +3267,12 @@ Use `Array.prototype.sort`
 **Example**  
 ```js
 // sort by age asc, then sort by name asc
-let sortMethod = f.sortWith(
+const sortMethod = f.sortWith(
   f.ascend(f.prop('age')), 
   f.ascend(f.prop('name'))
 )
 
-let users = [
+const users = [
   { name: 'Elika', age: 10 },
   { name: 'Alice', age: 10 },
   { name: 'Mike', age: 5 },
@@ -3313,8 +3316,8 @@ Return changed array
 
 **Example**  
 ```js
-let replaceTwo = f.splice(1, 2, 'two', 'two')
-let arr = ['one', 'two', 'three', 'four']
+const replaceTwo = f.splice(1, 2, 'two', 'two')
+const arr = ['one', 'two', 'three', 'four']
 
 replaceTwo(arr) // => ['one', 'two', 'two', 'four']
 ```
@@ -3342,8 +3345,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let str = 'i have a plan'
-let splitWithBlank = f.split(' ')
+const str = 'i have a plan'
+const splitWithBlank = f.split(' ')
 
 splitWithBlank(str) // => ['i', 'have', 'a', 'plan']
 ```
@@ -3371,7 +3374,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let str = 'i have a plan'
+const str = 'i have a plan'
 
 f.startsWith('i have')(str) // => true
 ```
@@ -3438,7 +3441,7 @@ Notice that this perhaps change the params passed
 
 This function usual use in case like this 
 
-`function foo () { let a = {}; a.a = 123; return a }`
+`function foo () { const a = {}; a.a = 123; return a }`
 
 To
 
@@ -3457,7 +3460,7 @@ To
 
 **Example**  
 ```js
-let fn = obj => obj.a = 123
+const fn = obj => obj.a = 123
 
 f.tap(fn)({}) // => { a: 123 }
 ```
@@ -3487,7 +3490,7 @@ it is curried and `RegExp` is the first parameter
 
 **Example**  
 ```js
-let test = f.test(/hello/)
+const test = f.test(/hello/)
 
 test('hello world') // => true
 test('goodbye world') // => false
@@ -3515,8 +3518,8 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let fetchData = () => Promise.resolve({ name: 'Eric' })
-let getName = f.then(f.prop('name'))
+const fetchData = () => Promise.resolve({ name: 'Eric' })
+const getName = f.then(f.prop('name'))
 
 getName(fetchData()).then(console.log) // => logs: Eric
 ```
@@ -3546,7 +3549,7 @@ and at most invoke once in `ms` milliseconds
 **Example**  
 ```js
 let num = 0
-let fn = f.throttle(100)(() => num += 1) 
+const fn = f.throttle(100)(() => num += 1) 
 
 fn()
 fn()
@@ -3582,8 +3585,8 @@ It is the special case of `f.partial`
 
 **Example**  
 ```js
-let sum = (a, b, c) => a + b + c
-let waitSum = f.thunkify(sum)('a', 'b', 'c')
+const sum = (a, b, c) => a + b + c
+const waitSum = f.thunkify(sum)('a', 'b', 'c')
 
 waitSum() // => 'abc'
 ```
@@ -3608,7 +3611,7 @@ and push the returns to an array
 
 **Example**  
 ```js
-let id3 = f.times(3, f.identity)
+const id3 = f.times(3, f.identity)
 
 id3(1) // => [1, 1, 1]
 ```
@@ -3660,7 +3663,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let str = 'ABC'
+const str = 'ABC'
 
 f.toLower(str) // => 'abc'
 ```
@@ -3713,7 +3716,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let str = 'abc'
+const str = 'abc'
 
 f.toUpper(str) // => 'ABC'
 ```
@@ -3741,7 +3744,7 @@ To test what parameters passed in
 
 **Example**  
 ```js
-let add3 = f.pipe(
+const add3 = f.pipe(
   f.add(1), 
   f.trace('what i am?')
   f.add(1), 
@@ -3777,7 +3780,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let str = ' i have a plan '
+const str = ' i have a plan '
 
 f.trim(str) // => 'i have a plan'
 ```
@@ -3803,7 +3806,7 @@ If throw an error, call the next
 
 **Example**  
 ```js
-let parse = f.tryCatch(JSON.parse, f.always({}))
+const parse = f.tryCatch(JSON.parse, f.always({}))
 
 parse(JSON.stringify({ a: 1 })) // => { a: 1 }
 parse({ a: 1 }) // => {}
@@ -3854,7 +3857,7 @@ Pass the first parameters to supplied function and ignore others
 
 **Example**  
 ```js
-let arr = [1, 2, 3]
+const arr = [1, 2, 3]
 
 arr.map(parseInt) // => [1, NaN, NaN]
 arr.map(f.unary(parseInt)) // => [1, 2, 3]
@@ -3879,8 +3882,8 @@ Change a curried function to an uncurry equivalent function
 
 **Example**  
 ```js
-let add = a => b => c => a + b + c
-let fn = f.uncurry(add)
+const add = a => b => c => a + b + c
+const fn = f.uncurry(add)
 
 fn('a', 'b', 'c') // => 'abc'
 ```
@@ -3906,8 +3909,8 @@ with `n` arugments
 
 **Example**  
 ```js
-let add = a => b => c => a + b + c
-let fn = f.uncurryN(2)(add)
+const add = a => b => c => a + b + c
+const fn = f.uncurryN(2)(add)
 
 fn('a', 'b')('c') // => 'abc'
 ```
@@ -3938,8 +3941,8 @@ Order from second to first
 
 **Example**  
 ```js
-let arr1 = [1, 2, 3]
-let arr2 = [2, 2, 3, 4]
+const arr1 = [1, 2, 3]
+const arr2 = [2, 2, 3, 4]
 
 f.union(arr1)(arr2) // => [2, 3, 4, 1]
 ```
@@ -3965,7 +3968,7 @@ Select unique elements in the array with `Set`
 
 **Example**  
 ```js
-let arr = [1, 2, 2, NaN, NaN]
+const arr = [1, 2, 2, NaN, NaN]
 
 f.uniq(arr) // => [1, 2, NaN]
 ```
@@ -3993,7 +3996,7 @@ else return self
 
 **Example**  
 ```js
-let cannotBelow3 = f.unless(f.gt(3), f.always('so small'))
+const cannotBelow3 = f.unless(f.gt(3), f.always('so small'))
 
 cannotBelow3(5) // => 5
 cannotBelow3(1) // => 'so small'
@@ -4020,7 +4023,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 **Example**  
 ```js
-let obj = { a: 1, b: 2, c: 3 }
+const obj = { a: 1, b: 2, c: 3 }
 
 f.values(obj) // => [1, 2, 3]
 ```
@@ -4048,7 +4051,7 @@ else return self
 
 **Example**  
 ```js
-let cannotOver3 = f.when(f.gt(3), f.always('so big'))
+const cannotOver3 = f.when(f.gt(3), f.always('so big'))
 
 cannotOver3(5) // => 'so big'
 cannotOver3(1) // => 1
@@ -4056,6 +4059,33 @@ cannotOver3(1) // => 1
   
 
 [View source](../src/when.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
+
+<a name="zip"></a>
+
+## zip ⇒ <code>Array</code>
+Create a new array from the supplied arrays,  
+every index corresponding value of them compose to the new item.  
+
+And the new array's length will same as the first supplied array.
+
+**Category**: [Array](#array)  
+**Sign**: ([a], [b], [c], ...) -> [[a, b, c, ...], ...]  
+**Since**: 0.1.7  
+
+| Param | Type |
+| --- | --- |
+| ...arr | <code>Array</code> | 
+
+**Example**  
+```js
+const weathers = ['windy', 'sunny', 'cloudy']
+const marks = [0, 1, 2]
+
+f.zip(weathers, marks) // => [['windy', 0], ['sunny', 1], ['cloudy', 2]]
+```
+  
+
+[View source](../src/zip.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
   
 

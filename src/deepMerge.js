@@ -13,6 +13,7 @@ import type from './type'
  * @since 0.1.0
  * @category Object
  * @sign ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }
+ * @see merge
  * @example
  * 
  * const obj1 = { a: { a: 123, b: 234 } }

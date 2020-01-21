@@ -10,6 +10,7 @@
  * @since 0.1.0
  * @category Object
  * @sign ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }
+ * @see deepMerge
  * @example
  * 
  * const obj1 = { a: 123 }

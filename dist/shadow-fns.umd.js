@@ -70,7 +70,7 @@
    * @see lt, gte
    * @example
    * 
-   * let greaterThan5 = f.gt(5)
+   * const greaterThan5 = f.gt(5)
    * 
    * greaterThan5(6) // => true
    * greaterThan5(5) // => false
@@ -92,7 +92,7 @@
    * @see lte, gt
    * @example
    * 
-   * let greaterOrEuqal5 = f.gte(5)
+   * const greaterOrEuqal5 = f.gte(5)
    * 
    * greaterOrEuqal5(6) // => true
    * greaterOrEuqal5(5) // => true
@@ -114,7 +114,7 @@
    * @see gt, lte
    * @example
    * 
-   * let lessThan5 = f.lt(5)
+   * const lessThan5 = f.lt(5)
    * 
    * lessThan5(6) // => false
    * lessThan5(5) // => false
@@ -136,7 +136,7 @@
    * @see gte, lt
    * @example
    * 
-   * let lessOrEqual5 = f.lte(5)
+   * const lessOrEqual5 = f.lte(5)
    * 
    * lessOrEqual5(6) // => false
    * lessOrEqual5(5) // => true
@@ -197,7 +197,7 @@
    * @see divide
    * @example 
    * 
-   * let multiply3 = f.multiply(3)
+   * const multiply3 = f.multiply(3)
    * 
    * multiply3(2) // => 6
    * multiply3(3) // => 9
@@ -218,7 +218,7 @@
    * @see multiply
    * @example 
    * 
-   * let divide3 = f.divide(3)
+   * const divide3 = f.divide(3)
    * 
    * divide3(9) // => 3
    * divide3(12) // => 4
@@ -237,7 +237,7 @@
    * @see identity
    * @example
    *    
-   * let obj = {}
+   * const obj = {}
    * 
    * f.always(10)(123) // => 10
    * f.always(10)(null) // => 10
@@ -258,7 +258,7 @@
    * @see always
    * @example
    * 
-   * let obj = {}
+   * const obj = {}
    * 
    * f.identity(10) // => 10
    * f.identity(obj) === obj // => true
@@ -325,7 +325,7 @@
    * @see min
    * @example
    * 
-   * let arr = [1, 3, 10, 4, 9]
+   * const arr = [1, 3, 10, 4, 9]
    * 
    * arr.reduce(f.max) // => 10
    */
@@ -343,7 +343,7 @@
    * @see max
    * @example
    * 
-   * let arr = [1, 3, 10, 4, 9]
+   * const arr = [1, 3, 10, 4, 9]
    * 
    * arr.reduce(f.min) // => 1
    */
@@ -364,11 +364,11 @@
    * @see first, last
    * @example
    * 
-   * let str = 'abcdefg'
+   * const str = 'abcdefg'
    * f.nth(3)(str) // => d
    * f.nth(-2)(str) // => f
    * 
-   * let arr = [1, 2, 3, 4, 5]
+   * const arr = [1, 2, 3, 4, 5]
    * f.nth(5)(arr) // => undefined
    * f.nth(-1)(arr) // => 5
    */
@@ -386,10 +386,10 @@
    * @see last, nth
    * @example
    * 
-   * let str = 'abcdefg'
+   * const str = 'abcdefg'
    * f.first(str) // => a
    * 
-   * let arr = [1, 2, 3, 4, 5]
+   * const arr = [1, 2, 3, 4, 5]
    * f.first(arr) // => 1
    */
   const first = list => list[0];
@@ -406,10 +406,10 @@
    * @see first, nth
    * @example
    * 
-   * let str = 'abcdefg'
+   * const str = 'abcdefg'
    * f.last(str) // => g
    * 
-   * let arr = [1, 2, 3, 4, 5]
+   * const arr = [1, 2, 3, 4, 5]
    * f.last(arr) // => 5
    */
   const last = list => list.slice(-1)[0];
@@ -430,7 +430,7 @@
    * @see desc, ascend
    * @example
    * 
-   * let arr = [3,2,1,4,5]
+   * const arr = [3,2,1,4,5]
    * 
    * f.sort(f.asc)(arr) // => [1,2,3,4,5]
    */
@@ -488,7 +488,7 @@
    * @see asc, descend
    * @example
    * 
-   * let arr = [3,2,1,4,5]
+   * const arr = [3,2,1,4,5]
    * 
    * f.sort(f.desc)(arr) // => [5,4,3,2,1]
    */
@@ -532,7 +532,7 @@
    * 
    * This function usual use in case like this 
    * 
-   * `function foo () { let a = {}; a.a = 123; return a }`
+   * `function foo () { const a = {}; a.a = 123; return a }`
    * 
    * To
    * 
@@ -548,7 +548,7 @@
    * @sign (a -> x) -> a -> a
    * @example
    *    
-   * let fn = obj => obj.a = 123
+   * const fn = obj => obj.a = 123
    * 
    * f.tap(fn)({}) // => { a: 123 }
    */
@@ -566,10 +566,11 @@
    * @since 0.1.0
    * @category Object
    * @sign ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }
+   * @see deepMerge
    * @example
    * 
-   * let obj1 = { a: 123 }
-   * let obj2 = { b: 234 }
+   * const obj1 = { a: 123 }
+   * const obj2 = { b: 234 }
    * 
    * f.merge(obj1, obj2) // => { a: 123, b: 234 }
    */
@@ -588,7 +589,7 @@
    * @see dissoc
    * @example
    * 
-   * let obj = { a: 123 }
+   * const obj = { a: 123 }
    * 
    * f.assoc('b', 234)(obj) // => { a: 123, b: 234 }
    */
@@ -608,7 +609,7 @@
    * @see dissoc
    * @example
    * 
-   * let obj = { a: 123, b: 234 }
+   * const obj = { a: 123, b: 234 }
    * 
    * f.dissoc('b')(obj) // => { a: 123 }
    */
@@ -667,7 +668,7 @@
    * @see values
    * @example
    * 
-   * let obj = { a: 1, b: 2, c: 3 }
+   * const obj = { a: 1, b: 2, c: 3 }
    * 
    * keys(obj) // => ['a', 'b', 'c']
    */
@@ -702,7 +703,7 @@
     const t2 = type(x);
 
     if (t1 === 'Array' && t2 === 'Array') {
-      let length = e.length;
+      const length = e.length;
 
       if (length !== x.length) return false
 
@@ -714,12 +715,12 @@
     }
 
     if (t1 === 'Object' && t2 === 'Object') {
-      let _keys = keys(e);
-      let length = _keys.length;
+      const _keys = keys(e);
+      const length = _keys.length;
 
       if (length !== keys(x).length) return false
 
-      for (let k of _keys) {
+      for (const k of _keys) {
         if (!equals(x[k], e[k])) return false
       }
 
@@ -743,10 +744,10 @@
    * @see props, propOr, propEq
    * @example
    * 
-   * let a = { a: 1, b: 0 }
-   * let b = { a: 2 }
-   * let getA = f.prop('a')
-   * let getB = f.prop('b')
+   * const a = { a: 1, b: 0 }
+   * const b = { a: 2 }
+   * const getA = f.prop('a')
+   * const getB = f.prop('b')
    * 
    * getA(a) // => 1
    * getA(b) // => 2
@@ -768,7 +769,7 @@
    * @see prop
    * @example
    * 
-   * let obj = { a: 1, b: 2, c: 3 }
+   * const obj = { a: 1, b: 2, c: 3 }
    * 
    * f.props(['a', 'b', 'c', 'd'])(obj)
    * // => [1, 2, 3, undefined]
@@ -796,7 +797,7 @@
    * @see prop, propEq
    * @example
    * 
-   * let readA = f.propOr('a', false)
+   * const readA = f.propOr('a', false)
    * 
    * readA({ a: 123 }) // => 123
    * readA({}) // => false
@@ -820,9 +821,9 @@
    * @see prop, propOr
    * @example
    * 
-   * let checkEq = f.propEq('a', 123)
-   * let obj1 = { a: 123 }
-   * let obj2 = { a: 234 }
+   * const checkEq = f.propEq('a', 123)
+   * const obj1 = { a: 123 }
+   * const obj2 = { a: 234 }
    * 
    * checkEq(obj1) // => true
    * checkEq(obj2) // => false
@@ -844,7 +845,7 @@
    * f.isNil(undefined) // => true
    * f.isNil('undefined') // => false
    */
-  const isNil = e => e === undefined || e === null;
+  const isNil = e => e == null;
 
   /**
    * Okay, this method just like `Object.prototype.hasOwnProperty.call`
@@ -870,7 +871,7 @@
    * @see hasPath
    * @example
    * 
-   * let hasA = f.has('a')
+   * const hasA = f.has('a')
    * 
    * hasA({ a: 123 }) // => true
    * hasA({ b: 123 }) // => fasle
@@ -891,7 +892,7 @@
    * @see has
    * @example
    * 
-   * let hasPath = f.hasPath(['a', 'a'])
+   * const hasPath = f.hasPath(['a', 'a'])
    * 
    * hasPath({ a: { a: 123 } }) // => true
    * hasPath({ b: 123 }) // => false
@@ -899,7 +900,7 @@
   const hasPath = _curry2((arr, obj) => {
     let val = obj;
 
-    for (let k of arr) {
+    for (const k of arr) {
       if (!has(k)(val)) return false
       val = val[k];
     }
@@ -925,9 +926,9 @@
    * @see pathOr, pathEq
    * @example
    * 
-   * let readPath = f.path(['a', 'a'])
-   * let obj1 = { a: { a: 123 } }
-   * let obj2 = { a: { b: 123 } }
+   * const readPath = f.path(['a', 'a'])
+   * const obj1 = { a: { a: 123 } }
+   * const obj2 = { a: { b: 123 } }
    * 
    * readPath(obj1) // => 123
    * readPath(obj2) // => undefined
@@ -935,7 +936,7 @@
   const path = _curry2((arr, obj) => {
     let val = obj;
 
-    for (let k of arr) {
+    for (const k of arr) {
       if (isNil(val)) return
       val = val[k];
     }
@@ -958,7 +959,7 @@
    * @see path, pathEq
    * @example
    * 
-   * let readPathOr = f.pathOr(['a', 'a'], 'no!')
+   * const readPathOr = f.pathOr(['a', 'a'], 'no!')
    * 
    * readPathOr({ a: 123 }) // => no!
    * readPathOr({ a: { a: 'yes' } }) // => yes!
@@ -980,7 +981,7 @@
    * @see path, pathOr
    * @example
    * 
-   * let checkPath = f.pathEq(['a', 'a'], 123)
+   * const checkPath = f.pathEq(['a', 'a'], 123)
    * 
    * checkPath({ b: 999 }) // => false
    * checkPath({ a: { a: 123 } }) // => true
@@ -1002,7 +1003,7 @@
    * @example
    * 
    * class C {}
-   * let c = new C()
+   * const c = new C()
    * 
    * f.is(C)(c) // => true  
    * f.is(Object)(c) // => true  
@@ -1026,8 +1027,8 @@
    * @sign a -> a
    * @example
    * 
-   * let arr = [{}, {}, {}]
-   * let arr2 = f.clone(arr) // => [{}, {}, {}]
+   * const arr = [{}, {}, {}]
+   * const arr2 = f.clone(arr) // => [{}, {}, {}]
    * arr[0] === arr2[0] // => false
    */
   const clone = data => 
@@ -1068,7 +1069,7 @@
    * @see some, none
    * @example
    * 
-   * let everyGreaterThan3 = f.every(f.gt(3))
+   * const everyGreaterThan3 = f.every(f.gt(3))
    * 
    * everyGreaterThan3([2, 3, 4]) // => false
    * everyGreaterThan3([4, 5, 6]) // => true
@@ -1090,7 +1091,7 @@
    * @see every, none
    * @example
    * 
-   * let someGreaterThan3 = f.some(f.gt(3))
+   * const someGreaterThan3 = f.some(f.gt(3))
    * 
    * someGreaterThan3([2, 3, 4]) // => true
    * someGreaterThan3([1, 2, 3]) // => false
@@ -1107,8 +1108,8 @@
    * @sign (...x -> result) -> (...x -> !result)
    * @example
    * 
-   * let gt3 = f.gt(3)
-   * let arr = [1, 2, 3, 4, 5]
+   * const gt3 = f.gt(3)
+   * const arr = [1, 2, 3, 4, 5]
    * 
    * arr.filter(gt3) // => [4, 5]
    * arr.filter(f.opposite(gt3)) // => [1, 2, 3]
@@ -1129,7 +1130,7 @@
    * @see every, some
    * @example
    * 
-   * let noneGreaterThan3 = f.none(f.gt(3))
+   * const noneGreaterThan3 = f.none(f.gt(3))
    * 
    * noneGreaterThan3([1, 2, 3]) // => true
    * noneGreaterThan3([2, 3, 4]) // => false
@@ -1149,7 +1150,7 @@
    * @see keys
    * @example
    * 
-   * let obj = { a: 1, b: 2, c: 3 }
+   * const obj = { a: 1, b: 2, c: 3 }
    * 
    * f.values(obj) // => [1, 2, 3]
    */
@@ -1186,7 +1187,7 @@
    * @see split
    * @example
    * 
-   * let arr = ['i', 'have', 'a', 'plan']
+   * const arr = ['i', 'have', 'a', 'plan']
    * 
    * f.join(' ')(arr) // => 'i have a plan'
    */
@@ -1206,7 +1207,7 @@
    * @sign (a -> b) -> [a] -> [b]
    * @example
    * 
-   * let mapDouble = f.map(f.multiply(2))
+   * const mapDouble = f.map(f.multiply(2))
    * 
    * mapSquare([1, 2, 3]) // => [2, 4, 6]
    */
@@ -1229,8 +1230,8 @@
    * @sign (a -> b) -> { k: a } -> { k: b }
    * @example 
    * 
-   * let obj = { a: 1, b: 2, c: 3 }
-   * let everyAdd1 = f.mapObj(f.add(1))
+   * const obj = { a: 1, b: 2, c: 3 }
+   * const everyAdd1 = f.mapObj(f.add(1))
    * 
    * everyAdd1(obj) // => { a: 2, b: 3, c: 4 }
    */
@@ -1254,7 +1255,7 @@
    * @sign (x -> a) -> Array -> a
    * @example
    * 
-   * let sum = f.reduce((acc, cur) => acc += cur)
+   * const sum = f.reduce((acc, cur) => acc += cur)
    * 
    * sum([1, 2, 3]) // => 6
    */
@@ -1281,8 +1282,8 @@
    * @sign (Number, Number, *, ...) -> Array -> Array
    * @example
    * 
-   * let replaceTwo = f.splice(1, 2, 'two', 'two')
-   * let arr = ['one', 'two', 'three', 'four']
+   * const replaceTwo = f.splice(1, 2, 'two', 'two')
+   * const arr = ['one', 'two', 'three', 'four']
    * 
    * replaceTwo(arr) // => ['one', 'two', 'two', 'four']
    */
@@ -1306,7 +1307,7 @@
    * @sign (a -> x) -> [a] -> [a]
    * @example
    * 
-   * let logElems = f.forEach(f.unary(console.log))
+   * const logElems = f.forEach(f.unary(console.log))
    * 
    * logElems([1, 2, 3]) // => [1, 2, 3]
    * // logs: 1
@@ -1333,7 +1334,7 @@
    * @see sortWith
    * @example
    * 
-   * let sortAsc = f.sort(f.asc)
+   * const sortAsc = f.sort(f.asc)
    * 
    * sortAsc([10, 9, 1, 3, 2]) // => [1, 2, 3, 9, 10]
    */
@@ -1360,12 +1361,12 @@
    * @example
    *    
    * // sort by age asc, then sort by name asc
-   * let sortMethod = f.sortWith(
+   * const sortMethod = f.sortWith(
    *   f.ascend(f.prop('age')), 
    *   f.ascend(f.prop('name'))
    * )
    * 
-   * let users = [
+   * const users = [
    *   { name: 'Elika', age: 10 },
    *   { name: 'Alice', age: 10 },
    *   { name: 'Mike', age: 5 },
@@ -1384,7 +1385,7 @@
     (a, b) => {
       let res;
 
-      for (let fn of fns) {
+      for (const fn of fns) {
         res = fn(a, b);
         if (res !== 0) break
       }
@@ -1408,8 +1409,8 @@
    * @see reject
    * @example
    *    
-   * let greaterThan3 = f.filter(f.gt(3))
-   * let arr = [1, 2, 3, 4, 5]
+   * const greaterThan3 = f.filter(f.gt(3))
+   * const arr = [1, 2, 3, 4, 5]
    * 
    * greaterThan3(arr) // => [4, 5]
    */
@@ -1429,8 +1430,8 @@
    * @see filter
    * @example
    * 
-   * let notGreaterThan3 = f.reject(f.gt(3))
-   * let arr = [1, 2, 3, 4, 5]
+   * const notGreaterThan3 = f.reject(f.gt(3))
+   * const arr = [1, 2, 3, 4, 5]
    * 
    * notGreaterThan3(arr) // => [1, 2, 3]
    */
@@ -1451,8 +1452,8 @@
    * @see findIndex
    * @example
    * 
-   * let firstBiggerThan2 = f.find(f.gt(2))
-   * let arr = [2, 3, 4, 5]
+   * const firstBiggerThan2 = f.find(f.gt(2))
+   * const arr = [2, 3, 4, 5]
    * 
    * firstBiggerThan2(arr) // => 3
    */
@@ -1473,8 +1474,8 @@
    * @see find
    * @example
    * 
-   * let firstIndexBiggerThan2 = f.findIndex(f.gt(2))
-   * let arr = [2, 3, 4, 5]
+   * const firstIndexBiggerThan2 = f.findIndex(f.gt(2))
+   * const arr = [2, 3, 4, 5]
    * 
    * firstIndexBiggerThan2(arr) // => 1
    */
@@ -1496,7 +1497,7 @@
    * @see lastIndexOf
    * @example
    * 
-   * let findIndexA = f.indexOf('a')
+   * const findIndexA = f.indexOf('a')
    * 
    * findIndexA('abcabc') // => 0
    * findIndexA(['b', 'c', 'a']) // => 2
@@ -1520,7 +1521,7 @@
    * @see indexOf
    * @example
    * 
-   * let findIndexA = f.lastIndexOf('a')
+   * const findIndexA = f.lastIndexOf('a')
    * 
    * findIndexA('abcabc') // => 3
    * findIndexA(['b', 'c', 'a', 'a']) // => 3
@@ -1544,7 +1545,7 @@
    * @example
    *    
    * // add 1 then multiply 2
-   * let calc = f.pipe(f.add(1), f.multiply(2))
+   * const calc = f.pipe(f.add(1), f.multiply(2))
    * 
    * calc(1) // => 4
    * calc(3) // => 8
@@ -1569,10 +1570,10 @@
    * @see pipe
    * @example
    * 
-   * let addA = arg => new Promise(res => setTimeout(res, 100, arg + 'a'))
-   * let addB = arg => new Promise(res => setTimeout(res, 100, arg + 'b'))
-   * let addC = arg => new Promise(res => setTimeout(res, 100, arg + 'c'))
-   * let addABC = f.pipeAsync(addA, addB, addC)
+   * const addA = arg => new Promise(res => setTimeout(res, 100, arg + 'a'))
+   * const addB = arg => new Promise(res => setTimeout(res, 100, arg + 'b'))
+   * const addC = arg => new Promise(res => setTimeout(res, 100, arg + 'c'))
+   * const addABC = f.pipeAsync(addA, addB, addC)
    * 
    * addABC('').then(console.log) // => after 300 ms logs: 'abc'
    */
@@ -1592,8 +1593,8 @@
    * @sign Number -> x -> Promise
    * @example
    * 
-   * let fn = res => 'result is' + res
-   * let sleepOneSec = sleep(1000)
+   * const fn = res => 'result is' + res
+   * const sleepOneSec = sleep(1000)
    * 
    * sleepOneSec('hello').then(fn) 
    * // => after 1 sceond: 'result is hello'
@@ -1614,8 +1615,8 @@
    * @sign (Function, Function?) -> Promise -> Promise
    * @example
    *    
-   * let fetchData = () => Promise.resolve({ name: 'Eric' })
-   * let getName = f.then(f.prop('name'))
+   * const fetchData = () => Promise.resolve({ name: 'Eric' })
+   * const getName = f.then(f.prop('name'))
    * 
    * getName(fetchData()).then(console.log) // => logs: Eric
    */
@@ -1706,7 +1707,7 @@
    * @sign [a, b, ..., z] -> [z, ..., b, a]
    * @example
    * 
-   * let arr = [1, 2, 3]
+   * const arr = [1, 2, 3]
    * 
    * f.reverse(arr) // [3, 2, 1]
    */
@@ -1726,7 +1727,7 @@
    * @sign Array -> Array
    * @example
    * 
-   * let arr = [1, [2], [[3, 4], 5]]
+   * const arr = [1, [2], [[3, 4], 5]]
    * 
    * f.flatten(arr) // => [1, 2, 3, 4, 5]
    */
@@ -1749,7 +1750,7 @@
    * @see difference, intersection, union
    * @example
    * 
-   * let arr = [1, 2, 2, NaN, NaN]
+   * const arr = [1, 2, 2, NaN, NaN]
    * 
    * f.uniq(arr) // => [1, 2, NaN]
    */
@@ -1773,8 +1774,8 @@
    * @see difference, intersection, uniq
    * @example
    * 
-   * let arr1 = [1, 2, 3]
-   * let arr2 = [2, 2, 3, 4]
+   * const arr1 = [1, 2, 3]
+   * const arr2 = [2, 2, 3, 4]
    * 
    * f.union(arr1)(arr2) // => [2, 3, 4, 1]
    */
@@ -1800,8 +1801,8 @@
    * @see intersection, union, uniq
    * @example
    * 
-   * let arr1 = [1, 3, 5]
-   * let arr2 = [3, 5, 7]
+   * const arr1 = [1, 3, 5]
+   * const arr2 = [3, 5, 7]
    * 
    * f.difference(arr1)(arr2) // => [7, 1]
    */
@@ -1831,8 +1832,8 @@
    * @see difference, union, uniq
    * @example
    * 
-   * let arr1 = [1, 3, 5]
-   * let arr2 = [7, 5, 3]
+   * const arr1 = [1, 3, 5]
+   * const arr2 = [7, 5, 3]
    * 
    * f.intersection(arr1)(arr2) // => [5, 3]
    */
@@ -1856,8 +1857,8 @@
    * @sign (a -> b) -> [a] -> { b: [a] }
    * @example
    * 
-   * let arr = [1, 2, 3, 4, 5]
-   * let group = f.groupBy(e => e < 3 ? 'small' : 'big')
+   * const arr = [1, 2, 3, 4, 5]
+   * const group = f.groupBy(e => e < 3 ? 'small' : 'big')
    * 
    * group(arr)
    * // => { small: [1, 2], big: [3, 4, 5] }
@@ -1886,7 +1887,7 @@
    * @see toUpper
    * @example
    * 
-   * let str = 'ABC'
+   * const str = 'ABC'
    * 
    * f.toLower(str) // => 'abc'
    */
@@ -1907,7 +1908,7 @@
    * @see toLower
    * @example
    * 
-   * let str = 'abc'
+   * const str = 'abc'
    * 
    * f.toUpper(str) // => 'ABC'
    */
@@ -1944,10 +1945,10 @@
    * @sign ...a -> a -> a
    * @example
    * 
-   * let str = 'i have'
+   * const str = 'i have'
    * f.concat(' a', ' plan')(str) // => 'i have a plan'
    * 
-   * let arr = [1, 2, 3]
+   * const arr = [1, 2, 3]
    * f.concat(4, [5])(arr) // => [1, 2, 3, 4, 5]
    */
   const concat = _nativeSelfFn('concat');
@@ -1968,7 +1969,7 @@
    * @sign x -> a -> Boolean
    * @example
    * 
-   * let includes = f.includes('yes')
+   * const includes = f.includes('yes')
    * 
    * includes(['i', 'say', 'yes', '!']) // => true
    * includes('i say yes!') // => true
@@ -1991,7 +1992,7 @@
    * @sign (Number, Number) -> a -> a
    * @example
    *    
-   * let slice2 = f.slice(2, 4)
+   * const slice2 = f.slice(2, 4)
    * 
    * slice2([1, 2, 3, 4, 5]) // => [3, 4]
    * slice2('abced') // => 'ce'
@@ -2012,7 +2013,7 @@
    * @sign String -> String
    * @example
    * 
-   * let str = ' i have a plan '
+   * const str = ' i have a plan '
    * 
    * f.trim(str) // => 'i have a plan'
    */
@@ -2033,8 +2034,8 @@
    * @see join
    * @example
    * 
-   * let str = 'i have a plan'
-   * let splitWithBlank = f.split(' ')
+   * const str = 'i have a plan'
+   * const splitWithBlank = f.split(' ')
    * 
    * splitWithBlank(str) // => ['i', 'have', 'a', 'plan']
    */
@@ -2057,7 +2058,7 @@
    * @see match
    * @example
    * 
-   * let test = f.test(/hello/)
+   * const test = f.test(/hello/)
    * 
    * test('hello world') // => true
    * test('goodbye world') // => false
@@ -2078,7 +2079,7 @@
    * @see test
    * @example
    * 
-   * let matchAll = f.match(/\{.*?\}/g)
+   * const matchAll = f.match(/\{.*?\}/g)
    * 
    * matchAll('{aa}-{bb}-{cc}')
    * // => ['{aa}', '{bb}', '{cc}']
@@ -2101,7 +2102,7 @@
    * @sing (String | RegExp, String | Function) -> String ->String
    * @example
    * 
-   * let replace = f.replace(/yes/, 'no')
+   * const replace = f.replace(/yes/, 'no')
    * 
    * replace('yes yes i will yes')
    * // => no no i will no
@@ -2123,7 +2124,7 @@
    * @see endsWith
    * @example
    * 
-   * let str = 'i have a plan'
+   * const str = 'i have a plan'
    * 
    * f.startsWith('i have')(str) // => true
    */
@@ -2144,7 +2145,7 @@
    * @see startsWith
    * @example
    * 
-   * let str = 'i have a plan'
+   * const str = 'i have a plan'
    * 
    * f.endsWith('plan')(str) // => true
    */
@@ -2163,20 +2164,21 @@
    * @since 0.1.0
    * @category Object
    * @sign ({ k: a }, { k: b }, ..., { k: n }) -> { k: n }
+   * @see merge
    * @example
    * 
-   * let obj1 = { a: { a: 123, b: 234 } }
-   * let obj2 = { a: { a: 234 } }
+   * const obj1 = { a: { a: 123, b: 234 } }
+   * const obj2 = { a: { a: 234 } }
    * 
    * f.deepMerge(obj1, obj2) // => { a: { a: 234, b: 234 } }
    */
   const deepMerge = (...args) => {
-    let length = args.length;
+    const length = args.length;
 
     if (length < 2 ) return args[0]
     
-    let obj1 = Object.assign({}, args[0]);
-    let obj2 = Object.assign({}, args[1]);
+    const obj1 = Object.assign({}, args[0]);
+    const obj2 = Object.assign({}, args[1]);
 
     Object.keys(obj2).forEach(
       k => obj1[k] = type(obj1[k]) === 'Object' && type(obj2[k]) === 'Object'
@@ -2202,8 +2204,8 @@
    * @see pick
    * @example
    * 
-   * let omit = f.omit(['a', 'b'])
-   * let obj = { a: 1, b: 2, c: 3 }
+   * const omit = f.omit(['a', 'b'])
+   * const obj = { a: 1, b: 2, c: 3 }
    * 
    * omit(obj) // => { c: 3 }
    */
@@ -2231,8 +2233,8 @@
    * @see pickBy, omit
    * @example
    * 
-   * let pickAB = f.pick(['a', 'b'])
-   * let obj = { a: 123, b: 234, c: 345 }
+   * const pickAB = f.pick(['a', 'b'])
+   * const obj = { a: 123, b: 234, c: 345 }
    * 
    * pickAB(obj) // => { a: 123, b: 234 }
    */
@@ -2258,15 +2260,15 @@
    * @see pick
    * @example
    * 
-   * let obj = { a: 1, b: 2, c: 3}
-   * let pickBy = f.pickBy(f.gte(2))
+   * const obj = { a: 1, b: 2, c: 3}
+   * const pickBy = f.pickBy(f.gte(2))
    * 
    * pickBy(obj) // => { b: 2, c: 3 }
    */
   const pickBy = _curry2((fn, obj) => tap(
     _obj => keys(obj).forEach(
       key => {
-        let val = obj[key];
+        const val = obj[key];
         fn(val, key) && (_obj[key] = val);
       }
     ), {}
@@ -2323,18 +2325,18 @@
    * @sign Number -> Number -> [a] -> [a]
    * @example
    * 
-   * let arr = [1, 2, 3, 4]
+   * const arr = [1, 2, 3, 4]
    * 
    * f.move(1, 2, arr) // => [1, 3, 2, 4]
    * f.move(-1, 0, arr) // => [4, 1, 2, 3]
    * f.move(-100, 100, arr) // => [1, 2, 3, 4]
    */
   const move = _curry3((from, to, arr) => {
-    let length = arr.length;
-    let result = [].concat(arr);
-    let fromIndex = from < 0 ? length + from : from;
-    let toIndex = to < 0 ? length + to : to;
-    let item = result.splice(fromIndex, 1);
+    const length = arr.length;
+    const result = [].concat(arr);
+    const fromIndex = from < 0 ? length + from : from;
+    const toIndex = to < 0 ? length + to : to;
+    const item = result.splice(fromIndex, 1);
 
     return fromIndex >= length || toIndex >= length 
       || fromIndex < 0 || toIndex < 0
@@ -2359,7 +2361,7 @@
    * @sign String -> a -> a
    * @example
    * 
-   * let add3 = f.pipe(
+   * const add3 = f.pipe(
    *   f.add(1), 
    *   f.trace('what i am?')
    *   f.add(1), 
@@ -2388,8 +2390,8 @@
    * @see curryN, partial
    * @example
    * 
-   * let fn = (a, b, c, d) => a + b + c + d
-   * fn = f.curry(fn)
+   * const add = (a, b, c, d) => a + b + c + d
+   * fn = f.curry(add)
    * 
    * fn(1, 2, 3, 4) // => 10
    * fn(1, 2)(3, 4) // => 10
@@ -2413,11 +2415,11 @@
    * @see curry, partial
    * @example
    * 
-   * let join = (...args) => args.join('')
+   * const join = (...args) => args.join('')
    * join(1, 2, 3, 4) // => '1234'
    * join(1, 2, 3) // => '123'
    * 
-   * join3 = f.curryN(3)(join)
+   * const join3 = f.curryN(3)(join)
    * join3(1, 2, 3) // => '123'
    * join3(1, 2)(3) // => '123'
    * join3(1)(2, 3) // => '123'
@@ -2444,8 +2446,8 @@
    * @see uncurry, curry
    * @example
    * 
-   * let add = a => b => c => a + b + c
-   * let fn = f.uncurryN(2)(add)
+   * const add = a => b => c => a + b + c
+   * const fn = f.uncurryN(2)(add)
    * 
    * fn('a', 'b')('c') // => 'abc'
    */
@@ -2470,8 +2472,8 @@
    * @see uncurryN, curry
    * @example
    * 
-   * let add = a => b => c => a + b + c
-   * let fn = f.uncurry(add)
+   * const add = a => b => c => a + b + c
+   * const fn = f.uncurry(add)
    * 
    * fn('a', 'b', 'c') // => 'abc'
    */
@@ -2491,8 +2493,8 @@
    * @see curry, partialRight
    * @example
    * 
-   * let sum = (a, b, c) => a + b + c
-   * let sumAB = f.partial(sum)('a', 'b')
+   * const sum = (a, b, c) => a + b + c
+   * const sumAB = f.partial(sum)('a', 'b')
    * 
    * sumAB('c') // => 'abc'
    * sumAB('d') // => 'abd'
@@ -2513,8 +2515,8 @@
    * @see partial
    * @example
    * 
-   * let sum = (a, b, c) => a + b + c
-   * let sumBeforeAB = f.partial(sum)('a', 'b')
+   * const sum = (a, b, c) => a + b + c
+   * const sumBeforeAB = f.partial(sum)('a', 'b')
    * 
    * sumAB('c') // => 'cab'
    * sumAB('d') // => 'dab'
@@ -2536,8 +2538,8 @@
    * @see partial, partialRight
    * @example
    * 
-   * let sum = (a, b, c) => a + b + c
-   * let waitSum = f.thunkify(sum)('a', 'b', 'c')
+   * const sum = (a, b, c) => a + b + c
+   * const waitSum = f.thunkify(sum)('a', 'b', 'c')
    * 
    * waitSum() // => 'abc'
    */
@@ -2553,8 +2555,8 @@
    * @sign ((a, b, ..., z) -> x) -> ((z, ..., b, a) -> x)
    * @example
    * 
-   * let print = (...args) => args
-   * let flipPrint = f.flip(print)
+   * const print = (...args) => args
+   * const flipPrint = f.flip(print)
    * 
    * print(1, 2, 3) // => [1, 2, 3]
    * flipPrint(1, 2, 3) // => [3, 2, 1]
@@ -2573,10 +2575,10 @@
    * @sign Number -> ((a, b, ..., z) -> result) -> ((a, b, ..., n) -> result)
    * @example
    * 
-   * let printThree = (a, b, c) => [a, b, c]
+   * const printThree = (a, b, c) => [a, b, c]
    * printThree(1, 2, 3) // => [1, 2, 3]
    * 
-   * let printTwo = f.nAry(2)(printThree)
+   * const printTwo = f.nAry(2)(printThree)
    * printTwo(1, 2, 3) // => [1, 2, undefined]
    */
   const nAry = _curry2((n, fn) => (...args) => fn(...args.slice(0, n)));
@@ -2597,7 +2599,7 @@
    * @see binary, nAry
    * @example
    * 
-   * let arr = [1, 2, 3]
+   * const arr = [1, 2, 3]
    * 
    * arr.map(parseInt) // => [1, NaN, NaN]
    * arr.map(f.unary(parseInt)) // => [1, 2, 3]
@@ -2615,10 +2617,10 @@
    * @see unary, nAry
    * @example
    * 
-   * let printThree = (a, b, c) => [a, b, c]
+   * const printThree = (a, b, c) => [a, b, c]
    * printThree(1, 2, 3) // => [1, 2, 3]
    * 
-   * let printTwo = f.binary(printThree)
+   * const printTwo = f.binary(printThree)
    * printTwo(1, 2, 3) // => [1, 2, undefined]
    */
   const binary = _nAry(2);
@@ -2637,8 +2639,8 @@
    * @sign (...x -> a) -> (...x -> a)
    * @example
    * 
-   * let add1 = f.add(1)
-   * let addOnce = f.once(add1)
+   * const add1 = f.add(1)
+   * const addOnce = f.once(add1)
    * 
    * addOnce(10) // => 11
    * addOnce(20) // => 11
@@ -2671,7 +2673,7 @@
    * @sign (...a -> b, ...a -> c) -> (...a -> b | c)
    * @example
    * 
-   * let parse = f.tryCatch(JSON.parse, f.always({}))
+   * const parse = f.tryCatch(JSON.parse, f.always({}))
    * 
    * parse(JSON.stringify({ a: 1 })) // => { a: 1 }
    * parse({ a: 1 }) // => {}
@@ -2703,7 +2705,7 @@
    * @see unless, ifElse, cond
    * @example
    * 
-   * let cannotOver3 = f.when(f.gt(3), f.always('so big'))
+   * const cannotOver3 = f.when(f.gt(3), f.always('so big'))
    * 
    * cannotOver3(5) // => 'so big'
    * cannotOver3(1) // => 1
@@ -2725,7 +2727,7 @@
    * @see when, ifElse, cond
    * @example
    * 
-   * let cannotBelow3 = f.unless(f.gt(3), f.always('so small'))
+   * const cannotBelow3 = f.unless(f.gt(3), f.always('so small'))
    * 
    * cannotBelow3(5) // => 5
    * cannotBelow3(1) // => 'so small'
@@ -2747,7 +2749,7 @@
    * @see when, unless, cond
    * @example
    * 
-   * let check3 = f.ifElse(f.gt(3), f.always('so big'), f.always('so small'))
+   * const check3 = f.ifElse(f.gt(3), f.always('so big'), f.always('so small'))
    * check3(5) // => 'so big'
    * check3(1) // => 'so small'
    */
@@ -2772,21 +2774,21 @@
    * @see when, unless, ifElse
    * @example
    * 
-   * let judgeMan = f.cond(
+   * const judgeMan = f.cond(
    *   [f.gt(90), f.always('good man')],
    *   [f.gt(70), f.always('common man')],
    *   [f.gt(50), f.always('weak man')],
    *   [f.T, f.always('unless man')]
    * )
    * 
-   * let man1 = { name: 'Dark', point: 80 }
-   * let man2 = { name: 'White', point: 30 }
+   * const man1 = { name: 'Dark', point: 80 }
+   * const man2 = { name: 'White', point: 30 }
    * 
    * judgeMan(man1.point) // => 'common man'
    * judgeMan(man2.point) // => 'unless man'
    */
   const cond = (...conditions) => (...args) => {
-    for (let condition of conditions) {
+    for (const condition of conditions) {
       if (condition[0](...args)) return condition[1](...args)
     }
   };
@@ -2806,8 +2808,8 @@
    * @see call
    * @example 
    * 
-   * let print = (...args) => args
-   * let fn = f.apply(print)
+   * const print = (...args) => args
+   * const fn = f.apply(print)
    * 
    * fn([1, 2, 3]) // => [1, 2, 3]
    */
@@ -2848,9 +2850,9 @@
    * @sign ...x -> (...x -> a) -> a
    * @example
    * 
-   * let fn1 = (...args) => args
-   * let fn2 = (...args) => f.sum(args)
-   * let applyTo = f.applyTo('a', 'b', 'c')
+   * const fn1 = (...args) => args
+   * const fn2 = (...args) => f.sum(args)
+   * const applyTo = f.applyTo('a', 'b', 'c')
    *    
    * applyTo(fn1) // => ['a', 'b', 'c']
    * applyTo(fn2) // => 'abc'
@@ -2871,7 +2873,7 @@
    * @example
    * 
    * class Animal {}
-   * let makeAnimal = f.construct(Animal)
+   * const makeAnimal = f.construct(Animal)
    * 
    * makeAnimal('Rabbit') // => new Animal('Rabbit')
    */
@@ -2892,7 +2894,7 @@
    * @see either, everyPass
    * @example
    * 
-   * let isBetween = f.both(f.gt(5), f.lt(10))
+   * const isBetween = f.both(f.gt(5), f.lt(10))
    * isBetween(8) // => true
    * isBetween(11) // => false
    */
@@ -2913,7 +2915,7 @@
    * @see both, somePass
    * @example
    * 
-   * let isSatisfied = f.either(f.gt(15), f.lt(10))
+   * const isSatisfied = f.either(f.gt(15), f.lt(10))
    * 
    * isSatisfied(8) // => true
    * isSatisfied(11) // => false
@@ -2935,13 +2937,13 @@
    * @see somePass, both
    * @example
    * 
-   * let everyPass = f.everyPass(f.gt(5), f.gt(10), f.gt(15))
+   * const everyPass = f.everyPass(f.gt(5), f.gt(10), f.gt(15))
    * 
    * everyPass(12) // => false
    * everyPass(20) // => true
    */
   const everyPass = (...fns) => (...args) => {
-    for (let fn of fns) {
+    for (const fn of fns) {
       if (!fn(...args)) return false
     }
     return true
@@ -2963,13 +2965,13 @@
    * @see everyPass, either
    * @example
    * 
-   * let somePass = f.somePass(f.gt(5), f.gt(10), f.gt(15))
+   * const somePass = f.somePass(f.gt(5), f.gt(10), f.gt(15))
    * 
    * somePass(12) // => true
    * somePass(3) // => false
    */
   const somePass = (...fns) => (...args) => {
-    for (let fn of fns) {
+    for (const fn of fns) {
       if (fn(...args)) return true
     }
     return false
@@ -2993,14 +2995,14 @@
    * @see after
    * @example
    * 
-   * let fn = () => console.log('i am coming')
-   * let fnx = () => console.log('i am before')
+   * const fn1 = () => console.log('i am fn1')
+   * const fn2 = () => console.log('i am fn2')
    * 
-   * fn = f.before(fnx)(fn)
+   * fn = f.before(fn1)(fn2)
    * 
    * fn()
-   * // logs: i am before
-   * // logs: i am coming
+   * // logs: i am fn1
+   * // logs: i am fn2
    */
   const before = _curry2((fnx, fn) => (...args) => { 
     fnx(...args);
@@ -3026,17 +3028,17 @@
    * @see before
    * @example
    * 
-   * let fn = () => console.log('i am coming')
-   * let fnx = () => console.log('i am after')
-   *    
-   * fn = f.after(fnx)(fn)
+   * const fn1 = () => console.log('i am fn1')
+   * const fn2 = () => console.log('i am fn2')
+   * 
+   * const fn = f.after(fn1)(fn2)
    * 
    * fn()
-   * // logs: i am coming
-   * // logs: i am after
+   * // logs: i am fn2
+   * // logs: i am fn1
    */
   const after = _curry2((fnx, fn) => (...args) => { 
-    let result = fn(...args);
+    const result = fn(...args);
     fnx(...args);
 
     return result
@@ -3061,7 +3063,7 @@
    * @example
    * 
    * let num = 0
-   * let add = f.cacheWith(f.identity)(() => num += 1)
+   * const add = f.cacheWith(f.identity)(() => num += 1)
    * 
    * add(1) // => 1
    * add(1) // => 1
@@ -3069,10 +3071,10 @@
    * add(2) // => 3
    */
   const cacheWith = _curry2((cacheFn, fn) => {
-    let cache = {};
+    const cache = {};
 
     return (...args) => {
-      let key = cacheFn(...args);
+      const key = cacheFn(...args);
 
       if (!_has(cache, key)) {
         cache[key] = fn(...args);
@@ -3099,7 +3101,7 @@
    * @example
    * 
    * let num = 0
-   * let fn = f.debounce(100)(() => num += 1) 
+   * const fn = f.debounce(100)(() => num += 1) 
    * 
    * fn()
    * fn()
@@ -3134,7 +3136,7 @@
    * @example
    * 
    * let num = 0
-   * let fn = f.throttle(100)(() => num += 1) 
+   * const fn = f.throttle(100)(() => num += 1) 
    * 
    * fn()
    * fn()
@@ -3196,19 +3198,20 @@
    * @sign [a] -> [a]
    * @example
    * 
-   * let arr = [1, 2, 3]
+   * const arr = [1, 2, 3]
    * 
    * f.shuffle(arr) // => [2, 3, 1]
    */
   const shuffle = arr => {
-    let _arr = [].concat(arr);
-    let length = _arr.length;
-    let maxIndex = length - 1;
+    const _arr = [].concat(arr);
+    const length = _arr.length;
+    const maxIndex = length - 1;
+    
     let i = 0;
 
     while (i < length) {
-      let rand = random(i, maxIndex);
-      let val = _arr[rand];
+      const rand = random(i, maxIndex);
+      const val = _arr[rand];
 
       _arr[rand] = _arr[i];
       _arr[i] = val;
@@ -3231,13 +3234,13 @@
    * @sign Number -> (a -> b) -> (a -> b)
    * @example
    * 
-   * let id3 = f.times(3, f.identity)
+   * const id3 = f.times(3, f.identity)
    * 
    * id3(1) // => [1, 1, 1]
    */
   const times = _curry2((n, fn) => (...args) => {
     let i = 0;
-    let ret = [];
+    const ret = [];
 
     while (i++ < n) {
       ret.push(fn(...args));
@@ -3283,6 +3286,39 @@
   const fromPairs = arr => merge(...arr.map(
     elem => ({ [elem[0]]: elem[1] })
   ));
+
+  /**
+   * Create a new array from the supplied arrays,  
+   * every index corresponding value of them compose to the new item.  
+   * 
+   * And the new array's length will same as the first supplied array.  
+   * 
+   * @param {...Array} arr 
+   * @return {Array}
+   * @since 0.1.7
+   * @category Array
+   * @sign ([a], [b], [c], ...) -> [[a, b, c, ...], ...]
+   * @example
+   * 
+   * const weathers = ['windy', 'sunny', 'cloudy']
+   * const marks = [0, 1, 2]
+   * 
+   * f.zip(weathers, marks) // => [['windy', 0], ['sunny', 1], ['cloudy', 2]]
+   */
+  const zip = (...arr) => {
+    const first = arr[0] || [];
+    const length = first.length;
+    const result = [];
+
+    let i = 0;
+    while (i < length) {
+      result[i] = arr.map(elem => elem[i]);
+
+      i++;
+    }
+
+    return result
+  };
 
   var name = "shadow-fns";
   var version = "0.1.6";
@@ -3513,6 +3549,7 @@
   exports.unless = unless;
   exports.values = values;
   exports.when = when;
+  exports.zip = zip;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
