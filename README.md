@@ -35,8 +35,8 @@ Chasing for more simplify and singleness function.
 
 > You can also import from CDN  
 > 
-> https://cdn.jsdelivr.net/npm/shadow-fns@0.1.6/dist/shadow-fns.umd.js  
-> https://cdn.jsdelivr.net/npm/shadow-fns@0.1.6/dist/shadow-fns.umd.min.js  
+> https://cdn.jsdelivr.net/npm/shadow-fns/dist/shadow-fns.umd.js  
+> https://cdn.jsdelivr.net/npm/shadow-fns/dist/shadow-fns.umd.min.js  
 
 then
 

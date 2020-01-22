@@ -1,10 +1,10 @@
 # Changelog
 
-## v0.1.7
+## v0.1.7 (20200122)
 
 Add
 
-- zip
+- [zip](./src/zip.js)
 
 And improve some API code example and internal implementation.
 

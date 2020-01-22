@@ -3289,7 +3289,7 @@
 
   /**
    * Create a new array from the supplied arrays,  
-   * every index corresponding value of them compose to the new item.  
+   * every index corresponding value of them will compose to a new item.  
    * 
    * And the new array's length will same as the first supplied array.  
    * 
@@ -3321,7 +3321,7 @@
   };
 
   var name = "shadow-fns";
-  var version = "0.1.6";
+  var version = "0.1.7";
   var description = "A javascript function library.";
   var main = "lib/index.js";
   var module = "src/index.js";

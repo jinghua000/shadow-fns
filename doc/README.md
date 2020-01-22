@@ -4064,7 +4064,7 @@ cannotOver3(1) // => 1
 
 ## zip ⇒ <code>Array</code>
 Create a new array from the supplied arrays,  
-every index corresponding value of them compose to the new item.  
+every index corresponding value of them will compose to a new item.  
 
 And the new array's length will same as the first supplied array.
 
