@@ -9,9 +9,9 @@
  * @sign ...x -> (...x -> a) -> a
  * @example
  * 
- * let fn1 = (...args) => args
- * let fn2 = (...args) => f.sum(args)
- * let applyTo = f.applyTo('a', 'b', 'c')
+ * const fn1 = (...args) => args
+ * const fn2 = (...args) => f.sum(args)
+ * const applyTo = f.applyTo('a', 'b', 'c')
  *    
  * applyTo(fn1) // => ['a', 'b', 'c']
  * applyTo(fn2) // => 'abc'

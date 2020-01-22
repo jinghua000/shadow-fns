@@ -14,8 +14,8 @@ import _curryN from './internal/_curryN'
  * @see curryN, partial
  * @example
  * 
- * let fn = (a, b, c, d) => a + b + c + d
- * fn = f.curry(fn)
+ * const add = (a, b, c, d) => a + b + c + d
+ * fn = f.curry(add)
  * 
  * fn(1, 2, 3, 4) // => 10
  * fn(1, 2)(3, 4) // => 10

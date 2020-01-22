@@ -11,8 +11,8 @@ import uncurryN from './uncurryN'
  * @see uncurryN, curry
  * @example
  * 
- * let add = a => b => c => a + b + c
- * let fn = f.uncurry(add)
+ * const add = a => b => c => a + b + c
+ * const fn = f.uncurry(add)
  * 
  * fn('a', 'b', 'c') // => 'abc'
  */

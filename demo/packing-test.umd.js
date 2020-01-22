@@ -56,7 +56,7 @@
    * @see divide
    * @example 
    * 
-   * let multiply3 = f.multiply(3)
+   * const multiply3 = f.multiply(3)
    * 
    * multiply3(2) // => 6
    * multiply3(3) // => 9
@@ -79,7 +79,7 @@
    * @example
    *    
    * // add 1 then multiply 2
-   * let calc = f.pipe(f.add(1), f.multiply(2))
+   * const calc = f.pipe(f.add(1), f.multiply(2))
    * 
    * calc(1) // => 4
    * calc(3) // => 8

@@ -15,7 +15,7 @@ import _curry3 from './internal/_curry3'
  * @see dissoc
  * @example
  * 
- * let obj = { a: 123 }
+ * const obj = { a: 123 }
  * 
  * f.assoc('b', 234)(obj) // => { a: 123, b: 234 }
  */

@@ -16,8 +16,8 @@ import tap from './tap'
  * @see pick
  * @example
  * 
- * let omit = f.omit(['a', 'b'])
- * let obj = { a: 1, b: 2, c: 3 }
+ * const omit = f.omit(['a', 'b'])
+ * const obj = { a: 1, b: 2, c: 3 }
  * 
  * omit(obj) // => { c: 3 }
  */

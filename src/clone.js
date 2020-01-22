@@ -16,8 +16,8 @@ import tap from './tap'
  * @sign a -> a
  * @example
  * 
- * let arr = [{}, {}, {}]
- * let arr2 = f.clone(arr) // => [{}, {}, {}]
+ * const arr = [{}, {}, {}]
+ * const arr2 = f.clone(arr) // => [{}, {}, {}]
  * arr[0] === arr2[0] // => false
  */
 const clone = data => 

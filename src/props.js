@@ -14,7 +14,7 @@ import _curry2 from './internal/_curry2'
  * @see prop
  * @example
  * 
- * let obj = { a: 1, b: 2, c: 3 }
+ * const obj = { a: 1, b: 2, c: 3 }
  * 
  * f.props(['a', 'b', 'c', 'd'])(obj)
  * // => [1, 2, 3, undefined]

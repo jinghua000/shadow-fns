@@ -18,17 +18,17 @@ import _curry2 from './internal/_curry2'
  * @see before
  * @example
  * 
- * let fn = () => console.log('i am coming')
- * let fnx = () => console.log('i am after')
- *    
- * fn = f.after(fnx)(fn)
+ * const fn1 = () => console.log('i am fn1')
+ * const fn2 = () => console.log('i am fn2')
+ * 
+ * const fn = f.after(fn1)(fn2)
  * 
  * fn()
- * // logs: i am coming
- * // logs: i am after
+ * // logs: i am fn2
+ * // logs: i am fn1
  */
 const after = _curry2((fnx, fn) => (...args) => { 
-  let result = fn(...args)
+  const result = fn(...args)
   fnx(...args)
 
   return result

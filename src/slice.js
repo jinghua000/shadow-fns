@@ -15,7 +15,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @sign (Number, Number) -> a -> a
  * @example
  *    
- * let slice2 = f.slice(2, 4)
+ * const slice2 = f.slice(2, 4)
  * 
  * slice2([1, 2, 3, 4, 5]) // => [3, 4]
  * slice2('abced') // => 'ce'

@@ -16,7 +16,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @sing (String | RegExp, String | Function) -> String ->String
  * @example
  * 
- * let replace = f.replace(/yes/, 'no')
+ * const replace = f.replace(/yes/, 'no')
  * 
  * replace('yes yes i will yes')
  * // => no no i will no

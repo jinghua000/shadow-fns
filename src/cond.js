@@ -13,21 +13,21 @@
  * @see when, unless, ifElse
  * @example
  * 
- * let judgeMan = f.cond(
+ * const judgeMan = f.cond(
  *   [f.gt(90), f.always('good man')],
  *   [f.gt(70), f.always('common man')],
  *   [f.gt(50), f.always('weak man')],
  *   [f.T, f.always('unless man')]
  * )
  * 
- * let man1 = { name: 'Dark', point: 80 }
- * let man2 = { name: 'White', point: 30 }
+ * const man1 = { name: 'Dark', point: 80 }
+ * const man2 = { name: 'White', point: 30 }
  * 
  * judgeMan(man1.point) // => 'common man'
  * judgeMan(man2.point) // => 'unless man'
  */
 const cond = (...conditions) => (...args) => {
-  for (let condition of conditions) {
+  for (const condition of conditions) {
     if (condition[0](...args)) return condition[1](...args)
   }
 }

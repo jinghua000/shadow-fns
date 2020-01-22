@@ -15,7 +15,7 @@ import _curry2 from './internal/_curry2'
  * @see both, somePass
  * @example
  * 
- * let isSatisfied = f.either(f.gt(15), f.lt(10))
+ * const isSatisfied = f.either(f.gt(15), f.lt(10))
  * 
  * isSatisfied(8) // => true
  * isSatisfied(11) // => false

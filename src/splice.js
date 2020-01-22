@@ -21,8 +21,8 @@ import tap from './tap'
  * @sign (Number, Number, *, ...) -> Array -> Array
  * @example
  * 
- * let replaceTwo = f.splice(1, 2, 'two', 'two')
- * let arr = ['one', 'two', 'three', 'four']
+ * const replaceTwo = f.splice(1, 2, 'two', 'two')
+ * const arr = ['one', 'two', 'three', 'four']
  * 
  * replaceTwo(arr) // => ['one', 'two', 'two', 'four']
  */

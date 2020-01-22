@@ -12,7 +12,7 @@
  * @sign String -> String
  * @example
  * 
- * let str = ' i have a plan '
+ * const str = ' i have a plan '
  * 
  * f.trim(str) // => 'i have a plan'
  */

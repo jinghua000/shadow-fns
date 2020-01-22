@@ -15,7 +15,7 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @see every, none
  * @example
  * 
- * let someGreaterThan3 = f.some(f.gt(3))
+ * const someGreaterThan3 = f.some(f.gt(3))
  * 
  * someGreaterThan3([2, 3, 4]) // => true
  * someGreaterThan3([1, 2, 3]) // => false

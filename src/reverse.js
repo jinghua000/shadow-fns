@@ -14,7 +14,7 @@
  * @sign [a, b, ..., z] -> [z, ..., b, a]
  * @example
  * 
- * let arr = [1, 2, 3]
+ * const arr = [1, 2, 3]
  * 
  * f.reverse(arr) // [3, 2, 1]
  */

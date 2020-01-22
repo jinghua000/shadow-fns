@@ -11,7 +11,7 @@ import _nAry from './internal/_nAry'
  * @see binary, nAry
  * @example
  * 
- * let arr = [1, 2, 3]
+ * const arr = [1, 2, 3]
  * 
  * arr.map(parseInt) // => [1, NaN, NaN]
  * arr.map(f.unary(parseInt)) // => [1, 2, 3]

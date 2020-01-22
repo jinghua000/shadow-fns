@@ -15,8 +15,8 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @see reject
  * @example
  *    
- * let greaterThan3 = f.filter(f.gt(3))
- * let arr = [1, 2, 3, 4, 5]
+ * const greaterThan3 = f.filter(f.gt(3))
+ * const arr = [1, 2, 3, 4, 5]
  * 
  * greaterThan3(arr) // => [4, 5]
  */

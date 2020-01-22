@@ -14,7 +14,7 @@ import _curry2 from './internal/_curry2'
  * @see dissoc
  * @example
  * 
- * let obj = { a: 123, b: 234 }
+ * const obj = { a: 123, b: 234 }
  * 
  * f.dissoc('b')(obj) // => { a: 123 }
  */

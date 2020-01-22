@@ -8,8 +8,8 @@
  * @sign (...x -> result) -> (...x -> !result)
  * @example
  * 
- * let gt3 = f.gt(3)
- * let arr = [1, 2, 3, 4, 5]
+ * const gt3 = f.gt(3)
+ * const arr = [1, 2, 3, 4, 5]
  * 
  * arr.filter(gt3) // => [4, 5]
  * arr.filter(f.opposite(gt3)) // => [1, 2, 3]

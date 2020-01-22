@@ -17,7 +17,7 @@ import _curry2 from './internal/_curry2'
  * @see match
  * @example
  * 
- * let test = f.test(/hello/)
+ * const test = f.test(/hello/)
  * 
  * test('hello world') // => true
  * test('goodbye world') // => false

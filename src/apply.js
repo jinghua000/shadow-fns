@@ -15,8 +15,8 @@ import _curry2 from './internal/_curry2'
  * @see call
  * @example 
  * 
- * let print = (...args) => args
- * let fn = f.apply(print)
+ * const print = (...args) => args
+ * const fn = f.apply(print)
  * 
  * fn([1, 2, 3]) // => [1, 2, 3]
  */

@@ -13,7 +13,7 @@ import _curry2 from './internal/_curry2'
  * @sign (...a -> b, ...a -> c) -> (...a -> b | c)
  * @example
  * 
- * let parse = f.tryCatch(JSON.parse, f.always({}))
+ * const parse = f.tryCatch(JSON.parse, f.always({}))
  * 
  * parse(JSON.stringify({ a: 1 })) // => { a: 1 }
  * parse({ a: 1 }) // => {}

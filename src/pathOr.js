@@ -16,7 +16,7 @@ import path from './path'
  * @see path, pathEq
  * @example
  * 
- * let readPathOr = f.pathOr(['a', 'a'], 'no!')
+ * const readPathOr = f.pathOr(['a', 'a'], 'no!')
  * 
  * readPathOr({ a: 123 }) // => no!
  * readPathOr({ a: { a: 'yes' } }) // => yes!

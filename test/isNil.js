@@ -17,6 +17,8 @@ describe('test isNil', function () {
     eq(f.isNil(false), false)
     eq(f.isNil(NaN), false)
     eq(f.isNil({}), false)
+    eq(f.isNil([]), false)
+    eq(f.isNil(0), false)
 
   })
 

@@ -14,10 +14,10 @@ import _curry2 from './internal/_curry2'
  * @see props, propOr, propEq
  * @example
  * 
- * let a = { a: 1, b: 0 }
- * let b = { a: 2 }
- * let getA = f.prop('a')
- * let getB = f.prop('b')
+ * const a = { a: 1, b: 0 }
+ * const b = { a: 2 }
+ * const getA = f.prop('a')
+ * const getB = f.prop('b')
  * 
  * getA(a) // => 1
  * getA(b) // => 2

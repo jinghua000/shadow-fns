@@ -15,11 +15,11 @@ import _curry2 from './internal/_curry2'
  * @see first, last
  * @example
  * 
- * let str = 'abcdefg'
+ * const str = 'abcdefg'
  * f.nth(3)(str) // => d
  * f.nth(-2)(str) // => f
  * 
- * let arr = [1, 2, 3, 4, 5]
+ * const arr = [1, 2, 3, 4, 5]
  * f.nth(5)(arr) // => undefined
  * f.nth(-1)(arr) // => 5
  */

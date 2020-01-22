@@ -13,7 +13,7 @@
  * @see toUpper
  * @example
  * 
- * let str = 'ABC'
+ * const str = 'ABC'
  * 
  * f.toLower(str) // => 'abc'
  */

@@ -16,7 +16,7 @@
  * @see sortWith
  * @example
  * 
- * let sortAsc = f.sort(f.asc)
+ * const sortAsc = f.sort(f.asc)
  * 
  * sortAsc([10, 9, 1, 3, 2]) // => [1, 2, 3, 9, 10]
  */

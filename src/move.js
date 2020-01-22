@@ -17,18 +17,18 @@ import _curry3 from './internal/_curry3'
  * @sign Number -> Number -> [a] -> [a]
  * @example
  * 
- * let arr = [1, 2, 3, 4]
+ * const arr = [1, 2, 3, 4]
  * 
  * f.move(1, 2, arr) // => [1, 3, 2, 4]
  * f.move(-1, 0, arr) // => [4, 1, 2, 3]
  * f.move(-100, 100, arr) // => [1, 2, 3, 4]
  */
 const move = _curry3((from, to, arr) => {
-  let length = arr.length
-  let result = [].concat(arr)
-  let fromIndex = from < 0 ? length + from : from
-  let toIndex = to < 0 ? length + to : to
-  let item = result.splice(fromIndex, 1)
+  const length = arr.length
+  const result = [].concat(arr)
+  const fromIndex = from < 0 ? length + from : from
+  const toIndex = to < 0 ? length + to : to
+  const item = result.splice(fromIndex, 1)
 
   return fromIndex >= length || toIndex >= length 
     || fromIndex < 0 || toIndex < 0

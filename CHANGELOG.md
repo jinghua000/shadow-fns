@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.7 (20200122)
+
+Add
+
+- [zip](./src/zip.js)
+
+And improve some API code example and internal implementation.
+
 ## v0.1.6 (20200109)
 
 - Change pack tool from `webpack` to `rollup`,

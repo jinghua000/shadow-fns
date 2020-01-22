@@ -11,7 +11,7 @@
  * @see keys
  * @example
  * 
- * let obj = { a: 1, b: 2, c: 3 }
+ * const obj = { a: 1, b: 2, c: 3 }
  * 
  * f.values(obj) // => [1, 2, 3]
  */

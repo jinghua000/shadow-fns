@@ -15,7 +15,7 @@ import opposite from './opposite'
  * @see every, some
  * @example
  * 
- * let noneGreaterThan3 = f.none(f.gt(3))
+ * const noneGreaterThan3 = f.none(f.gt(3))
  * 
  * noneGreaterThan3([1, 2, 3]) // => true
  * noneGreaterThan3([2, 3, 4]) // => false

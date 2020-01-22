@@ -12,7 +12,7 @@
  * @sign Array -> Array
  * @example
  * 
- * let arr = [1, [2], [[3, 4], 5]]
+ * const arr = [1, [2], [[3, 4], 5]]
  * 
  * f.flatten(arr) // => [1, 2, 3, 4, 5]
  */

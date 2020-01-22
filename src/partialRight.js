@@ -12,8 +12,8 @@
  * @see partial
  * @example
  * 
- * let sum = (a, b, c) => a + b + c
- * let sumBeforeAB = f.partial(sum)('a', 'b')
+ * const sum = (a, b, c) => a + b + c
+ * const sumBeforeAB = f.partial(sum)('a', 'b')
  * 
  * sumAB('c') // => 'cab'
  * sumAB('d') // => 'dab'

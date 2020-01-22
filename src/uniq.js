@@ -11,7 +11,7 @@
  * @see difference, intersection, union
  * @example
  * 
- * let arr = [1, 2, 2, NaN, NaN]
+ * const arr = [1, 2, 2, NaN, NaN]
  * 
  * f.uniq(arr) // => [1, 2, NaN]
  */

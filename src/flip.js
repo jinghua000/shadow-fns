@@ -8,8 +8,8 @@
  * @sign ((a, b, ..., z) -> x) -> ((z, ..., b, a) -> x)
  * @example
  * 
- * let print = (...args) => args
- * let flipPrint = f.flip(print)
+ * const print = (...args) => args
+ * const flipPrint = f.flip(print)
  * 
  * print(1, 2, 3) // => [1, 2, 3]
  * flipPrint(1, 2, 3) // => [3, 2, 1]

@@ -14,8 +14,8 @@ import _nativeSelfFn from './internal/_nativeSelfFn'
  * @sign (Function, Function?) -> Promise -> Promise
  * @example
  *    
- * let fetchData = () => Promise.resolve({ name: 'Eric' })
- * let getName = f.then(f.prop('name'))
+ * const fetchData = () => Promise.resolve({ name: 'Eric' })
+ * const getName = f.then(f.prop('name'))
  * 
  * getName(fetchData()).then(console.log) // => logs: Eric
  */

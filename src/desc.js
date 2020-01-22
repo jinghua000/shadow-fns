@@ -16,7 +16,7 @@ import _curry2 from './internal/_curry2'
  * @see asc, descend
  * @example
  * 
- * let arr = [3,2,1,4,5]
+ * const arr = [3,2,1,4,5]
  * 
  * f.sort(f.desc)(arr) // => [5,4,3,2,1]
  */

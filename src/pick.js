@@ -17,8 +17,8 @@ import merge from './merge'
  * @see pickBy, omit
  * @example
  * 
- * let pickAB = f.pick(['a', 'b'])
- * let obj = { a: 123, b: 234, c: 345 }
+ * const pickAB = f.pick(['a', 'b'])
+ * const obj = { a: 123, b: 234, c: 345 }
  * 
  * pickAB(obj) // => { a: 123, b: 234 }
  */

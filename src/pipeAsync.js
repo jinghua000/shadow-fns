@@ -14,10 +14,10 @@
  * @see pipe
  * @example
  * 
- * let addA = arg => new Promise(res => setTimeout(res, 100, arg + 'a'))
- * let addB = arg => new Promise(res => setTimeout(res, 100, arg + 'b'))
- * let addC = arg => new Promise(res => setTimeout(res, 100, arg + 'c'))
- * let addABC = f.pipeAsync(addA, addB, addC)
+ * const addA = arg => new Promise(res => setTimeout(res, 100, arg + 'a'))
+ * const addB = arg => new Promise(res => setTimeout(res, 100, arg + 'b'))
+ * const addC = arg => new Promise(res => setTimeout(res, 100, arg + 'c'))
+ * const addABC = f.pipeAsync(addA, addB, addC)
  * 
  * addABC('').then(console.log) // => after 300 ms logs: 'abc'
  */

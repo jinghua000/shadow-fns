@@ -5,7 +5,7 @@ const dmd = require('dmd')
 const join = require('current-path-join')
 const chalk = require('chalk')
 const fs = require('fs')
-// ...
+
 const f = require('../lib')
 const docPath = join('../doc/README.md')
 const { 

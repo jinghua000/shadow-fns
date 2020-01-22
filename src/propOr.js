@@ -21,7 +21,7 @@ import _curry3 from './internal/_curry3'
  * @see prop, propEq
  * @example
  * 
- * let readA = f.propOr('a', false)
+ * const readA = f.propOr('a', false)
  * 
  * readA({ a: 123 }) // => 123
  * readA({}) // => false

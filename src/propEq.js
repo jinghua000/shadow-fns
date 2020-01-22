@@ -17,9 +17,9 @@ import _curry3 from './internal/_curry3'
  * @see prop, propOr
  * @example
  * 
- * let checkEq = f.propEq('a', 123)
- * let obj1 = { a: 123 }
- * let obj2 = { a: 234 }
+ * const checkEq = f.propEq('a', 123)
+ * const obj1 = { a: 123 }
+ * const obj2 = { a: 234 }
  * 
  * checkEq(obj1) // => true
  * checkEq(obj2) // => false
