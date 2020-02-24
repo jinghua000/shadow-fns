@@ -54,4 +54,13 @@ describe('test deepMerge', function () {
 
   })
 
+  it('empty values will also be merged', function () {
+
+    let obj1 = { a: { a: 1 } }
+    let obj2 = { a: { a: undefined } }
+
+    equals(f.deepMerge(obj1, obj2), { a: { a: undefined } })
+
+  })
+
 })
