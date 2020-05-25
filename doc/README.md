@@ -33,6 +33,7 @@
 - [clone](#clone)  
 - [compact](#compact)  
 - [cond](#cond)  
+- [deepCompact](#deepCompact)  
 - [descend](#descend)  
 - [either](#either)  
 - [everyPass](#everyPass)  
@@ -684,9 +685,9 @@ arr[0] === arr2[0] // => false
 <a name="compact"></a>
 
 ## compact ⇒ <code>Array</code> \| <code>Object</code> \| <code>String</code>
-If is Array select the elements which are not nil
+If is Array select the elements which are not `nil`
 
-If is Object pick the keys which them values are not nil
+If is Object pick the keys which them values are not `nil`
 
 If is String remove all the space
 
@@ -694,11 +695,11 @@ All of above return a new datum
 
 Others return them self
 
-And nil means `null` or `undefined`
+And `nil` means `null` or `undefined`
 
 **Category**: [Tools](#tools)  
 **Sign**: a -> a  
-**See**: [isNil](#isNil)  
+**See**: [isNil](#isNil), [deepCompact](#deepCompact)  
 **Since**: 0.1.0  
 
 | Param | Type |
@@ -907,6 +908,40 @@ setTimeout(() => console.log(num), 120) // logs 1 after 120 ms
   
 
 [View source](../src/debounce.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
+
+<a name="deepCompact"></a>
+
+## deepCompact ⇒ <code>Array</code> \| <code>Object</code> \| <code>String</code>
+If is Array select the elements which are not `empty`
+
+If is Object pick the keys which them values are not `empty`
+
+If is String remove all the space
+
+All of above return a new datum
+
+Others return them self
+
+And `empty` means `null` or `undefined` or `[]` or `{}` or `''`
+
+**Category**: [Tools](#tools)  
+**Sign**: a -> a  
+**See**: [isEmpty](#isEmpty), [compact](#compact)  
+**Since**: 0.1.8  
+
+| Param | Type |
+| --- | --- |
+| data | <code>Array</code> \| <code>Object</code> \| <code>String</code> | 
+
+**Example**  
+```js
+f.deepCompact([0, false, [], {}, '', null, undefined]) // => [0, false]
+f.deepCompact({ name: 'dog', age: '', children: [] }) // => { name: 'dog' }
+f.deepCompact(' i have a plan ') // => ihaveaplan
+```
+  
+
+[View source](../src/deepCompact.js)&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#api-documentation)  
 
 <a name="deepMerge"></a>
 

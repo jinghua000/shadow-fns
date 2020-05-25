@@ -4,7 +4,7 @@ const f = require('../src')
 
 describe('test compact', function () {
   
-  it('test array', function () {
+  it('should select values not nil and will not change the origin array', function () {
 
     let arr = [0, 1, null, undefined, false, [], {}]
 
@@ -13,9 +13,14 @@ describe('test compact', function () {
       [0, 1, false, [], {}]
     )
 
+    equals(
+      arr,
+      [0, 1, null, undefined, false, [], {}]
+    )
+
   })
 
-  it('test object', function () {
+  it('should select values not nil and will not change the origin object', function () {
 
     let obj = {
       a: 0,
@@ -35,6 +40,19 @@ describe('test compact', function () {
         e: false,
         f: [],
         g: {},      
+      }
+    )
+
+    equals(
+      obj,
+      {
+        a: 0,
+        b: 1,
+        c: null,
+        d: undefined,
+        e: false,
+        f: [],
+        g: {},
       }
     )
 
@@ -58,6 +76,7 @@ describe('test compact', function () {
     eq(f.compact(d), d)
     eq(f.compact(0), 0)
     eq(f.compact(true), true)
+    eq(f.compact(null), null)
 
   })
 

@@ -2275,9 +2275,9 @@
   ));
 
   /**
-   * If is Array select the elements which are not nil
+   * If is Array select the elements which are not `nil`
    * 
-   * If is Object pick the keys which them values are not nil
+   * If is Object pick the keys which them values are not `nil`
    * 
    * If is String remove all the space
    * 
@@ -2285,14 +2285,14 @@
    * 
    * Others return them self
    * 
-   * And nil means `null` or `undefined`
+   * And `nil` means `null` or `undefined`
    * 
    * @param {Array|Object|String} data 
    * @return {Array|Object|String}
    * @since 0.1.0
    * @category Tools
    * @sign a -> a
-   * @see isNil
+   * @see isNil, deepCompact
    * @example
    * 
    * f.compact([0, 1, 2, null, undefined]) // => [0, 1, 2]
@@ -2303,7 +2303,41 @@
     type(data) === 'Array'
       ? data.filter(opposite(isNil))
       : type(data) === 'Object'
-        ? pickBy(opposite(isNil))(data)
+        ? pickBy(opposite(isNil), data)
+        : type(data) === 'String'
+          ? data.replace(/\s/g, '')
+          : data;
+
+  /**
+   * If is Array select the elements which are not `empty`
+   * 
+   * If is Object pick the keys which them values are not `empty`
+   * 
+   * If is String remove all the space
+   * 
+   * All of above return a new datum
+   * 
+   * Others return them self
+   * 
+   * And `empty` means `null` or `undefined` or `[]` or `{}` or `''`
+   * 
+   * @param {Array|Object|String} data 
+   * @return {Array|Object|String}
+   * @since 0.1.8
+   * @category Tools
+   * @sign a -> a
+   * @see isEmpty, compact
+   * @example
+   * 
+   * f.deepCompact([0, false, [], {}, '', null, undefined]) // => [0, false]
+   * f.deepCompact({ name: 'dog', age: '', children: [] }) // => { name: 'dog' }
+   * f.deepCompact(' i have a plan ') // => ihaveaplan
+   */
+  const deepCompact = data => 
+    type(data) === 'Array'
+      ? data.filter(opposite(isEmpty))
+      : type(data) === 'Object'
+        ? pickBy(opposite(isEmpty), data)
         : type(data) === 'String'
           ? data.replace(/\s/g, '')
           : data;
@@ -3321,7 +3355,7 @@
   };
 
   var name = "shadow-fns";
-  var version = "0.1.7";
+  var version = "0.1.8";
   var description = "A javascript function library.";
   var main = "lib/index.js";
   var module = "src/index.js";
@@ -3440,6 +3474,7 @@
   exports.curry = curry;
   exports.curryN = curryN;
   exports.debounce = debounce;
+  exports.deepCompact = deepCompact;
   exports.deepMerge = deepMerge;
   exports.desc = desc;
   exports.descend = descend;

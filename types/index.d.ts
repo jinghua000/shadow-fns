@@ -23,6 +23,7 @@ export declare const construct: (...args: any[]) => any;
 export declare const curry: (...args: any[]) => any;
 export declare const curryN: (...args: any[]) => any;
 export declare const debounce: (...args: any[]) => any;
+export declare const deepCompact: (...args: any[]) => any;
 export declare const deepMerge: (...args: any[]) => any;
 export declare const desc: (...args: any[]) => any;
 export declare const descend: (...args: any[]) => any;
