@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.8 (20200525)
+
+Add 
+
+- [deepCompact](./src/deepCompact.js) This method is surely used commonly.
+
 ## v0.1.7 (20200122)
 
 Add

@@ -18,11 +18,12 @@ yarn
 
 ## Project Structure
 
+- `demo/` some special internal test.
 - `coverage/` coverage files.
 - `dist/` umd version.
 - `doc/` documentations.
 - `lib/` after babel translated.
-- `scripts/` used to build docs.
+- `scripts/` some scripts.
 - `src/` source code.
 - `test/` unit tests.
 
