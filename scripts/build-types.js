@@ -14,6 +14,7 @@ const filePath = join('../types/index.d.ts')
 
   Object.keys(f).sort(f.asc).forEach(k => {
     if (k === 'VERSION') return 
+    outputArray.push(`// https://github.com/jinghua000/shadow-fns/blob/master/doc/README.md#${k}`)
     outputArray.push(`export declare const ${k}: (...args: any[]) => any;`)
   })
 

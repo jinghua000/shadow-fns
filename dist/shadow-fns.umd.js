@@ -901,7 +901,7 @@
     let val = obj;
 
     for (const k of arr) {
-      if (!has(k)(val)) return false
+      if (!has(k, val)) return false
       val = val[k];
     }
 
@@ -986,7 +986,7 @@
    * checkPath({ b: 999 }) // => false
    * checkPath({ a: { a: 123 } }) // => true
    */
-  const pathEq = _curry3((arr, val, obj) => path(arr)(obj) === val);
+  const pathEq = _curry3((arr, val, obj) => path(arr, obj) === val);
 
   /**
    * Check the element is the instance of supplied constructor
@@ -1654,7 +1654,7 @@
    * f.isExist('') // => true
    * f.isExist({}) // => true
    */
-  const isExist = e => e !== undefined && e !== null;
+  const isExist = e => e != null;
 
   /**
    * Check the element is equal with one of below
@@ -1865,9 +1865,9 @@
    */
   const groupBy = _curry2((fn, arr) => tap(
     obj => arr.forEach(
-      e => tap(
-        cat => (obj[cat] = obj[cat] || []).push(e), 
-        fn(e)
+      elem => tap(
+        ret => (obj[ret] = obj[ret] || []).push(elem), 
+        fn(elem)
       )
     ), {}
   ));
@@ -2175,7 +2175,7 @@
   const deepMerge = (...args) => {
     const length = args.length;
 
-    if (length < 2 ) return args[0]
+    if (length < 2) return args[0]
     
     const obj1 = Object.assign({}, args[0]);
     const obj2 = Object.assign({}, args[1]);
@@ -2370,14 +2370,17 @@
     const result = [].concat(arr);
     const fromIndex = from < 0 ? length + from : from;
     const toIndex = to < 0 ? length + to : to;
-    const item = result.splice(fromIndex, 1);
+    const item = result.splice(fromIndex, 1)[0];
 
-    return fromIndex >= length || toIndex >= length 
-      || fromIndex < 0 || toIndex < 0
+    return fromIndex >= length || toIndex >= length || fromIndex < 0 || toIndex < 0
       ? arr
-      : result.slice(0, toIndex)
-          .concat(item)
-          .concat(result.slice(toIndex))
+      : tap(
+        _arr => {
+          _arr.push(...result.slice(0, toIndex));
+          _arr.push(item);
+          _arr.push(...result.slice(toIndex));
+        }, []
+      )
   });
 
   /**
@@ -3242,7 +3245,6 @@
     const maxIndex = length - 1;
     
     let i = 0;
-
     while (i < length) {
       const rand = random(i, maxIndex);
       const val = _arr[rand];
@@ -3355,7 +3357,7 @@
   };
 
   var name = "shadow-fns";
-  var version = "0.1.8";
+  var version = "1.0.0";
   var description = "A javascript function library.";
   var main = "lib/index.js";
   var module = "src/index.js";

@@ -24,7 +24,7 @@ const hasPath = _curry2((arr, obj) => {
   let val = obj
 
   for (const k of arr) {
-    if (!has(k)(val)) return false
+    if (!has(k, val)) return false
     val = val[k]
   }
 

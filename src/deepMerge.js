@@ -24,7 +24,7 @@ import type from './type'
 const deepMerge = (...args) => {
   const length = args.length
 
-  if (length < 2 ) return args[0]
+  if (length < 2) return args[0]
   
   const obj1 = Object.assign({}, args[0])
   const obj2 = Object.assign({}, args[1])

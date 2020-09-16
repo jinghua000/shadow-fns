@@ -21,6 +21,6 @@ import path from './path'
  * checkPath({ b: 999 }) // => false
  * checkPath({ a: { a: 123 } }) // => true
  */
-const pathEq = _curry3((arr, val, obj) => path(arr)(obj) === val)
+const pathEq = _curry3((arr, val, obj) => path(arr, obj) === val)
 
 export default pathEq
