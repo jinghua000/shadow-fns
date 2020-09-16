@@ -16,7 +16,7 @@ Chasing for more simplify and singleness function.
 
 ...Okay, just for my own preference.
 
-## Keywords
+## Features
 
 - Pure Function
 - Functional
@@ -24,6 +24,20 @@ Chasing for more simplify and singleness function.
 - Pointfree
 - No Context
 - Close To Native
+- More semantic
+
+```js
+f.pipe(f.length, f.gt(5)) 
+// => Means check the supplied parameter's length whether longer than 5.
+
+f.tryCatch(JSON.parse, f.always({})) 
+// => Means try parse the supplied parameter, when throw an error will return `{}`.
+
+f.pipe(f.map(f.prop('age')), f.sum)
+// => Means get every `age` property from the list to an array, then sum it.
+```
+
+All functions read from left-to-right with humanized semantics.
 
 ## Usage
 
@@ -121,9 +135,3 @@ And [Changelog](https://github.com/jinghua000/shadow-fns/blob/master/CHANGELOG.m
 ## Try
 
 [Click Me!](https://jinghua000.github.io/shadow-fns/index.html)
-
-## Reference
-
-- https://ramdajs.com/docs/  
-- https://lodash.com/docs  
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript  

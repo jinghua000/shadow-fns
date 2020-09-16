@@ -63,4 +63,14 @@ describe('test deepMerge', function () {
 
   })
 
+  it('one argument will return itself', () => {
+    let obj1 = { a: 1 }
+
+    eq(f.deepMerge(obj1), obj1)
+  })
+
+  it(`not supply arguments will return "undefined"`, () => {
+    eq(f.deepMerge(), undefined)
+  })
+
 })

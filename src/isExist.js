@@ -14,6 +14,6 @@
  * f.isExist('') // => true
  * f.isExist({}) // => true
  */
-const isExist = e => e !== undefined && e !== null
+const isExist = e => e != null
 
 export default isExist

@@ -5,7 +5,7 @@ describe('test VERSION', function () {
   
   it('test', function () {
 
-    eq(f.VERSION, '0.1.8')
+    eq(f.VERSION, '1.0.0')
 
   })
 

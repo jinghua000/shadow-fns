@@ -22,7 +22,6 @@ const shuffle = arr => {
   const maxIndex = length - 1
   
   let i = 0
-
   while (i < length) {
     const rand = random(i, maxIndex)
     const val = _arr[rand]

@@ -23,9 +23,9 @@ import tap from './tap'
  */
 const groupBy = _curry2((fn, arr) => tap(
   obj => arr.forEach(
-    e => tap(
-      cat => (obj[cat] = obj[cat] || []).push(e), 
-      fn(e)
+    elem => tap(
+      ret => (obj[ret] = obj[ret] || []).push(elem), 
+      fn(elem)
     )
   ), {}
 ))
