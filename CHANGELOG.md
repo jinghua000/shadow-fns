@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.0 (20200916)
+
+Change some documentation.
+
 ## v0.1.8 (20200525)
 
 Add 
