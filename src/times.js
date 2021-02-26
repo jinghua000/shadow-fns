@@ -18,13 +18,13 @@ import _curry2 from './internal/_curry2'
  */
 const times = _curry2((n, fn) => (...args) => {
   let i = 0
-  const ret = []
+  const arr = Array(n)
 
-  while (i++ < n) {
-    ret.push(fn(...args))
+  while (i < n) {
+    arr[i++] = fn(...args)
   }
 
-  return ret
+  return arr
 })
 
 export default times

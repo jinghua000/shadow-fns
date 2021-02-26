@@ -1,5 +1,4 @@
 import _curry3 from './internal/_curry3'
-import tap from './tap'
 
 /**
  * Move the element of supplied array from `from` to `to`.
@@ -26,20 +25,21 @@ import tap from './tap'
  */
 const move = _curry3((from, to, arr) => {
   const length = arr.length
-  const result = [].concat(arr)
   const fromIndex = from < 0 ? length + from : from
   const toIndex = to < 0 ? length + to : to
-  const item = result.splice(fromIndex, 1)[0]
 
-  return fromIndex >= length || toIndex >= length || fromIndex < 0 || toIndex < 0
-    ? arr
-    : tap(
-      _arr => {
-        _arr.push(...result.slice(0, toIndex))
-        _arr.push(item)
-        _arr.push(...result.slice(toIndex))
-      }, []
+  if (fromIndex >= length || toIndex >= length || fromIndex < 0 || toIndex < 0) {
+    return arr
+  } else {
+    const result = [].concat(arr)
+    result.splice(
+      toIndex, 
+      0, 
+      result.splice(fromIndex, 1)[0]
     )
+
+    return result
+  }
 })
 
 export default move

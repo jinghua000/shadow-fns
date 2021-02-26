@@ -9,11 +9,11 @@ function invokeWithoutCurry () {
 }
 
 console.time('invokeWithCurry')
-times(1000, invokeWithCurry)()
+times(1e6, invokeWithCurry)()
 console.timeEnd('invokeWithCurry')
 
 console.time('invokeWithoutCurry')
-times(1000, invokeWithoutCurry)()
+times(1e6, invokeWithoutCurry)()
 console.timeEnd('invokeWithoutCurry')
 
 // => invokeWithoutCurry much faster than invokeWithCurry

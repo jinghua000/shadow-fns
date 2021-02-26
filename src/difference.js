@@ -26,10 +26,8 @@ import uniq from './uniq'
  * 
  * f.difference(arr1)(arr2) // => [7, 1]
  */
-const difference = _curry2((arrx, arr) => uniq(
-  [].concat(arr, arrx).filter(
-    e => !arr.includes(e) || !arrx.includes(e)
-  )
+const difference = _curry2((arrx, arr) => uniq([].concat(arr, arrx)).filter(
+  e => !arr.includes(e) || !arrx.includes(e)
 ))
 
 export default difference

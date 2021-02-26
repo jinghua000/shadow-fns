@@ -41,10 +41,10 @@ describe('test move', function () {
   })
 
   it('is shallow copy', function () {
-    let arr = [{}]
-    f.move(0, 0, arr)[0].foo = 'foo'
+    let arr = [{}, {}]
+    f.move(0, 1, arr)[0].foo = 'foo'
 
-    equals(arr, [{ foo: 'foo' }])
+    equals(arr, [{}, { foo: 'foo' }])
   })
 
 })

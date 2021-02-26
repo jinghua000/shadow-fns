@@ -1,5 +1,3 @@
-import pkg from '../package.json'
-
 /**
  * Library's version
  * 
@@ -10,6 +8,6 @@ import pkg from '../package.json'
  * 
  * f.VERSION // => 0.1.4
  */
-const VERSION = pkg.version
+const VERSION = '1.0.1'
 
 export default VERSION

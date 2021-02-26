@@ -412,7 +412,7 @@
    * const arr = [1, 2, 3, 4, 5]
    * f.last(arr) // => 5
    */
-  const last = list => list.slice(-1)[0];
+  const last = list => list[list.length - 1];
 
   /**
    * If the first parameter smaller than the second one, return -1,
@@ -936,9 +936,9 @@
   const path = _curry2((arr, obj) => {
     let val = obj;
 
-    for (const k of arr) {
+    for (let i = 0; i < arr.length; i++) {
       if (isNil(val)) return
-      val = val[k];
+      val = val[arr[i]];
     }
 
     return val
@@ -1385,8 +1385,8 @@
     (a, b) => {
       let res;
 
-      for (const fn of fns) {
-        res = fn(a, b);
+      for (let i = 0; i < fns.length; i++) {
+        res = fns[i](a, b);
         if (res !== 0) break
       }
 
@@ -1806,10 +1806,8 @@
    * 
    * f.difference(arr1)(arr2) // => [7, 1]
    */
-  const difference = _curry2((arrx, arr) => uniq(
-    [].concat(arr, arrx).filter(
-      e => !arr.includes(e) || !arrx.includes(e)
-    )
+  const difference = _curry2((arrx, arr) => uniq([].concat(arr, arrx)).filter(
+    e => !arr.includes(e) || !arrx.includes(e)
   ));
 
   /**
@@ -1837,10 +1835,8 @@
    * 
    * f.intersection(arr1)(arr2) // => [5, 3]
    */
-  const intersection = _curry2((arrx, arr) => uniq(
-    [].concat(arr).filter(
-      e => arrx.includes(e)
-    )
+  const intersection = _curry2((arrx, arr) => uniq([].concat(arr)).filter(
+    e => arrx.includes(e)
   ));
 
   /**
@@ -2367,20 +2363,21 @@
    */
   const move = _curry3((from, to, arr) => {
     const length = arr.length;
-    const result = [].concat(arr);
     const fromIndex = from < 0 ? length + from : from;
     const toIndex = to < 0 ? length + to : to;
-    const item = result.splice(fromIndex, 1)[0];
 
-    return fromIndex >= length || toIndex >= length || fromIndex < 0 || toIndex < 0
-      ? arr
-      : tap(
-        _arr => {
-          _arr.push(...result.slice(0, toIndex));
-          _arr.push(item);
-          _arr.push(...result.slice(toIndex));
-        }, []
-      )
+    if (fromIndex >= length || toIndex >= length || fromIndex < 0 || toIndex < 0) {
+      return arr
+    } else {
+      const result = [].concat(arr);
+      result.splice(
+        toIndex, 
+        0, 
+        result.splice(fromIndex, 1)[0]
+      );
+
+      return result
+    }
   });
 
   /**
@@ -2825,7 +2822,8 @@
    * judgeMan(man2.point) // => 'unless man'
    */
   const cond = (...conditions) => (...args) => {
-    for (const condition of conditions) {
+    for (let i = 0; i < conditions.length; i++) {
+      const condition = conditions[i];
       if (condition[0](...args)) return condition[1](...args)
     }
   };
@@ -2980,9 +2978,10 @@
    * everyPass(20) // => true
    */
   const everyPass = (...fns) => (...args) => {
-    for (const fn of fns) {
-      if (!fn(...args)) return false
+    for (let i = 0; i < fns.length; i++) {
+      if (!fns[i](...args)) return false
     }
+    
     return true
   };
 
@@ -3008,9 +3007,10 @@
    * somePass(3) // => false
    */
   const somePass = (...fns) => (...args) => {
-    for (const fn of fns) {
-      if (fn(...args)) return true
+    for (let i = 0; i < fns.length; i++) {
+      if (fns[i](...args)) return true
     }
+    
     return false
   };
 
@@ -3276,13 +3276,13 @@
    */
   const times = _curry2((n, fn) => (...args) => {
     let i = 0;
-    const ret = [];
+    const arr = Array(n);
 
-    while (i++ < n) {
-      ret.push(fn(...args));
+    while (i < n) {
+      arr[i++] = fn(...args);
     }
 
-    return ret
+    return arr
   });
 
   /**
@@ -3356,89 +3356,6 @@
     return result
   };
 
-  var name = "shadow-fns";
-  var version = "1.0.0";
-  var description = "A javascript function library.";
-  var main = "lib/index.js";
-  var module = "src/index.js";
-  var types = "types/index.d.ts";
-  var scripts = {
-  	test: "mocha --require @babel/register",
-  	"test:pack": "IS_TESTING=1 rollup -c",
-  	"test:performance": "node demo/performance-test.js",
-  	cover: "yarn cover:unit && yarn cover:report && yarn cover:check",
-  	"cover:unit": "nyc npm test",
-  	"cover:report": "nyc report --reporter=lcov",
-  	"cover:check": "nyc check-coverage --branches=100 --functions=100 --lines=100 --statements=100",
-  	coveralls: "nyc npm test && yarn cover:check && nyc report --reporter=text-lcov | coveralls",
-  	build: "yarn clean && yarn build:cjs && yarn build:umd && yarn build:doc && yarn build:types",
-  	clean: "rm -rf ./dist ./lib",
-  	"build:cjs": "babel src --out-dir lib",
-  	"build:umd": "rollup -c",
-  	"build:doc": "node scripts/build-doc.js",
-  	"build:types": "node scripts/build-types.js"
-  };
-  var keywords = [
-  	"shadow-fns",
-  	"functional",
-  	"pure",
-  	"currying",
-  	"point-free"
-  ];
-  var files = [
-  	"dist",
-  	"lib",
-  	"src",
-  	"types"
-  ];
-  var author = "shadow";
-  var license = "MIT";
-  var repository = {
-  	type: "git",
-  	url: "https://github.com/jinghua000/shadow-fns.git"
-  };
-  var bugs = {
-  	url: "https://github.com/jinghua000/shadow-fns/issues"
-  };
-  var homepage = "https://github.com/jinghua000/shadow-fns";
-  var dependencies = {
-  };
-  var devDependencies = {
-  	"@babel/cli": "^7.4.3",
-  	"@babel/core": "^7.4.3",
-  	"@babel/preset-env": "^7.4.3",
-  	"@babel/register": "^7.4.0",
-  	"@rollup/plugin-json": "^4.0.1",
-  	chalk: "^3.0.0",
-  	coveralls: "^3.0.7",
-  	"current-path-join": "^0.1.0",
-  	dmd: "^4.0.4",
-  	"fs-extra": "^8.1.0",
-  	"jsdoc-to-markdown": "^5.0.1",
-  	mocha: "^6.1.3",
-  	nyc: "^14.1.1",
-  	rollup: "^1.28.0",
-  	"rollup-plugin-terser": "^5.1.3"
-  };
-  var pkg = {
-  	name: name,
-  	version: version,
-  	description: description,
-  	main: main,
-  	module: module,
-  	types: types,
-  	scripts: scripts,
-  	keywords: keywords,
-  	files: files,
-  	author: author,
-  	license: license,
-  	repository: repository,
-  	bugs: bugs,
-  	homepage: homepage,
-  	dependencies: dependencies,
-  	devDependencies: devDependencies
-  };
-
   /**
    * Library's version
    * 
@@ -3449,7 +3366,7 @@
    * 
    * f.VERSION // => 0.1.4
    */
-  const VERSION = pkg.version;
+  const VERSION = '1.0.1';
 
   exports.F = F;
   exports.T = T;

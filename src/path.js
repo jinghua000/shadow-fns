@@ -29,9 +29,9 @@ import isNil from './isNil'
 const path = _curry2((arr, obj) => {
   let val = obj
 
-  for (const k of arr) {
+  for (let i = 0; i < arr.length; i++) {
     if (isNil(val)) return
-    val = val[k]
+    val = val[arr[i]]
   }
 
   return val

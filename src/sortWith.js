@@ -43,8 +43,8 @@ const sortWith = (...fns) => arr => [].concat(arr).sort(
   (a, b) => {
     let res
 
-    for (const fn of fns) {
-      res = fn(a, b)
+    for (let i = 0; i < fns.length; i++) {
+      res = fns[i](a, b)
       if (res !== 0) break
     }
 
