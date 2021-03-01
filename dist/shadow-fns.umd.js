@@ -720,8 +720,9 @@
 
       if (length !== keys(x).length) return false
 
-      for (const k of _keys) {
-        if (!equals(x[k], e[k])) return false
+      for (let i = 0; i < length; i++) {
+        const key = _keys[i];
+        if (!equals(x[key], e[key])) return false
       }
 
       return true
@@ -900,7 +901,8 @@
   const hasPath = _curry2((arr, obj) => {
     let val = obj;
 
-    for (const k of arr) {
+    for (let i = 0; i < arr.length; i++) {
+      const k = arr[i];
       if (!has(k, val)) return false
       val = val[k];
     }

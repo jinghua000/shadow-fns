@@ -38,5 +38,13 @@ describe('test has', function () {
 
   })
 
+  it('support arrays', function() {
+
+
+    eq(f.has(0, [[]]), true)
+    eq(f.has(0, []), false)
+
+  })
+
 
 })

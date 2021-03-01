@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.1
+## v1.0.1 (20210301)
 
 Improve some functions performance.
 
@@ -9,16 +9,15 @@ And make the library smaller.
 - last 
 - sortWith
 - path 
+- hasPath
+- move
 - somePass
 - everyPass
 - times
 - cond
 - difference
 - intersection
-- move
-- TODO
-  - equals
-  - hasPath
+- equals
 
 ## v1.0.0 (20200916)
 

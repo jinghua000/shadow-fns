@@ -23,7 +23,8 @@ import has from './has'
 const hasPath = _curry2((arr, obj) => {
   let val = obj
 
-  for (const k of arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const k = arr[i]
     if (!has(k, val)) return false
     val = val[k]
   }
