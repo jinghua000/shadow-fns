@@ -20,9 +20,10 @@
  * somePass(3) // => false
  */
 const somePass = (...fns) => (...args) => {
-  for (const fn of fns) {
-    if (fn(...args)) return true
+  for (let i = 0; i < fns.length; i++) {
+    if (fns[i](...args)) return true
   }
+  
   return false
 }
 

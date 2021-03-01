@@ -19,4 +19,11 @@ describe('test last', function () {
 
   })
 
+  it('Empty string or array should return undefined', () => {
+
+    eq(f.last(''), void 0)
+    eq(f.last([]), void 0)
+    
+  })
+
 })

@@ -27,7 +27,8 @@
  * judgeMan(man2.point) // => 'unless man'
  */
 const cond = (...conditions) => (...args) => {
-  for (const condition of conditions) {
+  for (let i = 0; i < conditions.length; i++) {
+    const condition = conditions[i]
     if (condition[0](...args)) return condition[1](...args)
   }
 }

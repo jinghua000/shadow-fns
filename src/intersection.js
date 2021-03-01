@@ -26,10 +26,8 @@ import uniq from './uniq'
  * 
  * f.intersection(arr1)(arr2) // => [5, 3]
  */
-const intersection = _curry2((arrx, arr) => uniq(
-  [].concat(arr).filter(
-    e => arrx.includes(e)
-  )
+const intersection = _curry2((arrx, arr) => uniq([].concat(arr)).filter(
+  e => arrx.includes(e)
 ))
 
 export default intersection

@@ -16,6 +16,6 @@
  * const arr = [1, 2, 3, 4, 5]
  * f.last(arr) // => 5
  */
-const last = list => list.slice(-1)[0]
+const last = list => list[list.length - 1]
 
 export default last

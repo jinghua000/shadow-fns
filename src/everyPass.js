@@ -18,9 +18,10 @@
  * everyPass(20) // => true
  */
 const everyPass = (...fns) => (...args) => {
-  for (const fn of fns) {
-    if (!fn(...args)) return false
+  for (let i = 0; i < fns.length; i++) {
+    if (!fns[i](...args)) return false
   }
+  
   return true
 }
 
